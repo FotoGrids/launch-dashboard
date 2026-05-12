@@ -106,7 +106,7 @@ title: Product
               <span class="badge badge-planned">No</span>
             {% endif %}
           </td>
-          <td class="col-notes">{{ f.notes | default: "—" }}</td>
+          <td class="col-notes">{{ f.notes }}</td>
         </tr>
         {% endfor %}
       {% endif %}
