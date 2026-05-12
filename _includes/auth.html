@@ -4,38 +4,28 @@
        padding:40px 48px; width:340px; text-align:center;
        box-shadow:0 24px 64px rgba(14,20,38,.12);">
 
-    <!-- Logo mark -->
-    <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:20px;">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:3px; width:22px; height:22px;">
-        <span style="background:#3B3BFF; border-radius:2px;"></span>
-        <span style="background:#FFC72A; border-radius:2px;"></span>
-        <span style="background:#EE3B49; border-radius:2px;"></span>
-        <span style="background:#27C28A; border-radius:2px;"></span>
-      </div>
-      <div style="font-family:'Poppins',system-ui; font-weight:800; font-size:15px; letter-spacing:-.02em;">
-        <strong style="color:#3B3BFF;">FOTO</strong><span style="color:#0E1426;">GRIDS</span>
-      </div>
+    <div style="display:flex; justify-content:center; margin-bottom:20px;">
+      <img src="{{ '/assets/fotogrids-logo.svg' | relative_url }}" alt="FotoGrids" style="height:28px; width:auto;">
     </div>
 
-    <div style="font-family:'Poppins',system-ui; font-weight:600; font-size:16px;
+    <div style="font-family:var(--dash-font); font-weight:600; font-size:16px;
          color:#0E1426; margin-bottom:6px;">Launch Dashboard</div>
-    <div style="font-size:13px; color:#6B7290; margin-bottom:24px; font-family:'Poppins',system-ui;">
+    <div style="font-size:13px; color:#6B7290; margin-bottom:24px; font-family:var(--dash-font);">
       Enter the password to continue.</div>
 
     <input id="auth-input" type="password" placeholder="Password"
       style="width:100%; padding:10px 14px; border:1px solid var(--border);
-             border-radius:8px; font-size:14px; font-family:'Poppins',system-ui;
-             outline:none; margin-bottom:12px; color:#0E1426;"
+             border-radius:8px; font-size:14px; font-family:var(--dash-font);
+             outline:none; margin-bottom:12px; color:#0E1426; background:#fff;"
       onkeydown="if(event.key==='Enter') submitPassword()">
 
     <p id="auth-error" style="display:none; color:#EE3B49; font-size:12px;
-       margin:0 0 12px; font-family:'Poppins',system-ui;">Incorrect password.</p>
+       margin:0 0 12px; font-family:var(--dash-font);">Incorrect password.</p>
 
     <button onclick="submitPassword()"
       style="width:100%; padding:10px; background:#3B3BFF; color:#fff;
              border:none; border-radius:8px; font-size:14px; font-weight:600;
-             font-family:'Poppins',system-ui; cursor:pointer; letter-spacing:-.01em;
-             transition:background .15s;"
+             font-family:var(--dash-font); cursor:pointer; letter-spacing:-.01em;"
       onmouseover="this.style.background='#2929E6'"
       onmouseout="this.style.background='#3B3BFF'">Unlock</button>
   </div>

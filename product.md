@@ -32,9 +32,9 @@ title: Product
 <div class="filter-tabs" id="tier-filter">
   <button class="filter-tab active" onclick="filterTier('all', this)">All tiers</button>
   <button class="filter-tab" onclick="filterTier('free', this)">Free</button>
-  <button class="filter-tab" onclick="filterTier('pro_starter', this)">Pro Starter</button>
-  <button class="filter-tab" onclick="filterTier('pro_plus', this)">Pro Plus</button>
-  <button class="filter-tab" onclick="filterTier('agency', this)">Agency</button>
+  <button class="filter-tab" onclick="filterTier('pro_starter', this)">PRO Starter</button>
+  <button class="filter-tab" onclick="filterTier('pro_plus', this)">PRO Plus</button>
+  <button class="filter-tab" onclick="filterTier('agency', this)">PRO Agency</button>
   <button class="filter-tab" onclick="filterTier('addon', this)">Add-ons</button>
   <button class="filter-tab" onclick="filterTier('roadmap', this)">Post-launch</button>
 </div>
@@ -65,11 +65,11 @@ title: Product
       <td>{{ f.category }}</td>
       <td>
         {% case f.tier %}
-          {% when 'free' %}<span class="badge badge-shipped">Free</span>
-          {% when 'pro_starter' %}<span class="badge badge-roadmap" style="background:#EFF0FF;color:#2B2BAA;">Pro Starter</span>
-          {% when 'pro_plus' %}<span class="badge" style="background:#FFF3D6;color:#8A5A00;">Pro Plus</span>
-          {% when 'agency' %}<span class="badge" style="background:#F0EEF9;color:#4A3880;">Agency</span>
-          {% when 'addon' %}<span class="badge badge-planned">Add-on</span>
+          {% when 'free' %}<span class="badge badge-tier-free">Free</span>
+          {% when 'pro_starter' %}<span class="badge badge-tier-starter">PRO Starter</span>
+          {% when 'pro_plus' %}<span class="badge badge-tier-plus">PRO Plus</span>
+          {% when 'agency' %}<span class="badge badge-tier-agency">PRO Agency</span>
+          {% when 'addon' %}<span class="badge badge-tier-addon">Add-on</span>
         {% endcase %}
       </td>
       <td>{% include status_badge.html status=f.dev_status.backend %}</td>
@@ -180,7 +180,7 @@ function filterTier(tier, btn) {
 (function() {
   // Build data from injected Jekyll values
   const tiers   = ['free', 'pro_starter', 'pro_plus', 'agency', 'addon'];
-  const labels  = ['Free', 'Pro Starter', 'Pro Plus', 'Agency', 'Add-on'];
+  const labels  = ['Free', 'PRO Starter', 'PRO Plus', 'PRO Agency', 'Add-on'];
   const planned = [], inProgress = [], done = [];
 
   const rows = Array.from(document.querySelectorAll('#feature-table tbody tr'));

@@ -51,15 +51,15 @@ title: Metrics
     </div>
     <div class="stat-card">
       <div class="stat-value">{% if pro_s == 0 %}—{% else %}{{ pro_s }}{% endif %}</div>
-      <div class="stat-label">Pro Starter subscribers</div>
+      <div class="stat-label">PRO Starter subscribers</div>
     </div>
     <div class="stat-card">
       <div class="stat-value">{% if pro_p == 0 %}—{% else %}{{ pro_p }}{% endif %}</div>
-      <div class="stat-label">Pro Plus subscribers</div>
+      <div class="stat-label">PRO Plus subscribers</div>
     </div>
     <div class="stat-card">
       <div class="stat-value">{% if agency == 0 %}—{% else %}{{ agency }}{% endif %}</div>
-      <div class="stat-label">Agency subscribers</div>
+      <div class="stat-label">PRO Agency subscribers</div>
     </div>
     <div class="stat-card">
       <div class="stat-value">{% if addon == 0 %}—{% else %}${{ addon }}{% endif %}</div>
