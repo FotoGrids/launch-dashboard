@@ -9,14 +9,16 @@ title: Product
 {% comment %} ── Progress summary ──────────────────────────────────────────── {% endcomment %}
 {% assign launch_features = site.data.features | where: "roadmap", false %}
 {% assign done_features = launch_features | where_exp: "f", "f.dev_status.released == true" %}
-{% assign ip_features   = launch_features | where_exp: "f", "f.dev_status.released != true and (f.dev_status.backend == 'in_progress' or f.dev_status.frontend == 'in_progress')" %}
+{% assign ip_backend  = launch_features | where_exp: "f", "f.dev_status.released != true and f.dev_status.backend == 'in_progress'" %}
+{% assign ip_frontend = launch_features | where_exp: "f", "f.dev_status.released != true and f.dev_status.frontend == 'in_progress'" %}
+{% assign ip_combined = ip_backend | concat: ip_frontend | uniq %}
 
 <div class="stat-grid" style="margin-bottom:24px;">
   {% assign done_pct = done_features.size | times: 100 | divided_by: launch_features.size %}
   {% include stat_card.html value=done_features.size label="Features released" highlight=true %}
   {% include stat_card.html value=launch_features.size label="Launch-scoped features" %}
-  {% include stat_card.html value=ip_features.size label="In progress" %}
-  {% assign not_started = launch_features.size | minus: done_features.size | minus: ip_features.size %}
+  {% include stat_card.html value=ip_combined.size label="In progress" %}
+  {% assign not_started = launch_features.size | minus: done_features.size | minus: ip_combined.size %}
   {% include stat_card.html value=not_started label="Not started" %}
 </div>
 
