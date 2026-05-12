@@ -328,7 +328,7 @@ h3 {
 .tier-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0;
+  gap: 8px;
   overflow: hidden;
   font-size: 11px;
   font-weight: 600;
@@ -337,7 +337,7 @@ h3 {
 }
 
 .tier-pill .pro-tag {
-  padding: 3px 8px;
+  padding: 3px 10px;
   border-radius: 2px;
   font-size: 10px;
   font-weight: 700;
@@ -346,7 +346,6 @@ h3 {
 }
 
 .tier-pill .tier-name {
-  padding: 0 6px 0 4px;
   color: var(--navy);
   font-size: 11px;
   font-weight: 600;
@@ -383,7 +382,7 @@ h3 {
 .dash-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 13px;
+  font-size: 12px;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -397,7 +396,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: .1em;
   color: var(--white);
-  padding: 11px 16px;
+  padding: 16px 20px;
   text-align: center;
   border-bottom: none;
 }
@@ -413,7 +412,7 @@ h3 {
 .dash-table th:last-child  { border-radius: 0 8px 0 0; }
 
 .dash-table td {
-  padding: 14px 16px;
+  padding: 16px 20px;
   border-bottom: 1px solid var(--border);
   vertical-align: middle;
   text-align: center;
@@ -428,18 +427,18 @@ h3 {
 .dash-table tr:hover td { background: var(--bg); }
 
 /* Category header rows inside feature table */
-.table-category-row td {
-  background: var(--indigo-tint);
-  color: var(--indigo);
+.dash-table .table-category-row td {
+  background: var(--border);
+  color: var(--navy);
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  padding: 7px 16px;
+  padding: 16px 20px;
   text-align: left;
   border-bottom: 1px solid var(--border);
 }
-.table-category-row:hover td { background: var(--indigo-tint); }
+.dash-table .table-category-row:hover td { background: var(--border); }
 .dash-table .col-name  { font-weight: 500; color: var(--navy); text-align: left; }
 .dash-table .col-notes { color: var(--text-muted); font-size: 12px; text-align: left; }
 .dash-table .col-priority-high   { color: var(--red);        font-weight: 600; font-size: 11px; }

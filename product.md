@@ -92,14 +92,14 @@ title: Product
           <td>{% include status_badge.html status=f.dev_status.frontend %}</td>
           <td>
             {% if f.dev_status.released %}
-              <span class="badge badge-done">Yes</span>
+              {% include icon_done.html %}
             {% else %}
               <span class="badge badge-planned">No</span>
             {% endif %}
           </td>
           <td>
             {% if f.has_doc == true %}
-              <span class="badge badge-done">Yes</span>
+              {% include icon_done.html %}
             {% elsif f.has_doc == 'in_progress' %}
               <span class="badge badge-in_progress">WIP</span>
             {% else %}
@@ -223,8 +223,8 @@ function filterTier(tier, btn) {
     let d = 0, ip = 0, p = 0;
     tierRows.forEach(r => {
       const cells = r.querySelectorAll('td');
-      // released = col index 5 (0-based)
-      const released = cells[5].querySelector('.badge-done') !== null;
+      // released = col index 5 (0-based); icon_done.html renders an <svg>, no .badge-done
+      const released = cells[5].querySelector('svg') !== null;
       // backend = index 3, frontend = index 4
       const backendBadge   = cells[3].querySelector('.badge');
       const frontendBadge  = cells[4].querySelector('.badge');

@@ -1,5 +1,11 @@
 {% comment %}
   Usage: {% include status_badge.html status=item.status %}
   Renders a coloured pill badge for the given status string.
+  "done", "live", "published", "shipped" render as the checkmark icon.
 {% endcomment %}
-<span class="badge badge-{{ include.status | downcase | replace: ' ', '_' }}">{{ include.status | replace: '_', ' ' }}</span>
+{% assign _s = include.status | downcase | replace: ' ', '_' %}
+{% if _s == 'done' or _s == 'live' or _s == 'published' or _s == 'shipped' %}
+  {% include icon_done.html %}
+{% else %}
+<span class="badge badge-{{ _s }}">{{ include.status | replace: '_', ' ' }}</span>
+{% endif %}
