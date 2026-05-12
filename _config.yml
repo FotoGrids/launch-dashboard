@@ -1,0 +1,7 @@
+title: FotoGrids Dashboard
+baseurl: "/launch-dashboard"
+url: "https://fotogrids.github.io"
+theme: null
+nav: sidebar
+plugins:
+  - jekyll-relative-links

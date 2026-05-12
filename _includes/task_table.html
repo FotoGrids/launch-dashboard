@@ -1,0 +1,47 @@
+{% comment %}
+  Usage: {% include task_table.html tasks=filtered_tasks %}
+  Renders a task table from a list of task objects.
+{% endcomment %}
+{% assign tasks = include.tasks %}
+{% if tasks.size > 0 %}
+<table class="dash-table">
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Category</th>
+      <th>Status</th>
+      <th>Priority</th>
+      <th>Blocked by</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for task in tasks %}
+    <tr>
+      <td class="col-name">{{ task.name }}</td>
+      <td>{{ task.category }}</td>
+      <td>{% include status_badge.html status=task.status %}</td>
+      <td>
+        {% if task.priority == 'high' %}
+          <span class="col-priority-high">High</span>
+        {% elsif task.priority == 'medium' %}
+          <span class="col-priority-medium">Medium</span>
+        {% else %}
+          <span class="col-priority-low">Low</span>
+        {% endif %}
+      </td>
+      <td class="col-notes">
+        {% if task.blocked_by != "" and task.blocked_by %}
+          {{ task.blocked_by }}
+        {% else %}
+          —
+        {% endif %}
+      </td>
+      <td class="col-notes">{{ task.notes | default: "—" }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p style="color:var(--text-muted); font-size:13px; padding:12px 0;">No tasks in this section yet.</p>
+{% endif %}

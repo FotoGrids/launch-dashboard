@@ -1,0 +1,77 @@
+- id: domain_setup
+  name: Domain and DNS configured
+  category: Infrastructure
+  status: done
+  notes: ""
+
+- id: hosting_setup
+  name: Hosting environment live (website + shop)
+  category: Infrastructure
+  status: done
+  notes: ""
+
+- id: ssl_cert
+  name: SSL certificate active
+  category: Infrastructure
+  status: done
+  notes: ""
+
+- id: email_setup
+  name: Transactional email (Postmark)
+  category: Infrastructure
+  status: in_progress
+  notes: "Account created, templates in progress — see tasks.yaml"
+
+- id: backup_system
+  name: Automated database backups
+  category: Infrastructure
+  status: planned
+  notes: ""
+
+- id: analytics_setup
+  name: Analytics (Plausible or equivalent)
+  category: Infrastructure
+  status: in_progress
+  notes: "Plausible installed on website; goal tracking pending"
+
+- id: tos
+  name: Terms of Service written and published
+  category: Legal
+  status: planned
+  notes: ""
+
+- id: privacy_policy
+  name: Privacy Policy written and published
+  category: Legal
+  status: planned
+  notes: ""
+
+- id: gdpr_compliance
+  name: GDPR compliance review
+  category: Legal
+  status: planned
+  notes: ""
+
+- id: refund_policy
+  name: Refund Policy published
+  category: Legal
+  status: planned
+  notes: ""
+
+- id: cookie_banner
+  name: Cookie consent banner
+  category: Legal
+  status: planned
+  notes: ""
+
+- id: business_registration
+  name: Business entity registered
+  category: Company
+  status: done
+  notes: ""
+
+- id: bank_account
+  name: Business bank account open
+  category: Company
+  status: done
+  notes: ""

@@ -1,0 +1,13 @@
+# Controlled vocabulary for feature categories.
+# Every entry in features.yaml must use one of these exact strings.
+
+- Display & Layout
+- Image Optimisation
+- Protection & Privacy
+- SEO & Metadata
+- E-Commerce
+- Integrations
+- Developer Tools
+- Analytics & Reporting
+- Accessibility
+- Admin & Settings

@@ -1,0 +1,17 @@
+{% comment %}
+  Usage: {% include progress_bar.html done=done_count total=total_count label="Features" %}
+  Renders a progress bar with percentage and count label.
+{% endcomment %}
+{% assign pct = 0 %}
+{% if include.total > 0 %}
+  {% assign pct = include.done | times: 100 | divided_by: include.total %}
+{% endif %}
+<div class="progress-wrap">
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" style="width: {{ pct }}%;"></div>
+  </div>
+  <div class="progress-label">
+    <span>{{ include.label }}</span>
+    <span><strong>{{ pct }}%</strong> &nbsp;({{ include.done }}/{{ include.total }})</span>
+  </div>
+</div>

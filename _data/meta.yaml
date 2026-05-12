@@ -1,0 +1,12 @@
+project_name: FotoGrids
+launch_target: "2026-Q3"
+
+status_colours:
+  planned:     "#6B7290"
+  in_progress: "#FFC72A"
+  done:        "#27C28A"
+  blocked:     "#EE3B49"
+  live:        "#27C28A"
+  published:   "#27C28A"
+  released:    "#27C28A"
+  roadmap:     "#3B3BFF"

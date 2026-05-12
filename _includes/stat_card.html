@@ -1,0 +1,8 @@
+{% comment %}
+  Usage: {% include stat_card.html value="72%" label="Overall readiness" highlight=true %}
+  Renders a big-number stat card.
+{% endcomment %}
+<div class="stat-card{% if include.highlight %} highlight{% endif %}">
+  <div class="stat-value">{{ include.value }}</div>
+  <div class="stat-label">{{ include.label }}</div>
+</div>

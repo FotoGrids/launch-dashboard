@@ -1,0 +1,37 @@
+launch:
+  version: "1.0.0"
+  target_date: "2026-Q3"
+  scope_note: >
+    v1.0.0 covers both the free plugin and the Pro tiers simultaneously.
+    Any feature or task with roadmap: false is part of this launch.
+
+post_launch_roadmap:
+  - id: bulk_import
+    name: Bulk import from external galleries
+    tier: pro_plus
+    notes: "Frequently requested. Not a blocker for launch."
+
+  - id: video_galleries
+    name: Video gallery support
+    tier: pro_starter
+    notes: "Requires significant architecture change to the media pipeline."
+
+  - id: whitelabel
+    name: White-label mode for agencies
+    tier: agency
+    notes: "Full rebrand of plugin UI under client domains."
+
+  - id: client_accounts
+    name: Client account management
+    tier: agency
+    notes: "Sub-accounts with restricted access for agency clients."
+
+  - id: ai_tagging
+    name: AI-powered image auto-tagging
+    tier: pro_plus
+    notes: "Automatic alt text and keyword generation via vision model."
+
+  - id: slideshow_mode
+    name: Slideshow / presentation mode
+    tier: pro_starter
+    notes: "Keyboard and touch navigation, auto-advance."

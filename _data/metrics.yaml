@@ -1,0 +1,20 @@
+# All zeros until launch. Structure is ready so the dashboard is live on day one.
+# Update these after each weekly check-in.
+
+plugin:
+  free_installs: 0
+  active_installs: 0
+  wp_org_rating: null
+  wp_org_reviews: 0
+
+revenue:
+  mrr: 0
+  pro_starter_subscribers: 0
+  pro_plus_subscribers: 0
+  agency_subscribers: 0
+  addon_revenue: 0
+
+website:
+  monthly_visitors: 0
+  blog_organic_sessions: 0
+  email_subscribers: 0

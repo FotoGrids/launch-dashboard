@@ -1,0 +1,252 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# FotoGrids tasks.yaml
+# Non-feature work required for launch: submissions, integrations, legal, etc.
+#
+# section vocabulary:   product | website | marketing | admin
+# status vocabulary:    planned | in_progress | done | blocked
+# priority vocabulary:  high | medium | low
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Product — WordPress.org Compliance ────────────────────────────────────
+
+- id: wporg_readme
+  name: Write readme.txt (WordPress.org format)
+  section: product
+  category: WordPress.org Compliance
+  status: in_progress
+  blocked_by: ""
+  notes: "Short description + FAQ section drafted; changelog and screenshots pending"
+  priority: high
+
+- id: wporg_banner
+  name: Plugin banner image (1544×500)
+  section: product
+  category: WordPress.org Compliance
+  status: done
+  blocked_by: ""
+  notes: ""
+  priority: high
+
+- id: wporg_icon
+  name: Plugin icon (256×256 + 128×128)
+  section: product
+  category: WordPress.org Compliance
+  status: done
+  blocked_by: ""
+  notes: ""
+  priority: high
+
+- id: wporg_screenshots
+  name: Plugin screenshots (at least 3)
+  section: product
+  category: WordPress.org Compliance
+  status: in_progress
+  blocked_by: ""
+  notes: "Gallery editor and lightbox shots done; settings screenshot pending"
+  priority: high
+
+- id: wporg_code_review
+  name: Code review — no calls to external APIs without disclosure
+  section: product
+  category: WordPress.org Compliance
+  status: in_progress
+  blocked_by: ""
+  notes: "CDN integration needs disclosure in readme"
+  priority: high
+
+- id: wporg_submission
+  name: Submit plugin to WordPress.org review queue
+  section: product
+  category: WordPress.org Compliance
+  status: planned
+  blocked_by: wporg_readme
+  notes: "Requires readme.txt, banner, icon, and screenshots to be complete"
+  priority: high
+
+- id: wporg_review_approval
+  name: WordPress.org review approved
+  section: product
+  category: WordPress.org Compliance
+  status: planned
+  blocked_by: wporg_submission
+  notes: "Typical review turnaround: 1–4 weeks"
+  priority: high
+
+# ── Product — Infrastructure & Integrations ───────────────────────────────
+
+- id: stripe_integration
+  name: Stripe payment integration
+  section: product
+  category: Infrastructure
+  status: in_progress
+  blocked_by: ""
+  notes: "Webhooks for subscription events still pending"
+  priority: high
+
+- id: stripe_webhooks
+  name: Stripe webhooks (subscription events)
+  section: product
+  category: Infrastructure
+  status: planned
+  blocked_by: stripe_integration
+  notes: ""
+  priority: high
+
+- id: license_key_system
+  name: License key generation and validation
+  section: product
+  category: Infrastructure
+  status: in_progress
+  blocked_by: ""
+  notes: "Using EDD Software Licensing"
+  priority: high
+
+- id: update_server
+  name: Plugin update server (pro versions)
+  section: product
+  category: Infrastructure
+  status: in_progress
+  blocked_by: ""
+  notes: "Auto-update for pro tiers via EDD"
+  priority: high
+
+- id: staging_environment
+  name: Staging environment for QA
+  section: product
+  category: Infrastructure
+  status: done
+  blocked_by: ""
+  notes: ""
+  priority: medium
+
+- id: error_logging
+  name: Error logging and monitoring (Sentry or equivalent)
+  section: product
+  category: Infrastructure
+  status: planned
+  blocked_by: ""
+  notes: ""
+  priority: medium
+
+# ── Website ────────────────────────────────────────────────────────────────
+
+- id: pricing_finalised
+  name: Finalise tier pricing
+  section: website
+  category: Pricing
+  status: in_progress
+  blocked_by: ""
+  notes: "Awaiting competitive analysis"
+  priority: high
+
+- id: pricing_page
+  name: Pricing page live
+  section: website
+  category: Pages
+  status: in_progress
+  blocked_by: pricing_finalised
+  notes: ""
+  priority: high
+
+- id: affiliate_program
+  name: Affiliate program setup
+  section: website
+  category: Growth
+  status: planned
+  blocked_by: ""
+  notes: ""
+  priority: low
+
+# ── Marketing ─────────────────────────────────────────────────────────────
+
+- id: producthunt_prep
+  name: Product Hunt launch kit (tagline, images, first comment)
+  section: marketing
+  category: Launch
+  status: planned
+  blocked_by: ""
+  notes: "Schedule for launch week"
+  priority: high
+
+- id: launch_email
+  name: Launch announcement email to list
+  section: marketing
+  category: Email
+  status: planned
+  blocked_by: ""
+  notes: ""
+  priority: high
+
+- id: social_announcement
+  name: Social launch posts (X, LinkedIn)
+  section: marketing
+  category: Social
+  status: planned
+  blocked_by: ""
+  notes: ""
+  priority: medium
+
+# ── Admin ──────────────────────────────────────────────────────────────────
+
+- id: transactional_email
+  name: Transactional email templates (Postmark)
+  section: admin
+  category: Infrastructure
+  status: in_progress
+  blocked_by: ""
+  notes: "Welcome and purchase confirmation templates drafted; reset password pending"
+  priority: high
+
+- id: backup_system
+  name: Automated database backups
+  section: admin
+  category: Infrastructure
+  status: planned
+  blocked_by: ""
+  notes: ""
+  priority: medium
+
+- id: tos_publish
+  name: Terms of Service written and published
+  section: admin
+  category: Legal
+  status: planned
+  blocked_by: ""
+  notes: ""
+  priority: high
+
+- id: privacy_policy
+  name: Privacy Policy written and published
+  section: admin
+  category: Legal
+  status: planned
+  blocked_by: ""
+  notes: ""
+  priority: high
+
+- id: gdpr_compliance
+  name: GDPR compliance review
+  section: admin
+  category: Legal
+  status: planned
+  blocked_by: privacy_policy
+  notes: ""
+  priority: high
+
+- id: refund_policy
+  name: Refund Policy published
+  section: admin
+  category: Legal
+  status: planned
+  blocked_by: ""
+  notes: ""
+  priority: medium
+
+- id: cookie_banner
+  name: Cookie consent banner
+  section: admin
+  category: Legal
+  status: planned
+  blocked_by: privacy_policy
+  notes: ""
+  priority: medium

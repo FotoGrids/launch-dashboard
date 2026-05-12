@@ -1,0 +1,164 @@
+pages:
+  - id: home
+    name: Home
+    status: live
+    url: "/"
+    notes: ""
+
+  - id: pricing
+    name: Pricing
+    status: in_progress
+    url: "/pricing"
+    notes: "Waiting on final tier prices"
+
+  - id: features
+    name: Features
+    status: live
+    url: "/features"
+    notes: ""
+
+  - id: blog_index
+    name: Blog index
+    status: live
+    url: "/blog"
+    notes: ""
+
+  - id: docs_index
+    name: Documentation hub
+    status: in_progress
+    url: "/docs"
+    notes: "Index page structure drafted, individual doc pages in progress"
+
+  - id: about
+    name: About
+    status: planned
+    url: "/about"
+    notes: ""
+
+  - id: contact
+    name: Contact
+    status: planned
+    url: "/contact"
+    notes: ""
+
+  - id: changelog
+    name: Changelog
+    status: planned
+    url: "/changelog"
+    notes: ""
+
+blog:
+  target: 20
+  posts:
+    - id: gallery_seo_guide
+      title: "How to optimise gallery images for SEO"
+      status: published
+      url: "/blog/gallery-seo"
+
+    - id: watermarking_tips
+      title: "5 watermarking strategies for photographers"
+      status: drafted
+      url: ""
+
+    - id: woocommerce_gallery_guide
+      title: "The complete guide to WooCommerce product galleries"
+      status: drafted
+      url: ""
+
+    - id: page_speed_galleries
+      title: "How image galleries affect page speed (and what to do about it)"
+      status: drafted
+      url: ""
+
+    - id: wordpress_gallery_plugins
+      title: "Best WordPress gallery plugins compared"
+      status: planned
+      url: ""
+
+    - id: photographer_website_tips
+      title: "7 things every photographer website needs"
+      status: planned
+      url: ""
+
+    - id: lazy_loading_explainer
+      title: "Lazy loading explained for WordPress site owners"
+      status: planned
+      url: ""
+
+    - id: webp_guide
+      title: "Why WebP matters and how to serve it on WordPress"
+      status: planned
+      url: ""
+
+docs:
+  - feature_id: responsive_galleries
+    status: done
+    url: "/docs/responsive-galleries"
+
+  - feature_id: lightbox
+    status: done
+    url: "/docs/lightbox"
+
+  - feature_id: auto_compression
+    status: done
+    url: "/docs/image-compression"
+
+  - feature_id: webp_conversion
+    status: done
+    url: "/docs/webp-conversion"
+
+  - feature_id: lazy_loading
+    status: done
+    url: "/docs/lazy-loading"
+
+  - feature_id: watermarking
+    status: done
+    url: "/docs/watermarking"
+
+  - feature_id: right_click_protection
+    status: done
+    url: "/docs/right-click-protection"
+
+  - feature_id: seo_alt_tags
+    status: done
+    url: "/docs/alt-tags"
+
+  - feature_id: password_galleries
+    status: in_progress
+    url: ""
+
+  - feature_id: buy_now_button
+    status: done
+    url: "/docs/buy-now-button"
+
+  - feature_id: elementor_block
+    status: done
+    url: "/docs/elementor"
+
+  - feature_id: gutenberg_block
+    status: done
+    url: "/docs/gutenberg"
+
+  - feature_id: shortcodes
+    status: done
+    url: "/docs/shortcodes"
+
+  - feature_id: custom_css
+    status: done
+    url: "/docs/custom-css"
+
+  - feature_id: multisite_support
+    status: planned
+    url: ""
+
+  - feature_id: template_overrides
+    status: planned
+    url: ""
+
+  - feature_id: hotlink_protection
+    status: planned
+    url: ""
+
+  - feature_id: srcset_generation
+    status: planned
+    url: ""

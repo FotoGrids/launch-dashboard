@@ -1,0 +1,81 @@
+assets:
+  - id: plugin_banner
+    name: WordPress.org plugin banner (1544×500)
+    status: done
+    notes: ""
+
+  - id: plugin_icon
+    name: WordPress.org plugin icon (256×256)
+    status: done
+    notes: ""
+
+  - id: demo_video
+    name: Product demo video (homepage hero)
+    status: planned
+    notes: "Screen recording + voiceover — 90 seconds max"
+
+  - id: og_image
+    name: Open Graph / social share image
+    status: done
+    notes: ""
+
+  - id: product_hunt_gallery
+    name: Product Hunt gallery images (3–5 shots)
+    status: planned
+    notes: "Screenshots + animated GIFs showing key features"
+
+  - id: twitter_card
+    name: Twitter card image
+    status: done
+    notes: ""
+
+  - id: linkedin_banner
+    name: LinkedIn company page banner
+    status: in_progress
+    notes: ""
+
+  - id: email_header
+    name: Email header graphic (newsletter / drip)
+    status: planned
+    notes: ""
+
+channels:
+  - id: product_hunt
+    name: Product Hunt launch
+    status: planned
+    notes: "Schedule for launch week — needs hunter outreach first"
+
+  - id: email_list
+    name: Email list + welcome sequence
+    status: in_progress
+    notes: "Welcome email written; drip sequence (3 emails) pending"
+
+  - id: social_profiles
+    name: Social profiles claimed (X, LinkedIn)
+    status: done
+    notes: ""
+
+  - id: wordpress_subreddits
+    name: Reddit — r/Wordpress, r/webdev
+    status: planned
+    notes: "Announce in relevant threads on launch day"
+
+  - id: facebook_groups
+    name: WordPress Facebook groups
+    status: planned
+    notes: ""
+
+  - id: indie_hackers
+    name: Indie Hackers — launch post
+    status: planned
+    notes: ""
+
+  - id: twitter_launch
+    name: Launch thread on X/Twitter
+    status: planned
+    notes: ""
+
+  - id: early_access
+    name: Early access / beta user outreach
+    status: in_progress
+    notes: "10 beta users onboarded; follow-up interviews pending"

@@ -1,0 +1,5 @@
+{% comment %}
+  Usage: {% include status_badge.html status=item.status %}
+  Renders a coloured pill badge for the given status string.
+{% endcomment %}
+<span class="badge badge-{{ include.status | downcase | replace: ' ', '_' }}">{{ include.status | replace: '_', ' ' }}</span>
