@@ -10,7 +10,7 @@ title: Overview
 
 {% comment %} Feature progress {% endcomment %}
 {% assign launch_features   = site.data.features | where: "roadmap", false %}
-{% assign done_features     = launch_features | where_exp: "f", "f.dev_status.released == true" %}
+{% assign done_features     = launch_features | where: "dev_status.released", true %}
 
 {% comment %} Task progress {% endcomment %}
 {% assign all_tasks         = site.data.tasks %}

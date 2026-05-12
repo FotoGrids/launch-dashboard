@@ -8,10 +8,11 @@ title: Product
 
 {% comment %} ── Progress summary ──────────────────────────────────────────── {% endcomment %}
 {% assign launch_features = site.data.features | where: "roadmap", false %}
-{% assign done_features = launch_features | where_exp: "f", "f.dev_status.released == true" %}
-{% assign ip_backend  = launch_features | where_exp: "f", "f.dev_status.released != true and f.dev_status.backend == 'in_progress'" %}
-{% assign ip_frontend = launch_features | where_exp: "f", "f.dev_status.released != true and f.dev_status.frontend == 'in_progress'" %}
-{% assign ip_combined = ip_backend | concat: ip_frontend | uniq %}
+{% assign done_features   = launch_features | where: "dev_status.released", true %}
+{% assign not_done        = launch_features | where: "dev_status.released", false %}
+{% assign ip_backend      = not_done | where: "dev_status.backend", "in_progress" %}
+{% assign ip_frontend     = not_done | where: "dev_status.frontend", "in_progress" %}
+{% assign ip_combined     = ip_backend | concat: ip_frontend | uniq %}
 
 <div class="stat-grid" style="margin-bottom:24px;">
   {% assign done_pct = done_features.size | times: 100 | divided_by: launch_features.size %}
@@ -99,8 +100,38 @@ title: Product
 
 ## Section B — Admin & Integration Tasks
 
-{% assign product_tasks = site.data.tasks | where: "section", "product" | where_exp: "t", "t.category != 'WordPress.org Compliance'" %}
-{% include task_table.html tasks=product_tasks %}
+{% assign all_product_tasks = site.data.tasks | where: "section", "product" %}
+{% assign wporg_cat = "WordPress.org Compliance" %}
+<table class="dash-table">
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Category</th>
+      <th>Status</th>
+      <th>Priority</th>
+      <th>Blocked by</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for task in all_product_tasks %}
+    {% unless task.category == wporg_cat %}
+    <tr>
+      <td class="col-name">{{ task.name }}</td>
+      <td>{{ task.category }}</td>
+      <td>{% include status_badge.html status=task.status %}</td>
+      <td>
+        {% if task.priority == 'high' %}<span class="col-priority-high">High</span>
+        {% elsif task.priority == 'medium' %}<span class="col-priority-medium">Medium</span>
+        {% else %}<span class="col-priority-low">Low</span>{% endif %}
+      </td>
+      <td class="col-notes">{% if task.blocked_by and task.blocked_by != "" %}{{ task.blocked_by }}{% else %}—{% endif %}</td>
+      <td class="col-notes">{{ task.notes | default: "—" }}</td>
+    </tr>
+    {% endunless %}
+    {% endfor %}
+  </tbody>
+</table>
 
 ---
 
