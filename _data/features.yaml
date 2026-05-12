@@ -168,7 +168,7 @@
 
 - id: hover_effects_basic
   name: Hover Effects — Basic
-  category: Display & Layout
+  category: Styling & Customization
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
@@ -183,7 +183,7 @@
 
 - id: hover_effects_advanced
   name: Hover Effects — Advanced
-  category: Display & Layout
+  category: Styling & Customization
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
   status: beta
@@ -212,7 +212,7 @@
   has_doc: false
 
 - id: captions_custom_html
-  name: Custom HTML Captions
+  name: Captions — Custom HTML
   category: Display & Layout
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
@@ -348,11 +348,11 @@
   wp_org_visible: false
   has_doc: false
 
-# ── Protection & Privacy ───────────────────────────────────────────────────
+# ── Image Protection & Security ───────────────────────────────────────────────────
 
 - id: watermarking
   name: Watermarking
-  category: Protection & Privacy
+  category: Image Protection & Security
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
@@ -367,7 +367,7 @@
 
 - id: password_galleries
   name: Password-protected galleries
-  category: Protection & Privacy
+  category: Image Protection & Security
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
   status: beta
@@ -382,7 +382,7 @@
 
 - id: right_click_protection
   name: Right-click & drag protection
-  category: Protection & Privacy
+  category: Image Protection & Security
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
@@ -397,7 +397,7 @@
 
 - id: hotlink_protection
   name: Hotlink protection
-  category: Protection & Privacy
+  category: Image Protection & Security
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
   status: beta
@@ -410,11 +410,11 @@
   wp_org_visible: false
   has_doc: false
 
-# ── SEO & Metadata ─────────────────────────────────────────────────────────
+# ── SEO & Structured Data ─────────────────────────────────────────────────────────
 
 - id: seo_alt_tags
   name: Automatic alt tags
-  category: SEO & Metadata
+  category: SEO & Structured Data
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
@@ -429,7 +429,7 @@
 
 - id: schema_markup
   name: Image schema markup (JSON-LD)
-  category: SEO & Metadata
+  category: SEO & Structured Data
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
   status: beta
@@ -444,7 +444,7 @@
 
 - id: og_images
   name: Open Graph image tagging
-  category: SEO & Metadata
+  category: SEO & Structured Data
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
@@ -459,7 +459,7 @@
 
 - id: xml_sitemap
   name: Gallery XML sitemap integration
-  category: SEO & Metadata
+  category: SEO & Structured Data
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
   status: beta
@@ -472,11 +472,11 @@
   wp_org_visible: false
   has_doc: false
 
-# ── E-Commerce ─────────────────────────────────────────────────────────────
+# ── Monetization & E-commerce ─────────────────────────────────────────────────────────────
 
 - id: buy_now_button
   name: Buy Now button on images
-  category: E-Commerce
+  category: Monetization & E-commerce
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
   status: beta
@@ -491,7 +491,7 @@
 
 - id: woocommerce_gallery
   name: WooCommerce product gallery replacement
-  category: E-Commerce
+  category: Monetization & E-commerce
   tier: pro_plus
   available_on: [pro_plus, agency]
   status: beta
@@ -506,7 +506,7 @@
 
 - id: digital_downloads
   name: Digital download galleries (sell images)
-  category: E-Commerce
+  category: Monetization & E-commerce
   tier: addon
   available_on: [addon]
   status: beta
@@ -521,8 +521,8 @@
 
 # ── Integrations ───────────────────────────────────────────────────────────
 
-- id: elementor_block
-  name: Elementor widget
+- id: gutenberg_block
+  name: Gutenberg block
   category: Integrations
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -536,8 +536,8 @@
   wp_org_visible: true
   has_doc: false
 
-- id: gutenberg_block
-  name: Gutenberg block
+- id: elementor_block
+  name: Elementor widget
   category: Integrations
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -596,11 +596,11 @@
   wp_org_visible: false
   has_doc: false
 
-# ── Developer Tools ────────────────────────────────────────────────────────
+# ── Developers ────────────────────────────────────────────────────────
 
 - id: rest_api
   name: REST API endpoints
-  category: Developer Tools
+  category: Developers
   tier: pro_plus
   available_on: [pro_plus, agency]
   status: beta
@@ -615,7 +615,7 @@
 
 - id: shortcodes
   name: Shortcodes
-  category: Developer Tools
+  category: Developers
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
@@ -630,7 +630,7 @@
 
 - id: template_overrides
   name: Template overrides (theme files)
-  category: Developer Tools
+  category: Developers
   tier: pro_plus
   available_on: [pro_plus, agency]
   status: beta
@@ -643,11 +643,11 @@
   wp_org_visible: false
   has_doc: false
 
-# ── Analytics & Reporting ──────────────────────────────────────────────────
+# ── Analytics ──────────────────────────────────────────────────
 
 - id: gallery_analytics
   name: Gallery view analytics
-  category: Analytics & Reporting
+  category: Analytics
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
   status: beta
