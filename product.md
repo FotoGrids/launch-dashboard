@@ -45,17 +45,18 @@ title: Product
 </div>
 
 {% comment %} ── Feature table (filtered by JS) ─────────────────────────────── {% endcomment %}
+<div class="table-scroll">
 <table class="dash-table" id="feature-table">
   <thead>
     <tr>
-      <th>Feature</th>
+      <th style="text-align:left;">Feature</th>
       <th>Category</th>
       <th>Tier</th>
       <th>Backend</th>
       <th>Frontend</th>
       <th>Released</th>
       <th>Doc</th>
-      <th>Notes</th>
+      <th style="text-align:left;">Notes</th>
     </tr>
   </thead>
   <tbody>
@@ -65,11 +66,16 @@ title: Product
       <td>{{ f.category }}</td>
       <td>
         {% case f.tier %}
-          {% when 'free' %}<span class="badge badge-tier-free">Free</span>
-          {% when 'pro_starter' %}<span class="badge badge-tier-starter">PRO Starter</span>
-          {% when 'pro_plus' %}<span class="badge badge-tier-plus">PRO Plus</span>
-          {% when 'agency' %}<span class="badge badge-tier-agency">PRO Agency</span>
-          {% when 'addon' %}<span class="badge badge-tier-addon">Add-on</span>
+          {% when 'free' %}
+            <span class="tier-pill tier-free">FREE</span>
+          {% when 'pro_starter' %}
+            <span class="tier-pill tier-starter"><span class="pro-tag">PRO</span><span class="tier-name">Starter</span></span>
+          {% when 'pro_plus' %}
+            <span class="tier-pill tier-plus"><span class="pro-tag">PRO</span><span class="tier-name">Plus</span></span>
+          {% when 'agency' %}
+            <span class="tier-pill tier-agency"><span class="pro-tag">PRO</span><span class="tier-name">Agency</span></span>
+          {% when 'addon' %}
+            <span class="tier-pill tier-addon">Add-on</span>
         {% endcase %}
       </td>
       <td>{% include status_badge.html status=f.dev_status.backend %}</td>
@@ -95,6 +101,7 @@ title: Product
     {% endfor %}
   </tbody>
 </table>
+</div>
 
 ---
 
@@ -102,15 +109,16 @@ title: Product
 
 {% assign all_product_tasks = site.data.tasks | where: "section", "product" %}
 {% assign wporg_cat = "WordPress.org Compliance" %}
+<div class="table-scroll">
 <table class="dash-table">
   <thead>
     <tr>
-      <th>Task</th>
+      <th style="text-align:left;">Task</th>
       <th>Category</th>
       <th>Status</th>
       <th>Priority</th>
       <th>Blocked by</th>
-      <th>Notes</th>
+      <th style="text-align:left;">Notes</th>
     </tr>
   </thead>
   <tbody>
@@ -125,13 +133,14 @@ title: Product
         {% elsif task.priority == 'medium' %}<span class="col-priority-medium">Medium</span>
         {% else %}<span class="col-priority-low">Low</span>{% endif %}
       </td>
-      <td class="col-notes">{% if task.blocked_by and task.blocked_by != "" %}{{ task.blocked_by }}{% else %}—{% endif %}</td>
+      <td>{% if task.blocked_by and task.blocked_by != "" %}{{ task.blocked_by }}{% else %}—{% endif %}</td>
       <td class="col-notes">{{ task.notes | default: "—" }}</td>
     </tr>
     {% endunless %}
     {% endfor %}
   </tbody>
 </table>
+</div>
 
 ---
 

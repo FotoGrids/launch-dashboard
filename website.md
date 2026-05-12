@@ -6,15 +6,14 @@ title: Website
 <h1>Website</h1>
 <p class="page-subtitle">Pages, blog content, and documentation coverage.</p>
 
-{% comment %} ── Pages ─────────────────────────────────────────────────────── {% endcomment %}
-{% assign pages = site.data.website.pages %}
-{% assign pages_live = pages | where: "status", "live" %}
-{% assign pages_wip  = pages | where: "status", "in_progress" %}
+{% assign pages        = site.data.website.pages %}
+{% assign pages_live   = pages | where: "status", "live" %}
+{% assign pages_wip    = pages | where: "status", "in_progress" %}
+{% assign pages_planned = pages | where: "status", "planned" %}
 
-<div class="stat-grid" style="margin-bottom:24px;">
+<div class="stat-grid">
   {% include stat_card.html value=pages_live.size label="Pages live" highlight=true %}
   {% include stat_card.html value=pages_wip.size label="In progress" %}
-  {% assign pages_planned = pages | where: "status", "planned" %}
   {% include stat_card.html value=pages_planned.size label="Planned" %}
 </div>
 
@@ -22,13 +21,14 @@ title: Website
 
 ## Pages
 
+<div class="table-scroll">
 <table class="dash-table">
   <thead>
     <tr>
-      <th>Page</th>
+      <th style="text-align:left;">Page</th>
       <th>Status</th>
-      <th>URL</th>
-      <th>Notes</th>
+      <th style="text-align:left;">URL</th>
+      <th style="text-align:left;">Notes</th>
     </tr>
   </thead>
   <tbody>
@@ -36,7 +36,7 @@ title: Website
     <tr>
       <td class="col-name">{{ page.name }}</td>
       <td>{% include status_badge.html status=page.status %}</td>
-      <td>
+      <td style="text-align:left;">
         {% if page.url and page.url != "" and page.status == "live" %}
           <a href="{{ page.url }}" style="font-size:12px; color:var(--text-muted);">{{ page.url }}</a>
         {% elsif page.url and page.url != "" %}
@@ -50,19 +50,19 @@ title: Website
     {% endfor %}
   </tbody>
 </table>
+</div>
 
 ---
 
 ## Blog
 
-{% assign posts = site.data.website.blog.posts %}
-{% assign blog_target    = site.data.website.blog.target %}
-{% assign published      = posts | where: "status", "published" %}
-{% assign drafted        = posts | where: "status", "drafted" %}
-{% assign reviewed       = posts | where: "status", "reviewed" %}
-{% assign planned_posts  = posts | where: "status", "planned" %}
+{% assign posts        = site.data.website.blog.posts %}
+{% assign blog_target  = site.data.website.blog.target %}
+{% assign published    = posts | where: "status", "published" %}
+{% assign drafted      = posts | where: "status", "drafted" %}
+{% assign planned_posts = posts | where: "status", "planned" %}
 
-<div class="stat-grid" style="margin-bottom:20px;">
+<div class="stat-grid">
   {% include stat_card.html value=published.size label="Posts published" highlight=true %}
   {% include stat_card.html value=drafted.size label="Drafted" %}
   {% include stat_card.html value=planned_posts.size label="Planned" %}
@@ -71,12 +71,13 @@ title: Website
 
 {% include progress_bar.html done=published.size total=blog_target label="Blog posts published toward launch target" %}
 
-<table class="dash-table" style="margin-top:16px;">
+<div class="table-scroll">
+<table class="dash-table">
   <thead>
     <tr>
-      <th>Post title</th>
+      <th style="text-align:left;">Post title</th>
       <th>Status</th>
-      <th>URL</th>
+      <th style="text-align:left;">URL</th>
     </tr>
   </thead>
   <tbody>
@@ -84,7 +85,7 @@ title: Website
     <tr>
       <td class="col-name">{{ post.title }}</td>
       <td>{% include status_badge.html status=post.status %}</td>
-      <td>
+      <td style="text-align:left;">
         {% if post.url and post.url != "" %}
           <a href="{{ post.url }}" style="font-size:12px; color:var(--text-muted);">{{ post.url }}</a>
         {% else %}
@@ -95,17 +96,18 @@ title: Website
     {% endfor %}
   </tbody>
 </table>
+</div>
 
 ---
 
 ## Documentation Coverage
 
-{% assign docs       = site.data.website.docs %}
-{% assign docs_done  = docs | where: "status", "done" %}
-{% assign docs_wip   = docs | where: "status", "in_progress" %}
-{% assign docs_plan  = docs | where: "status", "planned" %}
+{% assign docs      = site.data.website.docs %}
+{% assign docs_done = docs | where: "status", "done" %}
+{% assign docs_wip  = docs | where: "status", "in_progress" %}
+{% assign docs_plan = docs | where: "status", "planned" %}
 
-<div class="stat-grid" style="margin-bottom:20px;">
+<div class="stat-grid">
   {% include stat_card.html value=docs_done.size label="Doc pages done" highlight=true %}
   {% include stat_card.html value=docs_wip.size label="In progress" %}
   {% include stat_card.html value=docs_plan.size label="Planned" %}
@@ -114,12 +116,13 @@ title: Website
 
 {% include progress_bar.html done=docs_done.size total=docs.size label="Documentation complete" %}
 
-<table class="dash-table" style="margin-top:16px;">
+<div class="table-scroll">
+<table class="dash-table">
   <thead>
     <tr>
-      <th>Feature</th>
+      <th style="text-align:left;">Feature</th>
       <th>Doc status</th>
-      <th>URL</th>
+      <th style="text-align:left;">URL</th>
     </tr>
   </thead>
   <tbody>
@@ -130,7 +133,7 @@ title: Website
         {% if feature %}{{ feature.name }}{% else %}{{ doc.feature_id }}{% endif %}
       </td>
       <td>{% include status_badge.html status=doc.status %}</td>
-      <td>
+      <td style="text-align:left;">
         {% if doc.url and doc.url != "" %}
           <a href="{{ doc.url }}" style="font-size:12px; color:var(--text-muted);">{{ doc.url }}</a>
         {% else %}
@@ -141,3 +144,4 @@ title: Website
     {% endfor %}
   </tbody>
 </table>
+</div>

@@ -4,10 +4,11 @@
 
 const COLOURS = {
   planned:     '#E5E7F0',
-  in_progress: '#FFC72A',
-  done:        '#27C28A',
-  blocked:     '#EE3B49',
-  indigo:      '#3B3BFF',
+  in_progress: '#FFB914',
+  done:        '#46B450',
+  blocked:     '#F01E32',
+  indigo:      '#3C46F0',
+  navy:        '#1A1A2E',
 };
 
 // Shared font defaults
@@ -53,12 +54,12 @@ function renderReadinessChart(canvasId, sections) {
   if (!ctx) return;
 
   const palette = [
-    '#3B3BFF', // indigo  — free features
-    '#6B6BFF', // indigo light — pro features
-    '#27C28A', // green   — product tasks
-    '#FFC72A', // yellow  — website
+    '#3C46F0', // indigo  — free features
+    '#7B83F5', // indigo light — pro features
+    '#46B450', // green   — product tasks
+    '#FFB914', // yellow  — website
     '#FF8C42', // orange  — marketing
-    '#EE3B49', // red     — admin
+    '#F01E32', // red     — admin
   ];
 
   new Chart(ctx, {

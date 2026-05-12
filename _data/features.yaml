@@ -16,8 +16,8 @@
 
 # ── Display & Layout ───────────────────────────────────────────────────────
 
-- id: responsive_galleries
-  name: Responsive gallery layouts
+- id: layout_grid
+  name: Layout — Grid
   category: Display & Layout
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -27,9 +27,129 @@
     frontend: done
     released: true
   roadmap: false
-  notes: "Grid, masonry, justified, mosaic"
+  notes: ""
   wp_org_visible: true
-  has_doc: true
+  has_doc: false
+
+- id: layout_masonry
+  name: Layout — Masonry
+  category: Display & Layout
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: done
+    frontend: in_progress
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
+- id: layout_justified
+  name: Layout — Justified
+  category: Display & Layout
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: done
+    frontend: done
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
+- id: layout_slider
+  name: Layout — Slider
+  category: Display & Layout
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: done
+    frontend: in_progress
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
+- id: layout_image_viewer
+  name: Layout — Image Viewer
+  category: Display & Layout
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: done
+    frontend: done
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
+- id: layout_single_item
+  name: Layout — Single Item
+  category: Display & Layout
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: done
+    frontend: done
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
+- id: layout_carousel
+  name: Layout — Carousel
+  category: Display & Layout
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: done
+    frontend: in_progress
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: layout_video_playlist
+  name: Layout — Video Playlist
+  category: Display & Layout
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: planned
+    frontend: planned
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: layout_product_gallery
+  name: Layout — Product Gallery
+  category: Display & Layout
+  tier: pro_plus
+  available_on: [pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: planned
+    frontend: planned
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
 
 - id: lightbox
   name: Built-in lightbox viewer

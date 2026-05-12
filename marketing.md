@@ -11,7 +11,7 @@ title: Marketing
 {% assign a_done   = assets   | where: "status", "done" %}
 {% assign c_done   = channels | where: "status", "done" %}
 
-<div class="stat-grid" style="margin-bottom:24px;">
+<div class="stat-grid">
   {% include stat_card.html value=a_done.size label="Assets ready" highlight=true %}
   {% include stat_card.html value=assets.size label="Total assets" %}
   {% include stat_card.html value=c_done.size label="Channels live" highlight=false %}
@@ -19,20 +19,19 @@ title: Marketing
 </div>
 
 {% include progress_bar.html done=a_done.size total=assets.size label="Assets complete" %}
-<div style="margin-top:10px;">
-  {% include progress_bar.html done=c_done.size total=channels.size label="Channels ready" %}
-</div>
+{% include progress_bar.html done=c_done.size total=channels.size label="Channels ready" %}
 
 ---
 
 ## Assets
 
+<div class="table-scroll">
 <table class="dash-table">
   <thead>
     <tr>
-      <th>Asset</th>
+      <th style="text-align:left;">Asset</th>
       <th>Status</th>
-      <th>Notes</th>
+      <th style="text-align:left;">Notes</th>
     </tr>
   </thead>
   <tbody>
@@ -45,6 +44,7 @@ title: Marketing
     {% endfor %}
   </tbody>
 </table>
+</div>
 
 ---
 

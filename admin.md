@@ -9,7 +9,7 @@ title: Admin & Legal
 {% assign admin_items = site.data.admin %}
 {% assign admin_done  = admin_items | where: "status", "done" %}
 
-<div class="stat-grid" style="margin-bottom:24px;">
+<div class="stat-grid">
   {% include stat_card.html value=admin_done.size label="Items complete" highlight=true %}
   {% assign admin_wip = admin_items | where: "status", "in_progress" %}
   {% include stat_card.html value=admin_wip.size label="In progress" %}
