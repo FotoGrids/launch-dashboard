@@ -156,48 +156,18 @@
   category: Display & Layout
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
-    frontend: done
-    released: true
+    frontend: na
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: true
-
-- id: hover_effects
-  name: Hover effects & captions
-  category: Display & Layout
-  tier: pro_starter
-  available_on: [pro_starter, pro_plus, agency]
-  status: shipped
-  dev_status:
-    backend: done
-    frontend: in_progress
-    released: false
-  roadmap: false
-  notes: "Caption overlay animations in final QA"
-  wp_org_visible: false
   has_doc: false
 
-- id: custom_css
-  name: Custom CSS per gallery
-  category: Display & Layout
-  tier: pro_plus
-  available_on: [pro_plus, agency]
-  status: shipped
-  dev_status:
-    backend: done
-    frontend: done
-    released: true
-  roadmap: false
-  notes: ""
-  wp_org_visible: false
-  has_doc: true
-
-- id: fullscreen_mode
-  name: Full-screen gallery mode
+- id: hover_effects_basic
+  name: Hover Effects — Basic
   category: Display & Layout
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -207,7 +177,97 @@
     frontend: in_progress
     released: false
   roadmap: false
-  notes: "iOS Safari scroll issue under investigation"
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
+- id: hover_effects_advanced
+  name: Hover Effects — Advanced
+  category: Display & Layout
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: done
+    frontend: in_progress
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: captions
+  name: Captions
+  category: Display & Layout
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: shipped
+  dev_status:
+    backend: done
+    frontend: done
+    released: true
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
+- id: captions_custom_html
+  name: Custom HTML Captions
+  category: Display & Layout
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: done
+    frontend: na
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: custom_css
+  name: Custom CSS per Collection
+  category: Developers
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: shipped
+  dev_status:
+    backend: done
+    frontend: done
+    released: true
+  roadmap: false
+  notes: "Missing CSS sanitization"
+  wp_org_visible: true
+  has_doc: false
+
+- id: custom_js
+  name: Custom JS per Collection
+  category: Developers
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: shipped
+  dev_status:
+    backend: done
+    frontend: done
+    released: true
+  roadmap: false
+  notes: "Missing JS sanitization"
+  wp_org_visible: true
+  has_doc: false
+
+- id: fullscreen_mode
+  name: Full-screen gallery mode
+  category: Display & Layout
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: done
+    frontend: na
+    released: false
+  roadmap: false
+  notes: ""
   wp_org_visible: true
   has_doc: false
 
@@ -218,56 +278,56 @@
   category: Image Optimisation
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
-    frontend: done
-    released: true
+    frontend: na
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: true
+  has_doc: false
 
 - id: webp_conversion
   name: WebP conversion on upload
   category: Image Optimisation
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
-    frontend: done
-    released: true
+    frontend: na
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: true
+  has_doc: false
 
 - id: lazy_loading
   name: Native lazy loading
   category: Image Optimisation
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
-    frontend: done
-    released: true
+    frontend: na
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: true
+  has_doc: false
 
 - id: srcset_generation
   name: Automatic srcset generation
   category: Image Optimisation
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
-    frontend: done
-    released: true
+    frontend: na
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: false
@@ -280,11 +340,11 @@
   available_on: [pro_plus, agency]
   status: beta
   dev_status:
-    backend: in_progress
+    backend: done
     frontend: na
     released: false
   roadmap: false
-  notes: "BunnyCDN integration, webhooks pending"
+  notes: ""
   wp_org_visible: false
   has_doc: false
 
@@ -295,56 +355,56 @@
   category: Protection & Privacy
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
-    frontend: done
-    released: true
+    frontend: na
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: true
+  has_doc: false
 
 - id: password_galleries
   name: Password-protected galleries
   category: Protection & Privacy
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
-    frontend: done
-    released: true
+    frontend: na
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: in_progress
+  has_doc: false
 
 - id: right_click_protection
   name: Right-click & drag protection
   category: Protection & Privacy
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
-    frontend: done
-    released: true
+    frontend: na
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: true
+  has_doc: false
 
 - id: hotlink_protection
   name: Hotlink protection
   category: Protection & Privacy
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
     frontend: na
-    released: true
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: false
@@ -357,26 +417,26 @@
   category: SEO & Metadata
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
-    frontend: done
-    released: true
+    frontend: na
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: true
+  has_doc: false
 
 - id: schema_markup
   name: Image schema markup (JSON-LD)
   category: SEO & Metadata
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
     frontend: na
-    released: true
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: false
@@ -387,11 +447,11 @@
   category: SEO & Metadata
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
     frontend: na
-    released: true
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
@@ -404,11 +464,11 @@
   available_on: [pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: in_progress
+    backend: done
     frontend: na
     released: false
   roadmap: false
-  notes: "Yoast + Rank Math hooks in progress"
+  notes: ""
   wp_org_visible: false
   has_doc: false
 
@@ -419,15 +479,15 @@
   category: E-Commerce
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
-    frontend: done
-    released: true
+    frontend: na
+    released: false
   roadmap: false
-  notes: "WooCommerce product link"
+  notes: ""
   wp_org_visible: false
-  has_doc: true
+  has_doc: false
 
 - id: woocommerce_gallery
   name: WooCommerce product gallery replacement
@@ -436,11 +496,11 @@
   available_on: [pro_plus, agency]
   status: beta
   dev_status:
-    backend: in_progress
-    frontend: in_progress
+    backend: done
+    frontend: na
     released: false
   roadmap: false
-  notes: "Variable product thumbnail switching under QA"
+  notes: ""
   wp_org_visible: false
   has_doc: false
 
@@ -451,11 +511,11 @@
   available_on: [addon]
   status: beta
   dev_status:
-    backend: in_progress
-    frontend: planned
+    backend: done
+    frontend: na
     released: false
   roadmap: false
-  notes: "Stripe integration still in progress"
+  notes: ""
   wp_org_visible: false
   has_doc: false
 
@@ -466,41 +526,41 @@
   category: Integrations
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: na
     frontend: done
-    released: true
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: true
+  has_doc: false
 
 - id: gutenberg_block
   name: Gutenberg block
   category: Integrations
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: na
     frontend: done
-    released: true
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: true
+  has_doc: false
 
 - id: divi_module
   name: Divi module
   category: Integrations
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: na
     frontend: done
-    released: true
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
@@ -514,10 +574,10 @@
   status: beta
   dev_status:
     backend: na
-    frontend: in_progress
+    frontend: done
     released: false
   roadmap: false
-  notes: "Template rendering issue in Bricks 1.9"
+  notes: ""
   wp_org_visible: false
   has_doc: false
 
@@ -528,11 +588,11 @@
   available_on: [pro_plus, agency]
   status: beta
   dev_status:
-    backend: in_progress
-    frontend: in_progress
+    backend: done
+    frontend: na
     released: false
   roadmap: false
-  notes: "OAuth flow complete, album sync in QA"
+  notes: ""
   wp_org_visible: false
   has_doc: false
 
@@ -545,11 +605,11 @@
   available_on: [pro_plus, agency]
   status: beta
   dev_status:
-    backend: in_progress
+    backend: done
     frontend: na
     released: false
   roadmap: false
-  notes: "Endpoint auth and rate limiting in review"
+  notes: ""
   wp_org_visible: false
   has_doc: false
 
@@ -558,26 +618,26 @@
   category: Developer Tools
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
     frontend: na
-    released: true
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: true
+  has_doc: false
 
 - id: template_overrides
   name: Template overrides (theme files)
   category: Developer Tools
   tier: pro_plus
   available_on: [pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
     frontend: na
-    released: true
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: false
@@ -592,11 +652,11 @@
   available_on: [pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: in_progress
-    frontend: planned
+    backend: done
+    frontend: na
     released: false
   roadmap: false
-  notes: "Event tracking built; dashboard UI planned"
+  notes: ""
   wp_org_visible: false
   has_doc: false
 
@@ -622,11 +682,11 @@
   category: Admin & Settings
   tier: pro_plus
   available_on: [pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: done
     frontend: na
-    released: true
+    released: false
   roadmap: false
   notes: ""
   wp_org_visible: false

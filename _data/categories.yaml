@@ -2,12 +2,13 @@
 # Every entry in features.yaml must use one of these exact strings.
 
 - Display & Layout
-- Image Optimisation
-- Protection & Privacy
-- SEO & Metadata
-- E-Commerce
+- Interactions
+- Styling & Customization
+- Media & Performance
+- SEO & Structured Data
+- Image Protection & Security
+- Analytics
+- Monetization & E-commerce
 - Integrations
-- Developer Tools
-- Analytics & Reporting
-- Accessibility
-- Admin & Settings
+- Workflow & Maintenance
+- Developers

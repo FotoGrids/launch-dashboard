@@ -426,6 +426,20 @@ h3 {
 
 .dash-table tr:last-child td { border-bottom: none; }
 .dash-table tr:hover td { background: var(--bg); }
+
+/* Category header rows inside feature table */
+.table-category-row td {
+  background: var(--indigo-tint);
+  color: var(--indigo);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  padding: 7px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.table-category-row:hover td { background: var(--indigo-tint); }
 .dash-table .col-name  { font-weight: 500; color: var(--navy); text-align: left; }
 .dash-table .col-notes { color: var(--text-muted); font-size: 12px; text-align: left; }
 .dash-table .col-priority-high   { color: var(--red);        font-weight: 600; font-size: 11px; }

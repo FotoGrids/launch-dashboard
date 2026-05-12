@@ -49,9 +49,9 @@ title: Product
 <table class="dash-table" id="feature-table">
   <thead>
     <tr>
+      <th style="text-align:left;">Tier</th>
       <th style="text-align:left;">Feature</th>
       <th>Category</th>
-      <th>Tier</th>
       <th>Backend</th>
       <th>Frontend</th>
       <th>Released</th>
@@ -60,44 +60,56 @@ title: Product
     </tr>
   </thead>
   <tbody>
-    {% for f in site.data.features %}
-    <tr data-tier="{{ f.tier }}" data-roadmap="{{ f.roadmap }}">
-      <td class="col-name">{{ f.name }}</td>
-      <td>{{ f.category }}</td>
-      <td>
-        {% case f.tier %}
-          {% when 'free' %}
-            <span class="tier-pill tier-free">FREE</span>
-          {% when 'pro_starter' %}
-            <span class="tier-pill tier-starter"><span class="pro-tag">PRO</span><span class="tier-name">Starter</span></span>
-          {% when 'pro_plus' %}
-            <span class="tier-pill tier-plus"><span class="pro-tag">PRO</span><span class="tier-name">Plus</span></span>
-          {% when 'agency' %}
-            <span class="tier-pill tier-agency"><span class="pro-tag">PRO</span><span class="tier-name">Agency</span></span>
-          {% when 'addon' %}
-            <span class="tier-pill tier-addon">Add-on</span>
-        {% endcase %}
-      </td>
-      <td>{% include status_badge.html status=f.dev_status.backend %}</td>
-      <td>{% include status_badge.html status=f.dev_status.frontend %}</td>
-      <td>
-        {% if f.dev_status.released %}
-          <span class="badge badge-done">Yes</span>
-        {% else %}
-          <span class="badge badge-planned">No</span>
-        {% endif %}
-      </td>
-      <td>
-        {% if f.has_doc == true %}
-          <span class="badge badge-done">Yes</span>
-        {% elsif f.has_doc == 'in_progress' %}
-          <span class="badge badge-in_progress">WIP</span>
-        {% else %}
-          <span class="badge badge-planned">No</span>
-        {% endif %}
-      </td>
-      <td class="col-notes">{{ f.notes | default: "—" }}</td>
-    </tr>
+    {% for cat in site.data.categories %}
+      {% assign cat_features = site.data.features | where: "category", cat %}
+      {% if cat_features.size > 0 %}
+        {% comment %} Collect all tiers present in this category for filter targeting {% endcomment %}
+        {% assign cat_tiers = cat_features | map: "tier" | uniq %}
+        {% assign cat_has_roadmap = false %}
+        {% for f in cat_features %}{% if f.roadmap %}{% assign cat_has_roadmap = true %}{% endif %}{% endfor %}
+        <tr class="table-category-row" data-category="{{ cat }}">
+          <td colspan="8">{{ cat }}</td>
+        </tr>
+        {% for f in cat_features %}
+        <tr data-tier="{{ f.tier }}" data-roadmap="{{ f.roadmap }}">
+          <td style="text-align:left;">
+            {% case f.tier %}
+              {% when 'free' %}
+                <span class="tier-pill tier-free">FREE</span>
+              {% when 'pro_starter' %}
+                <span class="tier-pill tier-starter"><span class="pro-tag">PRO</span><span class="tier-name">Starter</span></span>
+              {% when 'pro_plus' %}
+                <span class="tier-pill tier-plus"><span class="pro-tag">PRO</span><span class="tier-name">Plus</span></span>
+              {% when 'agency' %}
+                <span class="tier-pill tier-agency"><span class="pro-tag">PRO</span><span class="tier-name">Agency</span></span>
+              {% when 'addon' %}
+                <span class="tier-pill tier-addon">Add-on</span>
+            {% endcase %}
+          </td>
+          <td class="col-name">{{ f.name }}</td>
+          <td style="white-space:nowrap;">{{ f.category }}</td>
+          <td>{% include status_badge.html status=f.dev_status.backend %}</td>
+          <td>{% include status_badge.html status=f.dev_status.frontend %}</td>
+          <td>
+            {% if f.dev_status.released %}
+              <span class="badge badge-done">Yes</span>
+            {% else %}
+              <span class="badge badge-planned">No</span>
+            {% endif %}
+          </td>
+          <td>
+            {% if f.has_doc == true %}
+              <span class="badge badge-done">Yes</span>
+            {% elsif f.has_doc == 'in_progress' %}
+              <span class="badge badge-in_progress">WIP</span>
+            {% else %}
+              <span class="badge badge-planned">No</span>
+            {% endif %}
+          </td>
+          <td class="col-notes">{{ f.notes | default: "—" }}</td>
+        </tr>
+        {% endfor %}
+      {% endif %}
     {% endfor %}
   </tbody>
 </table>
@@ -172,6 +184,7 @@ function filterTier(tier, btn) {
 
   const rows = document.querySelectorAll('#feature-table tbody tr');
   rows.forEach(row => {
+    if (row.classList.contains('table-category-row')) return; // handle after feature rows
     const rowTier    = row.dataset.tier;
     const rowRoadmap = row.dataset.roadmap === 'true';
 
@@ -182,6 +195,17 @@ function filterTier(tier, btn) {
     } else {
       row.style.display = (!rowRoadmap && rowTier === tier) ? '' : 'none';
     }
+  });
+
+  // Show category header only if at least one sibling feature row is visible
+  document.querySelectorAll('.table-category-row').forEach(catRow => {
+    let next = catRow.nextElementSibling;
+    let anyVisible = false;
+    while (next && !next.classList.contains('table-category-row')) {
+      if (next.style.display !== 'none') { anyVisible = true; break; }
+      next = next.nextElementSibling;
+    }
+    catRow.style.display = anyVisible ? '' : 'none';
   });
 }
 
