@@ -151,6 +151,36 @@
   wp_org_visible: false
   has_doc: false
 
+- id: templates_library
+  name: Templates Library
+  category: Display & Layout
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: done
+    frontend: done
+    released: false
+  roadmap: false
+  notes: "10 Free Templates included - in place, but not yet fully polished"
+  wp_org_visible: false
+  has_doc: false
+
+- id: templates_library_pro
+  name: Templates Library - Pro Templates
+  category: Display & Layout
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: done
+    frontend: no
+    released: false
+  roadmap: false
+  notes: "Only the foundations are created - no content yet"
+  wp_org_visible: false
+  has_doc: false
+
 - id: lightbox
   name: Built-in lightbox viewer
   category: Display & Layout
