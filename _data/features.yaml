@@ -235,7 +235,7 @@
   dev_status:
     backend: done
     frontend: done
-    released: true
+    released: false
   roadmap: false
   notes: "Missing CSS sanitization"
   wp_org_visible: true
@@ -250,7 +250,7 @@
   dev_status:
     backend: done
     frontend: done
-    released: true
+    released: false
   roadmap: false
   notes: "Missing JS sanitization"
   wp_org_visible: true
