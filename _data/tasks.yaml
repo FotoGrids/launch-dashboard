@@ -13,16 +13,16 @@
   name: Write readme.txt (WordPress.org format)
   section: product
   category: WordPress.org Compliance
-  status: in_progress
+  status: planned
   blocked_by: ""
-  notes: "Short description + FAQ section drafted; changelog and screenshots pending"
+  notes: ""
   priority: high
 
 - id: wporg_banner
   name: Plugin banner image (1544×500)
   section: product
   category: WordPress.org Compliance
-  status: done
+  status: planned
   blocked_by: ""
   notes: ""
   priority: high
@@ -31,7 +31,7 @@
   name: Plugin icon (256×256 + 128×128)
   section: product
   category: WordPress.org Compliance
-  status: done
+  status: planned
   blocked_by: ""
   notes: ""
   priority: high
@@ -40,18 +40,18 @@
   name: Plugin screenshots (at least 3)
   section: product
   category: WordPress.org Compliance
-  status: in_progress
+  status: planned
   blocked_by: ""
-  notes: "Gallery editor and lightbox shots done; settings screenshot pending"
+  notes: ""
   priority: high
 
 - id: wporg_code_review
   name: Code review — no calls to external APIs without disclosure
   section: product
   category: WordPress.org Compliance
-  status: in_progress
+  status: planned
   blocked_by: ""
-  notes: "CDN integration needs disclosure in readme"
+  notes: ""
   priority: high
 
 - id: wporg_submission

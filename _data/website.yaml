@@ -52,22 +52,22 @@ blog:
   posts:
     - id: gallery_seo_guide
       title: "How to optimise gallery images for SEO"
-      status: published
-      url: "/blog/gallery-seo"
+      status: planned
+      url: ""
 
     - id: watermarking_tips
       title: "5 watermarking strategies for photographers"
-      status: drafted
+      status: planned
       url: ""
 
     - id: woocommerce_gallery_guide
       title: "The complete guide to WooCommerce product galleries"
-      status: drafted
+      status: planned
       url: ""
 
     - id: page_speed_galleries
       title: "How image galleries affect page speed (and what to do about it)"
-      status: drafted
+      status: planned
       url: ""
 
     - id: wordpress_gallery_plugins
@@ -91,61 +91,57 @@ blog:
       url: ""
 
 docs:
-  - feature_id: responsive_galleries
-    status: done
-    url: "/docs/responsive-galleries"
-
   - feature_id: lightbox
-    status: done
-    url: "/docs/lightbox"
+    status: planned
+    url: ""
 
   - feature_id: auto_compression
-    status: done
-    url: "/docs/image-compression"
+    status: planned
+    url: ""
 
   - feature_id: webp_conversion
-    status: done
-    url: "/docs/webp-conversion"
+    status: planned
+    url: ""
 
   - feature_id: lazy_loading
-    status: done
-    url: "/docs/lazy-loading"
+    status: planned
+    url: ""
 
   - feature_id: watermarking
-    status: done
-    url: "/docs/watermarking"
+    status: planned
+    url: ""
 
   - feature_id: right_click_protection
-    status: done
-    url: "/docs/right-click-protection"
+    status: planned
+    url: ""
 
   - feature_id: seo_alt_tags
-    status: done
-    url: "/docs/alt-tags"
+    status: planned
+    url: ""
 
   - feature_id: password_galleries
-    status: in_progress
+    status: planned
     url: ""
 
   - feature_id: buy_now_button
-    status: done
-    url: "/docs/buy-now-button"
+    status: planned
+    url: ""
 
   - feature_id: elementor_block
-    status: done
-    url: "/docs/elementor"
+    status: planned
+    url: ""
 
   - feature_id: gutenberg_block
-    status: done
-    url: "/docs/gutenberg"
+    status: planned
+    url: ""
 
   - feature_id: shortcodes
-    status: done
-    url: "/docs/shortcodes"
+    status: planned
+    url: ""
 
   - feature_id: custom_css
-    status: done
-    url: "/docs/custom-css"
+    status: planned
+    url: ""
 
   - feature_id: multisite_support
     status: planned

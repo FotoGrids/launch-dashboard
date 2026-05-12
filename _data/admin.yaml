@@ -67,11 +67,11 @@
 - id: business_registration
   name: Business entity registered
   category: Company
-  status: done
+  status: planned
   notes: ""
 
 - id: bank_account
   name: Business bank account open
   category: Company
-  status: done
+  status: planned
   notes: ""

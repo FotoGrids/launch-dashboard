@@ -311,26 +311,24 @@ h3 {
 }
 
 .badge-planned     { background: #F0F1F5; color: var(--text-muted); }
-.badge-in_progress { background: #FFF5D6; color: #8A5A00; }
-.badge-done        { background: #E6F9EA; color: #276B2E; }
-.badge-blocked     { background: #FDEEF0; color: #A8192A; }
-.badge-live        { background: #E6F9EA; color: #276B2E; }
-.badge-published   { background: #E6F9EA; color: #276B2E; }
+.badge-in_progress { background: var(--yellow); color: var(--white); }
+.badge-done        { background: var(--green); color: var(--white); }
+.badge-blocked     { background: var(--red); color: var(--white); }
+.badge-live        { background: var(--green); color: var(--white); }
+.badge-published   { background: var(--green); color: var(--white); }
 .badge-drafted     { background: #FFF5D6; color: #8A5A00; }
 .badge-reviewed    { background: var(--indigo-soft); color: var(--indigo); }
 .badge-roadmap     { background: var(--indigo-soft); color: var(--indigo); }
-.badge-shipped     { background: #E6F9EA; color: #276B2E; }
+.badge-shipped     { background: var(--green); color: var(--white); }
 .badge-beta        { background: var(--indigo-soft); color: var(--indigo); }
 .badge-skipped     { background: #F0F1F5; color: var(--text-muted); }
 .badge-na          { background: #F0F1F5; color: var(--text-muted); }
 
 /* ── Tier badges — tables only ──────────────────────────────── */
-/* Tier pills use border-radius: 4px (not 99px) */
 .tier-pill {
   display: inline-flex;
   align-items: center;
   gap: 0;
-  border-radius: 4px;
   overflow: hidden;
   font-size: 11px;
   font-weight: 600;
@@ -339,7 +337,8 @@ h3 {
 }
 
 .tier-pill .pro-tag {
-  padding: 3px 5px;
+  padding: 3px 8px;
+  border-radius: 2px;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: .04em;
@@ -347,9 +346,8 @@ h3 {
 }
 
 .tier-pill .tier-name {
-  padding: 3px 7px 3px 5px;
+  padding: 0 6px 0 4px;
   color: var(--navy);
-  background: var(--white);
   font-size: 11px;
   font-weight: 600;
 }
@@ -363,7 +361,7 @@ h3 {
 
 /* FREE — solid indigo pill */
 .tier-pill.tier-free {
-  border-radius: 4px;
+  border-radius: 2px;
   background: var(--indigo);
   padding: 3px 8px;
   color: var(--white);
@@ -374,6 +372,7 @@ h3 {
 
 /* Add-on */
 .tier-pill.tier-addon {
+  border-radius: 2px;
   background: #F0F1F5;
   padding: 3px 8px;
   color: var(--text-muted);
