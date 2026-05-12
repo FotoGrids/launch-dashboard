@@ -10,6 +10,9 @@ const COLOURS = {
   indigo:      '#3B3BFF',
 };
 
+// Shared font defaults
+const FONT = { family: "'Poppins', system-ui", size: 11 };
+
 // Render the feature-progress stacked bar chart on product.md
 function renderFeatureChart(canvasId, labels, plannedData, inProgressData, doneData) {
   const ctx = document.getElementById(canvasId);
@@ -20,23 +23,9 @@ function renderFeatureChart(canvasId, labels, plannedData, inProgressData, doneD
     data: {
       labels,
       datasets: [
-        {
-          label: 'Done',
-          data: doneData,
-          backgroundColor: COLOURS.done,
-          borderRadius: { topLeft: 0, topRight: 0, bottomLeft: 0, bottomRight: 0 },
-        },
-        {
-          label: 'In progress',
-          data: inProgressData,
-          backgroundColor: COLOURS.in_progress,
-        },
-        {
-          label: 'Planned',
-          data: plannedData,
-          backgroundColor: COLOURS.planned,
-          borderRadius: { topLeft: 4, topRight: 4, bottomLeft: 0, bottomRight: 0 },
-        },
+        { label: 'Done',        data: doneData,       backgroundColor: COLOURS.done },
+        { label: 'In progress', data: inProgressData, backgroundColor: COLOURS.in_progress },
+        { label: 'Planned',     data: plannedData,    backgroundColor: COLOURS.planned },
       ],
     },
     options: {
@@ -45,80 +34,89 @@ function renderFeatureChart(canvasId, labels, plannedData, inProgressData, doneD
       plugins: {
         legend: {
           position: 'bottom',
-          labels: {
-            font: { family: "'Poppins', system-ui", size: 12 },
-            color: '#6B7290',
-            boxWidth: 12,
-            padding: 16,
-          },
+          labels: { font: FONT, color: '#6B7290', boxWidth: 12, padding: 16 },
         },
-        tooltip: {
-          callbacks: {
-            title: (items) => items[0].label,
-          },
-        },
+        tooltip: { callbacks: { title: (items) => items[0].label } },
       },
       scales: {
-        x: {
-          stacked: true,
-          grid: { display: false },
-          ticks: {
-            font: { family: "'Poppins', system-ui", size: 11 },
-            color: '#6B7290',
-          },
-          border: { display: false },
-        },
-        y: {
-          stacked: true,
-          beginAtZero: true,
-          ticks: {
-            stepSize: 1,
-            font: { family: "'Poppins', system-ui", size: 11 },
-            color: '#6B7290',
-          },
-          grid: { color: '#E5E7F0' },
-          border: { display: false },
-        },
+        x: { stacked: true, grid: { display: false }, ticks: { font: FONT, color: '#6B7290' }, border: { display: false } },
+        y: { stacked: true, beginAtZero: true, ticks: { stepSize: 1, font: FONT, color: '#6B7290' }, grid: { color: '#E5E7F0' }, border: { display: false } },
       },
     },
   });
 }
 
-// Render a doughnut for overall launch readiness (used on index.md)
-function renderReadinessChart(canvasId, pct) {
+// Polar area chart — overall readiness by section (used on index.md)
+// sections: array of { label, pct } objects
+function renderReadinessChart(canvasId, sections) {
   const ctx = document.getElementById(canvasId);
   if (!ctx) return;
 
+  const palette = [
+    '#3B3BFF', // indigo  — free features
+    '#6B6BFF', // indigo light — pro features
+    '#27C28A', // green   — product tasks
+    '#FFC72A', // yellow  — website
+    '#FF8C42', // orange  — marketing
+    '#EE3B49', // red     — admin
+  ];
+
   new Chart(ctx, {
-    type: 'doughnut',
+    type: 'polarArea',
     data: {
+      labels: sections.map(s => s.label),
       datasets: [{
-        data: [pct, 100 - pct],
-        backgroundColor: [COLOURS.indigo, '#E5E7F0'],
-        borderWidth: 0,
-        cutout: '76%',
+        data: sections.map(s => s.pct),
+        backgroundColor: palette.map(c => c + 'CC'), // 80% opacity
+        borderColor:     palette,
+        borderWidth: 1,
       }],
     },
     options: {
       responsive: true,
       maintainAspectRatio: true,
+      scales: {
+        r: {
+          min: 0,
+          max: 100,
+          ticks: {
+            stepSize: 25,
+            font: FONT,
+            color: '#6B7290',
+            backdropColor: 'transparent',
+            callback: v => v + '%',
+          },
+          grid:        { color: '#E5E7F0' },
+          angleLines:  { color: '#E5E7F0' },
+          pointLabels: { display: false },
+        },
+      },
       plugins: {
-        legend: { display: false },
-        tooltip: { enabled: false },
+        legend: {
+          position: 'right',
+          labels: {
+            font: { family: "'Poppins', system-ui", size: 12 },
+            color: '#6B7290',
+            boxWidth: 12,
+            padding: 12,
+            generateLabels(chart) {
+              const data = chart.data;
+              return data.labels.map((label, i) => ({
+                text: label + '  ' + data.datasets[0].data[i] + '%',
+                fillStyle:   data.datasets[0].backgroundColor[i],
+                strokeStyle: data.datasets[0].borderColor[i],
+                lineWidth: 1,
+                index: i,
+              }));
+            },
+          },
+        },
+        tooltip: {
+          callbacks: {
+            label: ctx => ' ' + ctx.parsed.r + '%',
+          },
+        },
       },
     },
-    plugins: [{
-      id: 'centerText',
-      afterDraw(chart) {
-        const { ctx: c, chartArea: { left, top, width, height } } = chart;
-        c.save();
-        c.font = "700 28px 'Poppins', system-ui";
-        c.fillStyle = '#0E1426';
-        c.textAlign = 'center';
-        c.textBaseline = 'middle';
-        c.fillText(pct + '%', left + width / 2, top + height / 2);
-        c.restore();
-      },
-    }],
   });
 }

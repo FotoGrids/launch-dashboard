@@ -69,7 +69,7 @@ button, .btn {
   justify-content: center;
   font-family: var(--dash-font);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-muted);
   background: var(--white);
   border: 1px solid var(--border);
@@ -247,7 +247,7 @@ h3 {
 .stat-card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 20px 24px;
   display: flex;
   flex-direction: column;
@@ -338,24 +338,27 @@ h3 {
   font-size: 13px;
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
 .dash-table th {
-  background: var(--bg);
-  font-size: 11px;
-  font-weight: 700;
+  background: var(--navy);
+  font-size: 10px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .08em;
-  color: var(--text-muted);
-  padding: 10px 14px;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,0.7);
+  padding: 11px 16px;
   text-align: left;
-  border-bottom: 1px solid var(--border);
+  border-bottom: none;
 }
 
+.dash-table th:first-child { border-radius: 8px 0 0 0; }
+.dash-table th:last-child  { border-radius: 0 8px 0 0; }
+
 .dash-table td {
-  padding: 10px 14px;
+  padding: 14px 16px;
   border-bottom: 1px solid var(--border);
   vertical-align: middle;
 }
@@ -372,7 +375,7 @@ h3 {
 .checklist {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -435,7 +438,7 @@ h3 {
 .chart-wrap {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 24px;
 }
 
@@ -445,7 +448,7 @@ h3 {
 .blocker-list {
   background: #FDEEF0;
   border: 1px solid #F5C0C5;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 16px 20px;
   display: flex;
   flex-direction: column;
@@ -493,7 +496,7 @@ h3 {
 .launch-hero {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 28px 32px;
   display: flex;
   align-items: center;

@@ -24,17 +24,26 @@
 
   <script src="{{ '/assets/js/auth.js' | relative_url }}"></script>
 
-  <!-- Israeli time: replace all .il-time spans with local time in Asia/Jerusalem -->
+  <!-- Israeli time: replace all .il-time spans with local time + UTC offset -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var buildTime = new Date('{{ site.time | date: "%Y-%m-%dT%H:%M:%SZ" }}');
+      // Format in Asia/Jerusalem to get the local time string
       var formatted = buildTime.toLocaleString('en-GB', {
         timeZone: 'Asia/Jerusalem',
         day: '2-digit', month: 'short', year: 'numeric',
-        hour: '2-digit', minute: '2-digit'
+        hour: '2-digit', minute: '2-digit',
+        hour12: false
       });
+      // Compute UTC offset for Asia/Jerusalem at build time
+      var utcDate = new Date(buildTime.toLocaleString('en-US', { timeZone: 'UTC' }));
+      var ilDate  = new Date(buildTime.toLocaleString('en-US', { timeZone: 'Asia/Jerusalem' }));
+      var diffMin = Math.round((ilDate - utcDate) / 60000);
+      var sign    = diffMin >= 0 ? '+' : '-';
+      var h       = Math.floor(Math.abs(diffMin) / 60);
+      var offset  = 'UTC' + sign + h;
       document.querySelectorAll('.il-time').forEach(function(el) {
-        el.textContent = formatted + ' (IL)';
+        el.textContent = formatted + ' ' + offset;
       });
     });
   </script>

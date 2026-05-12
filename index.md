@@ -54,6 +54,23 @@ title: Overview
 {% assign admin_pct = 0 %}
 {% if admin_items.size > 0 %}{% assign admin_pct = admin_done.size | times: 100 | divided_by: admin_items.size %}{% endif %}
 
+{% comment %} Per-section: split features into free vs pro for the chart {% endcomment %}
+{% assign free_features      = launch_features | where: "tier", "free" %}
+{% assign free_done          = free_features | where: "dev_status.released", true %}
+{% assign pro_done_count = 0 %}
+{% assign pro_total_count = 0 %}
+{% for f in launch_features %}
+  {% unless f.tier == 'free' %}
+    {% assign pro_total_count = pro_total_count | plus: 1 %}
+    {% if f.dev_status.released %}{% assign pro_done_count = pro_done_count | plus: 1 %}{% endif %}
+  {% endunless %}
+{% endfor %}
+
+{% assign free_pct = 0 %}
+{% if free_features.size > 0 %}{% assign free_pct = free_done.size | times: 100 | divided_by: free_features.size %}{% endif %}
+{% assign pro_pct = 0 %}
+{% if pro_total_count > 0 %}{% assign pro_pct = pro_done_count | times: 100 | divided_by: pro_total_count %}{% endif %}
+
 <div class="launch-hero">
   <div class="target">
     <div class="label">Target</div>
@@ -62,14 +79,8 @@ title: Overview
   </div>
 
   <div class="readiness">
-    <div class="readiness-label">Overall launch readiness</div>
-    <div class="readiness-body">
-      <canvas id="readinessChart" width="80" height="80" style="flex-shrink:0;"></canvas>
-      <div style="flex:1; display:flex; flex-direction:column; gap:10px;">
-        {% include progress_bar.html done=done_features.size total=launch_features.size label="Features released" %}
-        {% include progress_bar.html done=done_tasks.size total=all_tasks.size label="Tasks complete" %}
-      </div>
-    </div>
+    <div class="readiness-label">Launch readiness by section</div>
+    <canvas id="readinessChart" style="max-height:260px;"></canvas>
   </div>
 </div>
 
@@ -162,5 +173,12 @@ title: Overview
 <p class="dash-timestamp">Last updated: <span class="il-time">{{ site.time | date: "%b %d, %Y" }}</span> — numbers update on every push.</p>
 
 <script>
-renderReadinessChart('readinessChart', {{ overall_pct }});
+renderReadinessChart('readinessChart', [
+  { label: 'Free Features',    pct: {{ free_pct }} },
+  { label: 'PRO Features',     pct: {{ pro_pct }} },
+  { label: 'Product Tasks',    pct: {{ product_pct }} },
+  { label: 'Website',          pct: {{ website_pct }} },
+  { label: 'Marketing',        pct: {{ marketing_pct }} },
+  { label: 'Admin & Legal',    pct: {{ admin_pct }} },
+]);
 </script>
