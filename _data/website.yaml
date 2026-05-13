@@ -3,24 +3,54 @@ pages:
     name: Home
     status: live
     url: "/"
-    notes: ""
+    notes: "Missing images."
 
   - id: pricing
     name: Pricing
-    status: in_progress
-    url: "/pricing"
-    notes: "Waiting on final tier prices"
-
-  - id: features
-    name: Features
     status: live
-    url: "/features"
+    url: "/pricing"
     notes: ""
 
-  - id: blog_index
-    name: Blog index
+  - id: features
+    name: Features Overview
     status: live
-    url: "/blog"
+    url: "/features"
+    notes: "All content inserted. Missing images."
+
+  - id: features_design_customization
+    name: Features - Design & Customization
+    status: planned
+    notes: ""
+
+  - id: features_no_code_workflow
+    name: Features - No-Code Workflow
+    status: planned
+    notes: ""
+
+  - id: features_seo_performance
+    name: Features - SEO & Performance
+    status: planned
+    notes: ""
+
+  - id: features_image_protection_security
+    name: Features - Image Protection & Security
+    status: planned
+    notes: ""
+
+  - id: features_engagement_analytics
+    name: Features - Engagement & Analytics
+    status: planned
+    notes: ""
+
+  - id: live_demos
+    name: Live Demos
+    status: planned
+    notes: ""
+
+  - id: free_vs_pro
+    name: Features Comparison by Tier
+    status: live
+    url: "/features/free-vs-pro"
     notes: ""
 
   - id: docs_index
@@ -29,17 +59,29 @@ pages:
     url: "/docs"
     notes: "Index page structure drafted, individual doc pages in progress"
 
+  - id: blog_index
+    name: Blog index
+    status: live
+    url: "/blog"
+    notes: ""
+
   - id: about
     name: About
-    status: planned
+    status: live
     url: "/about"
     notes: ""
 
+  - id: support_center
+    name: Support Center
+    status: live
+    url: "/support"
+    notes: "Almost completed."
+
   - id: contact
     name: Contact
-    status: planned
+    status: live
     url: "/contact"
-    notes: ""
+    notes: "Almost completed."
 
   - id: changelog
     name: Changelog
