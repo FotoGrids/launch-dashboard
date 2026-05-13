@@ -823,45 +823,105 @@
 
 # ── Monetization & E-commerce ─────────────────────────────────────────────────────────────
 
-- id: buy_now_button
-  name: Buy Now button on images
-  category: Monetization & E-commerce
-  tier: pro_starter
-  available_on: [pro_starter, pro_plus, agency]
-  status: beta
-  dev_status:
-    backend: true
-    frontend: na
-    released: false
-  roadmap: false
-  notes: ""
-  wp_org_visible: false
-  has_doc: false
-
-- id: woocommerce_gallery
-  name: WooCommerce product gallery replacement
+- id: woocommerce_integration
+  name: WooCommerce Integration
   category: Monetization & E-commerce
   tier: pro_plus
   available_on: [pro_plus, agency]
-  status: beta
+  status: planned
   dev_status:
-    backend: true
-    frontend: na
+    backend: false
+    frontend: false
     released: false
   roadmap: false
   notes: ""
   wp_org_visible: false
   has_doc: false
 
-- id: digital_downloads
-  name: Digital download galleries (sell images)
+- id: direct_add_to_cart
+  name: Direct Add to Cart
   category: Monetization & E-commerce
-  tier: addon
-  available_on: [addon]
-  status: beta
+  tier: pro_plus
+  available_on: [pro_plus, agency]
+  status: planned
   dev_status:
-    backend: true
-    frontend: na
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: product_variations
+  name: Product Variations
+  category: Monetization & E-commerce
+  tier: pro_plus
+  available_on: [pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: pricing_sale_badges
+  name: Pricing & Sale Badges
+  category: Monetization & E-commerce
+  tier: pro_plus
+  available_on: [pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: product_category_filtering
+  name: Product Category Filtering
+  category: Monetization & E-commerce
+  tier: pro_plus
+  available_on: [pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: product_aware_gallery_links
+  name: Product-Aware Gallery Links
+  category: Monetization & E-commerce
+  tier: pro_plus
+  available_on: [pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: digital_products_licensing
+  name: Digital Products & Licensing
+  category: Monetization & E-commerce
+  tier: pro_plus
+  available_on: [pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
     released: false
   roadmap: false
   notes: ""
