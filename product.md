@@ -97,7 +97,7 @@ title: Product
           <td>{% include status_badge.html status=f.dev_status.backend %}</td>
           <td>{% include status_badge.html status=f.dev_status.frontend %}</td>
           <td>
-            {% if f.dev_status.released %}
+            {% if f.dev_status.released == true or f.dev_status.released == 'true' %}
               {% include icon_done.html %}
             {% elsif f.dev_status.released == false or f.dev_status.released == 'false' %}
               {% include icon_false.html %}
@@ -106,7 +106,7 @@ title: Product
             {% endif %}
           </td>
           <td>
-            {% if f.has_doc == true %}
+            {% if f.has_doc == true or f.has_doc == 'true' %}
               {% include icon_done.html %}
             {% elsif f.has_doc == 'in_progress' %}
               <span class="badge badge-in_progress">WIP</span>

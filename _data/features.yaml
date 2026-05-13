@@ -11,7 +11,7 @@
 #   shipped | beta | roadmap
 #
 # Dev status vocabulary:
-#   false | in_progress | done | na
+#   false | in_progress | true | na
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Display & Layout ───────────────────────────────────────────────────────
@@ -23,8 +23,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: shipped
   dev_status:
-    backend: done
-    frontend: done
+    backend: true
+    frontend: true
     released: true
   roadmap: false
   notes: ""
@@ -38,7 +38,7 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: in_progress
     released: false
   roadmap: false
@@ -53,8 +53,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
-    frontend: done
+    backend: true
+    frontend: true
     released: false
   roadmap: false
   notes: ""
@@ -68,7 +68,7 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: in_progress
     released: false
   roadmap: false
@@ -83,8 +83,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
-    frontend: done
+    backend: true
+    frontend: true
     released: false
   roadmap: false
   notes: ""
@@ -98,8 +98,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
-    frontend: done
+    backend: true
+    frontend: true
     released: false
   roadmap: false
   notes: ""
@@ -113,7 +113,7 @@
   available_on: [pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: in_progress
     released: false
   roadmap: false
@@ -158,8 +158,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
-    frontend: done
+    backend: true
+    frontend: true
     released: false
   roadmap: false
   notes: "10 Free Templates included - in place, but not yet fully polished"
@@ -173,7 +173,7 @@
   available_on: [pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: no
     released: false
   roadmap: false
@@ -218,7 +218,7 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: in_progress
     released: false
   roadmap: false
@@ -233,7 +233,7 @@
   available_on: [pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: in_progress
     released: false
   roadmap: false
@@ -248,8 +248,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: shipped
   dev_status:
-    backend: done
-    frontend: done
+    backend: true
+    frontend: true
     released: true
   roadmap: false
   notes: ""
@@ -263,8 +263,8 @@
   available_on: [pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
-    frontend: na
+    backend: true
+    frontend: false
     released: false
   roadmap: false
   notes: ""
@@ -278,8 +278,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: shipped
   dev_status:
-    backend: done
-    frontend: done
+    backend: true
+    frontend: true
     released: false
   roadmap: false
   notes: "Missing CSS sanitization"
@@ -293,8 +293,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: shipped
   dev_status:
-    backend: done
-    frontend: done
+    backend: true
+    frontend: true
     released: false
   roadmap: false
   notes: "Missing JS sanitization"
@@ -305,12 +305,12 @@
 
 - id: lightbox
   name: Lightbox
-  category: Display & Layout
+  category: Interactions
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: false
     released: false
   roadmap: false
@@ -320,12 +320,12 @@
 
 - id: sorting
   name: Set Collection Sorting
-  category: interactions
+  category: Interactions
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: no
     released: false
   roadmap: false
@@ -335,7 +335,7 @@
 
 - id: sorting_user_change_order
   name: Allow Users to Change Sort Order
-  category: interactions
+  category: Interactions
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
   status: false
@@ -350,7 +350,7 @@
 
 - id: sorting_multi_criteria
   name: Advanced Multi-Criteria Sorting
-  category: interactions
+  category: Interactions
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
   status: false
@@ -365,7 +365,7 @@
 
 - id: sorting_metadata_based
   name: Metadata-Based Sorting
-  category: interactions
+  category: Interactions
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
   status: false
@@ -380,7 +380,7 @@
 
 - id: sorting_ai_powered
   name: Smart AI-Powered Sorting
-  category: interactions
+  category: Interactions
   tier: pro_plus
   available_on: [pro_plus, agency]
   status: false
@@ -402,7 +402,7 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
@@ -417,7 +417,7 @@
   available_on: [pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
@@ -432,7 +432,7 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
@@ -447,7 +447,7 @@
   available_on: [pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
@@ -462,7 +462,7 @@
   available_on: [pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
@@ -479,7 +479,7 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: false
     released: false
   roadmap: false
@@ -494,8 +494,8 @@
   available_on: [pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
-    frontend: na
+    backend: true
+    frontend: false
     released: false
   roadmap: false
   notes: ""
@@ -509,7 +509,7 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: false
     released: false
   roadmap: false
@@ -556,8 +556,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: shipped
   dev_status:
-    backend: done
-    frontend: done
+    backend: true
+    frontend: true
     released: true
   roadmap: false
   notes: ""
@@ -571,8 +571,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: shipped
   dev_status:
-    backend: done
-    frontend: done
+    backend: true
+    frontend: true
     released: true
   roadmap: false
   notes: ""
@@ -601,8 +601,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: shipped
   dev_status:
-    backend: done
-    frontend: done
+    backend: true
+    frontend: true
     released: true
   roadmap: false
   notes: ""
@@ -662,7 +662,7 @@
   status: beta
   dev_status:
     backend: na
-    frontend: done
+    frontend: true
     released: false
   roadmap: false
   notes: ""
@@ -768,7 +768,7 @@
   available_on: [pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
@@ -783,7 +783,7 @@
   available_on: [pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
@@ -798,7 +798,7 @@
   available_on: [addon]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
@@ -816,7 +816,7 @@
   status: beta
   dev_status:
     backend: na
-    frontend: done
+    frontend: true
     released: false
   roadmap: false
   notes: ""
@@ -831,7 +831,7 @@
   status: beta
   dev_status:
     backend: na
-    frontend: done
+    frontend: true
     released: false
   roadmap: false
   notes: ""
@@ -846,7 +846,7 @@
   status: beta
   dev_status:
     backend: na
-    frontend: done
+    frontend: true
     released: false
   roadmap: false
   notes: ""
@@ -861,7 +861,7 @@
   status: beta
   dev_status:
     backend: na
-    frontend: done
+    frontend: true
     released: false
   roadmap: false
   notes: ""
@@ -875,7 +875,7 @@
   available_on: [pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
@@ -892,7 +892,7 @@
   available_on: [pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
@@ -907,7 +907,7 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
@@ -922,7 +922,7 @@
   available_on: [pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
@@ -939,8 +939,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: shipped
   dev_status:
-    backend: done
-    frontend: done
+    backend: true
+    frontend: true
     released: true
   roadmap: false
   notes: ""
@@ -969,7 +969,7 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: in_progress
     released: false
   roadmap: false
@@ -1091,7 +1091,7 @@
   available_on: [pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
+    backend: true
     frontend: na
     released: false
   roadmap: false
