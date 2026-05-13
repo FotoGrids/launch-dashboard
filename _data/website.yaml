@@ -47,6 +47,36 @@ pages:
     status: planned
     notes: ""
 
+  - id: built_for_developers
+    name: Built for Developers
+    status: planned
+    notes: ""
+
+  - id: built_for_photographers
+    name: Built for Photographers
+    status: planned
+    notes: ""
+
+  - id: built_for_agencies
+    name: Built for Agencies
+    status: planned
+    notes: ""
+
+  - id: built_for_bloggers
+    name: Built for Bloggers
+    status: planned
+    notes: ""
+
+  - id: built_for_business_owners
+    name: Built for Business Owners
+    status: planned
+    notes: ""
+
+  - id: built_for_online_shops
+    name: Built for Online Shops
+    status: planned
+    notes: ""
+
   - id: free_vs_pro
     name: Features Comparison by Tier
     status: live
@@ -87,6 +117,86 @@ pages:
     name: Changelog
     status: planned
     url: "/changelog"
+    notes: ""
+
+  - id: compare_us_index
+    name: Compare Us - Index
+    status: live
+    notes: ""
+
+  - id: compare_us_template
+    name: Compare Us - Template
+    status: live
+    notes: ""
+
+  - id: compare_us_nextgen_gallery
+    name: Compare Us - NextGEN Gallery
+    status: in_progress
+    notes: ""
+
+  - id: compare_us_envira_gallery
+    name: Compare Us - Envira Gallery
+    status: planned
+    notes: ""
+
+  - id: compare_us_foogallery
+    name: Compare Us - FooGallery
+    status: planned
+    notes: ""
+
+  - id: compare_us_modula
+    name: Compare Us - Modula
+    status: planned
+    notes: ""
+
+  - id: compare_us_photo_gallery_10web
+    name: Compare Us - Photo Gallery by 10Web
+    status: planned
+    notes: ""
+
+  - id: compare_us_meow_gallery
+    name: Compare Us - Meow Gallery
+    status: planned
+    notes: ""
+
+  - id: compare_us_visual_portfolio
+    name: Compare Us - Visual Portfolio
+    status: planned
+    notes: ""
+
+  - id: compare_us_responsive_lightbox_gallery
+    name: Compare Us - Responsive Lightbox & Gallery
+    status: planned
+    notes: ""
+
+  - id: compare_us_robo_gallery
+    name: Compare Us - Robo Gallery
+    status: planned
+    notes: ""
+
+  - id: compare_us_gallery_bestwebsoft
+    name: Compare Us - Gallery by BestWebSoft
+    status: planned
+    notes: ""
+
+  - id: compare_us_slider_revolution
+    name: Compare Us - Slider Revolution
+    status: planned
+    notes: ""
+
+  - id: compare_us_layerslider
+    name: Compare Us - LayerSlider
+    status: planned
+    notes: ""
+
+  - id: compare_us_smart_slider_3
+    name: Compare Us - Smart Slider 3
+    status: planned
+    notes: ""
+
+  - id: compare_us_metaslider
+    name: Compare Us - MetaSlider
+    status: planned
     notes: ""
 
 blog:
