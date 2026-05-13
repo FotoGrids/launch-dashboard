@@ -380,32 +380,47 @@
   wp_org_visible: false
   has_doc: false
 
-# ── Image Optimisation ─────────────────────────────────────────────────────
+# -- Media & Performance ─────────────────────────────────────────────────────
 
-- id: auto_compression
-  name: Automatic image compression
-  category: Image Optimisation
+- id: video_support_files
+  name: Video Support - Files
+  category: Media & Performance
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: in_progress
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: video_support_full_embeds
+  name: Video Support - Full with Embeds
+  category: Media & Performance
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: image_sizes_cropping
+  name: Image Sizes & Cropping
+  category: Media & Performance
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
     backend: true
-    frontend: na
-    released: false
-  roadmap: false
-  notes: ""
-  wp_org_visible: true
-  has_doc: false
-
-- id: webp_conversion
-  name: WebP conversion on upload
-  category: Image Optimisation
-  tier: pro_starter
-  available_on: [pro_starter, pro_plus, agency]
-  status: beta
-  dev_status:
-    backend: true
-    frontend: na
+    frontend: in_progress
     released: false
   roadmap: false
   notes: ""
@@ -413,44 +428,89 @@
   has_doc: false
 
 - id: lazy_loading
-  name: Native lazy loading
-  category: Image Optimisation
+  name: Lazy Loading
+  category: Media & Performance
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
     backend: true
-    frontend: na
-    released: false
-  roadmap: false
-  notes: ""
-  wp_org_visible: true
-  has_doc: false
-
-- id: srcset_generation
-  name: Automatic srcset generation
-  category: Image Optimisation
-  tier: pro_starter
-  available_on: [pro_starter, pro_plus, agency]
-  status: beta
-  dev_status:
-    backend: true
-    frontend: na
+    frontend: in_progress
     released: false
   roadmap: false
   notes: ""
   wp_org_visible: false
   has_doc: false
 
-- id: cdn_delivery
-  name: CDN delivery integration
-  category: Image Optimisation
-  tier: pro_plus
-  available_on: [pro_plus, agency]
+- id: basic_pagination
+  name: Basic Pagination
+  category: Media & Performance
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
     backend: true
-    frontend: na
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: full_pagination_preloading
+  name: Full Pagination & Preloading
+  category: Media & Performance
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: enhanced_caching
+  name: Enhanced Caching
+  category: Media & Performance
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: image_optimizer
+  name: Image Optimizer
+  category: Media & Performance
+  tier: pro_plus
+  available_on: [pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: global_cdn_delivery
+  name: Global CDN Delivery
+  category: Media & Performance
+  tier: addon
+  available_on: [addon]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
     released: false
   roadmap: false
   notes: ""
@@ -1249,32 +1309,167 @@
   wp_org_visible: false
   has_doc: false
 
-# ── Agency / White-label ───────────────────────────────────────────────────
+# ── Workflow & Maintenance ───────────────────────────────────────────────────
 
-- id: client_accounts
-  name: Client account management
-  category: Admin & Settings
-  tier: agency
-  available_on: [agency]
-  status: roadmap
+- id: gallery_album_defaults
+  name: Gallery & Album Defaults
+  category: Workflow & Maintenance
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: shipped
+  dev_status:
+    backend: true
+    frontend: true
+    released: true
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: bulk_media_import
+  name: Bulk Media Import
+  category: Workflow & Maintenance
+  tier: pro_plus
+  available_on: [pro_plus, agency]
+  status: planned
   dev_status:
     backend: false
     frontend: false
     released: false
-  roadmap: true
-  notes: "Post-launch roadmap item"
+  roadmap: false
+  notes: ""
   wp_org_visible: false
   has_doc: false
 
-- id: multisite_support
-  name: WordPress Multisite support
-  category: Admin & Settings
+- id: bulk_editing
+  name: Bulk Editing
+  category: Workflow & Maintenance
   tier: pro_plus
   available_on: [pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: import_export
+  name: Import, Export
+  category: Workflow & Maintenance
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: backup_system
+  name: Backup System
+  category: Workflow & Maintenance
+  tier: pro_plus
+  available_on: [pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: migration_other_plugins
+  name: Migration from Other Plugins
+  category: Workflow & Maintenance
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: white_label
+  name: White Label
+  category: Workflow & Maintenance
+  tier: pro_plus
+  available_on: [pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: internal_team_notes
+  name: Internal Team Notes
+  category: Workflow & Maintenance
+  tier: agency
+  available_on: [agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: revision_history_restore
+  name: Revision History with One-Click Restore
+  category: Workflow & Maintenance
+  tier: agency
+  available_on: [agency]
   status: beta
   dev_status:
-    backend: true
+    backend: in_progress
     frontend: na
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: bulk_gallery_album_operations
+  name: Bulk Gallery & Album Operations
+  category: Workflow & Maintenance
+  tier: agency
+  available_on: [agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: multisite_gallery_management
+  name: Multisite Gallery Management
+  category: Workflow & Maintenance
+  tier: agency
+  available_on: [agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
     released: false
   roadmap: false
   notes: ""
