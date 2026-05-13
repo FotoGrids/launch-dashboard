@@ -780,7 +780,12 @@ h3 {
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 900px) {
 
-  /* Sidebar becomes an off-canvas drawer from the right */
+  /* Switch body from flex row to block so sidebar doesn't steal layout space */
+  body {
+    display: block;
+  }
+
+  /* Sidebar: hidden off-canvas drawer, slides in from right */
   .sidebar {
     position: fixed;
     top: 0;
@@ -792,10 +797,10 @@ h3 {
     transition: transform .28s cubic-bezier(.4,0,.2,1);
     border-right: none;
     border-left: 1px solid var(--border);
-    z-index: 300;
+    z-index: 400;
     padding: 24px 0 32px;
     flex-direction: column;
-    box-shadow: -4px 0 24px rgba(0,0,0,.08);
+    box-shadow: -4px 0 24px rgba(0,0,0,.12);
   }
 
   .sidebar.mobile-open {
@@ -807,7 +812,6 @@ h3 {
   }
 
   .sidebar nav a {
-    border-left: 3px solid transparent;
     border-radius: 0;
     border: none;
     border-left: 3px solid transparent;
@@ -822,14 +826,16 @@ h3 {
     font-weight: 600;
   }
 
-  /* Sticky top bar */
+  /* Fixed top bar — sits above everything */
   .mobile-topbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 200;
+    left: 0;
+    right: 0;
+    z-index: 300;
     background: var(--white);
     border-bottom: 1px solid var(--border);
     padding: 0 16px;
@@ -864,7 +870,7 @@ h3 {
     transition: transform .2s, opacity .2s;
   }
 
-  /* Animate to X when open */
+  /* Animate to × when open */
   .mobile-menu-btn.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .mobile-menu-btn.is-open span:nth-child(2) { opacity: 0; }
   .mobile-menu-btn.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -875,7 +881,7 @@ h3 {
     position: fixed;
     inset: 0;
     background: rgba(26,26,46,.4);
-    z-index: 200;
+    z-index: 300;
     opacity: 0;
     pointer-events: none;
     transition: opacity .28s;
@@ -886,9 +892,10 @@ h3 {
     pointer-events: all;
   }
 
+  /* Main content: full width, push down below the fixed topbar */
   .main {
     margin-left: 0;
-    padding: 20px 16px 40px;
+    padding: 72px 16px 40px; /* 52px topbar + 20px breathing room */
   }
 
   .content { max-width: 100%; }
