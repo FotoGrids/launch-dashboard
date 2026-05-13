@@ -128,6 +128,57 @@ title: Overview
 
 ---
 
+## Launch Roadmap
+
+<div class="roadmap-grid">
+  <div class="roadmap-card">
+    <div class="roadmap-stage">Stage 1</div>
+    <div class="roadmap-date">July 2026</div>
+    <div class="roadmap-title">Free Version</div>
+    <p class="roadmap-requirements-title">Requirements</p>
+    <ul class="roadmap-list">
+      <li>Free features completed</li>
+      <li>Product tasks completed</li>
+      <li>Website ready</li>
+      <li>Documentation ready</li>
+      <li>Admin and legal tasks completed</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-card">
+    <div class="roadmap-stage">Stage 2</div>
+    <div class="roadmap-date">August 2026</div>
+    <div class="roadmap-title">Pro Starter Version</div>
+    <p class="roadmap-requirements-title">Requirements</p>
+    <ul class="roadmap-list">
+      <li>Pro Starter version completed</li>
+      <li>Marketing completed</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-card">
+    <div class="roadmap-stage">Stage 3</div>
+    <div class="roadmap-date">October 2026</div>
+    <div class="roadmap-title">Pro Plus Version</div>
+    <p class="roadmap-requirements-title">Target</p>
+    <ul class="roadmap-list">
+      <li>Pro Plus plan released</li>
+    </ul>
+  </div>
+
+  <div class="roadmap-card">
+    <div class="roadmap-stage">Stage 4</div>
+    <div class="roadmap-date">December 2026</div>
+    <div class="roadmap-title">Pro Agency Version</div>
+    <p class="roadmap-requirements-title">Target</p>
+    <ul class="roadmap-list">
+      <li>Pro Agency plan released</li>
+    </ul>
+  </div>
+</div>
+
+---
+
 ## Blockers
 
 {% if blocked_tasks.size > 0 %}
