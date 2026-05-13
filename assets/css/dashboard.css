@@ -619,14 +619,14 @@ h3 {
 }
 
 .overview-top-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr);
+  display: flex;
   gap: 16px;
   align-items: stretch;
 }
 
 .overview-top-row .launch-hero {
-  height: 100%;
+  flex: 3 1 0;
+  min-width: 0;
   padding: 24px;
 }
 
@@ -641,8 +641,10 @@ h3 {
 }
 
 .stat-grid--side {
+  flex: 1 1 280px;
   grid-template-columns: 1fr;
   align-content: start;
+  height: 100%;
 }
 
 /* ── Metrics ─────────────────────────────────────────────────── */
@@ -710,10 +712,11 @@ h3 {
   }
 
   .overview-top-row {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
   .stat-grid--side {
+    flex: 1 1 auto;
     grid-template-columns: repeat(2, 1fr);
   }
 
