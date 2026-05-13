@@ -549,60 +549,210 @@
 
 # ── SEO & Structured Data ─────────────────────────────────────────────────────────
 
-- id: seo_alt_tags
-  name: Automatic alt tags
+- id: seo_per_item_tags
+  name: Per-item Tags
   category: SEO & Structured Data
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: beta
+  status: shipped
   dev_status:
     backend: done
-    frontend: na
-    released: false
+    frontend: done
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: true
   has_doc: false
 
-- id: schema_markup
-  name: Image schema markup (JSON-LD)
+- id: seo_per_item_people_tagging
+  name: Per-item People Tagging
   category: SEO & Structured Data
-  tier: pro_starter
-  available_on: [pro_starter, pro_plus, agency]
-  status: beta
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: shipped
   dev_status:
     backend: done
-    frontend: na
+    frontend: done
+    released: true
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
+- id: seo_ai_facial_recognition
+  name: AI Facial Recognition
+  category: SEO & Structured Data
+  tier: addon
+  available_on: [addon]
+  status: roadmap
+  dev_status:
+    backend: planned
+    frontend: planned
+    released: false
+  roadmap: true
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: seo_per_item_location_tagging
+  name: Per-item Location Tagging
+  category: SEO & Structured Data
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: shipped
+  dev_status:
+    backend: done
+    frontend: done
+    released: true
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
+- id: seo_smart_location_suggestions_map_integration
+  name: Smart Location Suggestions with Map Integration
+  category: SEO & Structured Data
+  tier: pro_plus
+  available_on: [pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: planned
+    frontend: planned
     released: false
   roadmap: false
   notes: ""
   wp_org_visible: false
   has_doc: false
 
-- id: og_images
-  name: Open Graph image tagging
+- id: seo_ai_powered_meta_optimization
+  name: AI-Powered Meta Optimization
+  category: SEO & Structured Data
+  tier: addon
+  available_on: [addon]
+  status: roadmap
+  dev_status:
+    backend: planned
+    frontend: planned
+    released: false
+  roadmap: true
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: seo_file_optimization
+  name: File Optimization for SEO
+  category: SEO & Structured Data
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: planned
+    frontend: planned
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: seo_alt_tags
+  name: Automatic Alt Tags
   category: SEO & Structured Data
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
-    frontend: na
+    backend: na
+    frontend: done
     released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
   has_doc: false
 
-- id: xml_sitemap
-  name: Gallery XML sitemap integration
+- id: seo_open_graph_tags
+  name: Open Graph Tags
+  category: SEO & Structured Data
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: na
+    frontend: no
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: seo_schema_markup
+  name: Image schema markup (JSON-LD)
   category: SEO & Structured Data
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
-    frontend: na
+    backend: na
+    frontend: no
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: seo_xml_sitemap
+  name: Image Sitemaps
+  category: SEO & Structured Data
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: na
+    frontend: no
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: exif_fetch_show
+  name: Fetch and Show EXIF Data
+  category: SEO & Structured Data
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: no
+    frontend: no
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: exif_edit
+  name: Edit EXIF Data
+  category: SEO & Structured Data
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: no
+    frontend: no
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: exif_per_image_overrides
+  name: Per-image EXIF Overrides
+  category: SEO & Structured Data
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: no
+    frontend: no
     released: false
   roadmap: false
   notes: ""
