@@ -132,8 +132,10 @@ title: Overview
 
 <div class="roadmap-grid">
   <div class="roadmap-card">
-    <div class="roadmap-stage">Stage 1</div>
-    <div class="roadmap-date">July 2026</div>
+    <div class="roadmap-stage-top">
+      <div class="roadmap-stage">Stage 1</div>
+      <div class="roadmap-date">July 2026</div>
+    </div>
     <div class="roadmap-title">Free Version</div>
     <p class="roadmap-requirements-title">Requirements</p>
     <ul class="roadmap-list">
@@ -146,8 +148,10 @@ title: Overview
   </div>
 
   <div class="roadmap-card">
-    <div class="roadmap-stage">Stage 2</div>
-    <div class="roadmap-date">August 2026</div>
+    <div class="roadmap-stage-top">
+      <div class="roadmap-stage">Stage 2</div>
+      <div class="roadmap-date">August 2026</div>
+    </div>
     <div class="roadmap-title">Pro Starter Version</div>
     <p class="roadmap-requirements-title">Requirements</p>
     <ul class="roadmap-list">
@@ -157,8 +161,10 @@ title: Overview
   </div>
 
   <div class="roadmap-card">
-    <div class="roadmap-stage">Stage 3</div>
-    <div class="roadmap-date">October 2026</div>
+    <div class="roadmap-stage-top">
+      <div class="roadmap-stage">Stage 3</div>
+      <div class="roadmap-date">October 2026</div>
+    </div>
     <div class="roadmap-title">Pro Plus Version</div>
     <p class="roadmap-requirements-title">Target</p>
     <ul class="roadmap-list">
@@ -167,8 +173,10 @@ title: Overview
   </div>
 
   <div class="roadmap-card">
-    <div class="roadmap-stage">Stage 4</div>
-    <div class="roadmap-date">December 2026</div>
+    <div class="roadmap-stage-top">
+      <div class="roadmap-stage">Stage 4</div>
+      <div class="roadmap-date">December 2026</div>
+    </div>
     <div class="roadmap-title">Pro Agency Version</div>
     <p class="roadmap-requirements-title">Target</p>
     <ul class="roadmap-list">
