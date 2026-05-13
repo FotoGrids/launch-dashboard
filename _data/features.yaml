@@ -487,23 +487,23 @@
 
 # ── Image Protection & Security ───────────────────────────────────────────────────
 
-- id: watermarking
-  name: Watermarking
+- id: password_protect
+  name: Password Protect Gallery/Album
   category: Image Protection & Security
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
     backend: done
-    frontend: na
+    frontend: false
     released: false
   roadmap: false
   notes: ""
-  wp_org_visible: true
+  wp_org_visible: false
   has_doc: false
 
-- id: password_galleries
-  name: Password-protected galleries
+- id: right_click_protection
+  name: Right-click & Drag Protection
   category: Image Protection & Security
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
@@ -514,22 +514,37 @@
     released: false
   roadmap: false
   notes: ""
-  wp_org_visible: false
+  wp_org_visible: true
   has_doc: false
 
-- id: right_click_protection
-  name: Right-click & drag protection
+- id: watermarking
+  name: Basic Watermarking
   category: Image Protection & Security
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
     backend: done
-    frontend: na
+    frontend: false
     released: false
   roadmap: false
   notes: ""
   wp_org_visible: true
+  has_doc: false
+
+- id: watermarking_advanced_settings_image_watermarks
+  name: Advanced Watermark Settings & Image Watermarks
+  category: Image Protection & Security
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
   has_doc: false
 
 - id: hotlink_protection
@@ -539,10 +554,10 @@
   available_on: [pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
-    frontend: na
+    backend: false
+    frontend: false
     released: false
-  roadmap: false
+  roadmap: true
   notes: ""
   wp_org_visible: false
   has_doc: false
