@@ -77,6 +77,7 @@ title: Product
           data-backend="{{ f.dev_status.backend }}"
           data-frontend="{{ f.dev_status.frontend }}"
           data-released="{{ f.dev_status.released }}"
+          data-doc="{{ f.has_doc }}"
         >
           <td style="text-align:left;">
             {% case f.tier %}
@@ -187,6 +188,125 @@ title: Product
 </div>
 
 <script>
+let featureChartState = null;
+
+function normalizeStatus(value) {
+  return String(value || '').trim().toLowerCase().replace(/\s+/g, '_');
+}
+
+function isCompletedStatus(value) {
+  const normalized = normalizeStatus(value);
+  return normalized === 'true' || normalized === 'done';
+}
+
+function createFeatureChart(config) {
+  const canvas = document.getElementById('featureChart');
+  if (!canvas) return;
+  if (featureChartState) featureChartState.destroy();
+  featureChartState = new Chart(canvas, config);
+}
+
+function renderTierSummaryChart() {
+  const tiers   = ['free', 'pro_starter', 'pro_plus', 'agency', 'addon'];
+  const labels  = ['Free', 'PRO Starter', 'PRO Plus', 'PRO Agency', 'Add-on'];
+  const planned = [], inProgress = [], done = [];
+  const rows = Array.from(document.querySelectorAll('#feature-table tbody tr'));
+
+  tiers.forEach(tier => {
+    const tierRows = rows.filter(r => r.dataset.tier === tier && r.dataset.roadmap === 'false');
+    let d = 0, ip = 0, p = 0;
+    tierRows.forEach(r => {
+      const released = normalizeStatus(r.dataset.released) === 'true';
+      const backendStatus = normalizeStatus(r.dataset.backend);
+      const frontendStatus = normalizeStatus(r.dataset.frontend);
+
+      if (released) {
+        d++;
+      } else if (backendStatus === 'in_progress' || frontendStatus === 'in_progress') {
+        ip++;
+      } else {
+        p++;
+      }
+    });
+    done.push(d);
+    inProgress.push(ip);
+    planned.push(p);
+  });
+
+  createFeatureChart({
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Done',        data: done,       backgroundColor: '#46B450' },
+        { label: 'In progress', data: inProgress, backgroundColor: '#FFB914' },
+        { label: 'Planned',     data: planned,    backgroundColor: '#E5E7F0' },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { font: { family: "'Poppins', system-ui", size: 11 }, color: '#6B7290', boxWidth: 12, padding: 16 },
+        },
+      },
+      scales: {
+        x: { stacked: true, grid: { display: false }, ticks: { font: { family: "'Poppins', system-ui", size: 11 }, color: '#6B7290' }, border: { display: false } },
+        y: { stacked: true, beginAtZero: true, ticks: { stepSize: 1, font: { family: "'Poppins', system-ui", size: 11 }, color: '#6B7290' }, grid: { color: '#E5E7F0' }, border: { display: false } },
+      },
+    },
+  });
+}
+
+function renderTierDetailChart(tier) {
+  const rows = Array.from(document.querySelectorAll('#feature-table tbody tr'))
+    .filter(r => r.dataset.tier === tier && r.dataset.roadmap === 'false');
+
+  const labels = ['Backend', 'Frontend', 'Released', 'Docs'];
+  const values = [
+    rows.filter(r => isCompletedStatus(r.dataset.backend)).length,
+    rows.filter(r => isCompletedStatus(r.dataset.frontend)).length,
+    rows.filter(r => normalizeStatus(r.dataset.released) === 'true').length,
+    rows.filter(r => isCompletedStatus(r.dataset.doc)).length,
+  ];
+
+  createFeatureChart({
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        label: 'Completed',
+        data: values,
+        backgroundColor: ['#3C46F0', '#7B83F5', '#46B450', '#FFB914'],
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { font: { family: "'Poppins', system-ui", size: 11 }, color: '#6B7290', boxWidth: 12, padding: 16 },
+        },
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { family: "'Poppins', system-ui", size: 11 }, color: '#6B7290' }, border: { display: false } },
+        y: { beginAtZero: true, max: rows.length > 0 ? rows.length : 1, ticks: { stepSize: 1, font: { family: "'Poppins', system-ui", size: 11 }, color: '#6B7290' }, grid: { color: '#E5E7F0' }, border: { display: false } },
+      },
+    },
+  });
+}
+
+function updateFeatureChartForTier(tier) {
+  if (tier === 'all' || tier === 'roadmap') {
+    renderTierSummaryChart();
+    return;
+  }
+  renderTierDetailChart(tier);
+}
+
 // ── Tier filter ─────────────────────────────────────────────────
 function filterTier(tier, btn) {
   document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
@@ -217,42 +337,10 @@ function filterTier(tier, btn) {
     }
     catRow.style.display = anyVisible ? '' : 'none';
   });
+
+  updateFeatureChartForTier(tier);
 }
 
-// ── Feature stacked bar chart ────────────────────────────────────
-(function() {
-  // Build data from injected Jekyll values
-  const tiers   = ['free', 'pro_starter', 'pro_plus', 'agency', 'addon'];
-  const labels  = ['Free', 'PRO Starter', 'PRO Plus', 'PRO Agency', 'Add-on'];
-  const planned = [], inProgress = [], done = [];
-
-  const rows = Array.from(document.querySelectorAll('#feature-table tbody tr'));
-
-  function normalizeStatus(value) {
-    return String(value || '').trim().toLowerCase().replace(/\s+/g, '_');
-  }
-
-  tiers.forEach(tier => {
-    const tierRows = rows.filter(r => r.dataset.tier === tier && r.dataset.roadmap === 'false');
-    let d = 0, ip = 0, p = 0;
-    tierRows.forEach(r => {
-      const released = normalizeStatus(r.dataset.released) === 'true';
-      const backendStatus = normalizeStatus(r.dataset.backend);
-      const frontendStatus = normalizeStatus(r.dataset.frontend);
-
-      if (released) {
-        d++;
-      } else if (backendStatus === 'in_progress' || frontendStatus === 'in_progress') {
-        ip++;
-      } else {
-        p++;
-      }
-    });
-    done.push(d);
-    inProgress.push(ip);
-    planned.push(p);
-  });
-
-  renderFeatureChart('featureChart', labels, planned, inProgress, done);
-})();
+// ── Initial chart render (all tiers summary) ─────────────────────
+updateFeatureChartForTier('all');
 </script>

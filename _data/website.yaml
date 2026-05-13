@@ -80,7 +80,7 @@ pages:
   - id: free_vs_pro
     name: Features Comparison by Tier
     status: live
-    url: "/features/free-vs-pro"
+    url: "/free-vs-pro"
     notes: ""
 
   - id: docs_index
@@ -117,6 +117,12 @@ pages:
     name: Changelog
     status: planned
     url: "/changelog"
+    notes: ""
+
+  - id: affiliates
+    name: Become an Affiliate
+    status: live
+    url: "/affiliates"
     notes: ""
 
   - id: compare_us_index
