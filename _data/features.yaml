@@ -565,7 +565,7 @@
 # ── SEO & Structured Data ─────────────────────────────────────────────────────────
 
 - id: seo_per_item_tags
-  name: Per-item Tags
+  name: Per-Item Tags
   category: SEO & Structured Data
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -580,7 +580,7 @@
   has_doc: false
 
 - id: seo_per_item_people_tagging
-  name: Per-item People Tagging
+  name: Per-Item People Tagging
   category: SEO & Structured Data
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -610,7 +610,7 @@
   has_doc: false
 
 - id: seo_per_item_location_tagging
-  name: Per-item Location Tagging
+  name: Per-Item Location Tagging
   category: SEO & Structured Data
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]

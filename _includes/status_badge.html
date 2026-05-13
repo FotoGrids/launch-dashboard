@@ -6,6 +6,10 @@
 {% assign _s = include.status | downcase | replace: ' ', '_' %}
 {% if _s == 'done' or _s == 'live' or _s == 'published' or _s == 'shipped' %}
   {% include icon_done.html %}
+{% elsif _s == 'na' or _s == 'n/a' %}
+  {% include icon_na.html %}
+{% elsif _s == 'false' %}
+  {% include icon_false.html %}
 {% else %}
 <span class="badge badge-{{ _s }}">{{ include.status | replace: '_', ' ' }}</span>
 {% endif %}

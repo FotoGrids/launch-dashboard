@@ -71,7 +71,13 @@ title: Product
           <td colspan="8">{{ cat }}</td>
         </tr>
         {% for f in cat_features %}
-        <tr data-tier="{{ f.tier }}" data-roadmap="{{ f.roadmap }}">
+        <tr
+          data-tier="{{ f.tier }}"
+          data-roadmap="{{ f.roadmap }}"
+          data-backend="{{ f.dev_status.backend }}"
+          data-frontend="{{ f.dev_status.frontend }}"
+          data-released="{{ f.dev_status.released }}"
+        >
           <td style="text-align:left;">
             {% case f.tier %}
               {% when 'free' %}
@@ -218,22 +224,21 @@ function filterTier(tier, btn) {
 
   const rows = Array.from(document.querySelectorAll('#feature-table tbody tr'));
 
+  function normalizeStatus(value) {
+    return String(value || '').trim().toLowerCase().replace(/\s+/g, '_');
+  }
+
   tiers.forEach(tier => {
     const tierRows = rows.filter(r => r.dataset.tier === tier && r.dataset.roadmap === 'false');
     let d = 0, ip = 0, p = 0;
     tierRows.forEach(r => {
-      const cells = r.querySelectorAll('td');
-      // released = col index 5 (0-based); icon_done.html renders an <svg>, no .badge-done
-      const released = cells[5].querySelector('svg') !== null;
-      // backend = index 3, frontend = index 4
-      const backendBadge   = cells[3].querySelector('.badge');
-      const frontendBadge  = cells[4].querySelector('.badge');
-      const backendText    = backendBadge ? backendBadge.textContent.trim() : '';
-      const frontendText   = frontendBadge ? frontendBadge.textContent.trim() : '';
+      const released = normalizeStatus(r.dataset.released) === 'true';
+      const backendStatus = normalizeStatus(r.dataset.backend);
+      const frontendStatus = normalizeStatus(r.dataset.frontend);
 
       if (released) {
         d++;
-      } else if (backendText === 'in progress' || frontendText === 'in progress') {
+      } else if (backendStatus === 'in_progress' || frontendStatus === 'in_progress') {
         ip++;
       } else {
         p++;

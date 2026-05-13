@@ -324,6 +324,9 @@ h3 {
 .badge-skipped     { background: #F0F1F5; color: var(--text-muted); }
 .badge-na          { background: #F0F1F5; color: var(--text-muted); }
 
+/* Shared SVG status icon hook for table/chart logic */
+.status-icon { display: inline-block; vertical-align: middle; }
+
 /* ── Tier badges — tables only ──────────────────────────────── */
 .tier-pill {
   display: inline-flex;
