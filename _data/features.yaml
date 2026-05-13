@@ -211,36 +211,6 @@
   wp_org_visible: false
   has_doc: false
 
-- id: hover_effects_basic
-  name: Hover Effects — Basic
-  category: Styling & Customization
-  tier: free
-  available_on: [free, pro_starter, pro_plus, agency]
-  status: beta
-  dev_status:
-    backend: true
-    frontend: in_progress
-    released: false
-  roadmap: false
-  notes: ""
-  wp_org_visible: true
-  has_doc: false
-
-- id: hover_effects_advanced
-  name: Hover Effects — Advanced
-  category: Styling & Customization
-  tier: pro_starter
-  available_on: [pro_starter, pro_plus, agency]
-  status: beta
-  dev_status:
-    backend: true
-    frontend: in_progress
-    released: false
-  roadmap: false
-  notes: ""
-  wp_org_visible: false
-  has_doc: false
-
 - id: captions
   name: Captions
   category: Display & Layout
@@ -271,33 +241,18 @@
   wp_org_visible: false
   has_doc: false
 
-- id: custom_css
-  name: Custom CSS per Collection
-  category: Developers
+- id: shortcodes
+  name: Shortcodes Implementation
+  category: Display & Layout
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
+  status: beta
   dev_status:
     backend: true
     frontend: true
-    released: false
+    released: true
   roadmap: false
-  notes: "Missing CSS sanitization"
-  wp_org_visible: true
-  has_doc: false
-
-- id: custom_js
-  name: Custom JS per Collection
-  category: Developers
-  tier: free
-  available_on: [free, pro_starter, pro_plus, agency]
-  status: shipped
-  dev_status:
-    backend: true
-    frontend: true
-    released: false
-  roadmap: false
-  notes: "Missing JS sanitization"
+  notes: ""
   wp_org_visible: true
   has_doc: false
 
@@ -311,7 +266,7 @@
   status: beta
   dev_status:
     backend: true
-    frontend: false
+    frontend: in_progress
     released: false
   roadmap: false
   notes: ""
@@ -389,6 +344,38 @@
     frontend: no
     released: false
   roadmap: true
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+# -- Styling & Customization ─────────────────────────────────────────────────────
+
+- id: hover_effects_basic
+  name: Hover Effects — Basic
+  category: Styling & Customization
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: true
+    frontend: in_progress
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
+- id: hover_effects_advanced
+  name: Hover Effects — Advanced
+  category: Styling & Customization
+  tier: pro_starter
+  available_on: [pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: true
+    frontend: in_progress
+    released: false
+  roadmap: false
   notes: ""
   wp_org_visible: false
   has_doc: false
@@ -885,6 +872,36 @@
 
 # ── Developers ────────────────────────────────────────────────────────
 
+- id: custom_css
+  name: Custom CSS per Collection
+  category: Developers
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: shipped
+  dev_status:
+    backend: true
+    frontend: in_progress
+    released: false
+  roadmap: false
+  notes: "Working, but missing CSS sanitization"
+  wp_org_visible: true
+  has_doc: false
+
+- id: custom_js
+  name: Custom JS per Collection
+  category: Developers
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: shipped
+  dev_status:
+    backend: true
+    frontend: in_progress
+    released: false
+  roadmap: false
+  notes: "Working, but missing JS sanitization"
+  wp_org_visible: true
+  has_doc: false
+
 - id: rest_api
   name: REST API endpoints
   category: Developers
@@ -898,21 +915,6 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
-
-- id: shortcodes
-  name: Shortcodes
-  category: Developers
-  tier: free
-  available_on: [free, pro_starter, pro_plus, agency]
-  status: beta
-  dev_status:
-    backend: true
-    frontend: na
-    released: false
-  roadmap: false
-  notes: ""
-  wp_org_visible: true
   has_doc: false
 
 - id: template_overrides
