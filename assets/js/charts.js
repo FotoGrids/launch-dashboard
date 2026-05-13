@@ -65,7 +65,36 @@ function renderReadinessChart(canvasId, sections) {
 
   const sectionColours = sections.map((_, i) => palette[i % palette.length]);
 
-  new Chart(ctx, {
+  const isMobile = () => window.innerWidth <= 900;
+
+  const legendConfig = () => ({
+    position: isMobile() ? 'bottom' : 'right',
+    labels: {
+      font: { family: "'Poppins', system-ui", size: 12 },
+      color: '#6B7290',
+      boxWidth: 12,
+      padding: isMobile() ? 12 : 20,
+      generateLabels(chart) {
+        const data = chart.data;
+        return data.labels.map((label, i) => ({
+          text: label + '  ' + data.datasets[0].data[i] + '%',
+          fillStyle:   data.datasets[0].backgroundColor[i],
+          strokeStyle: data.datasets[0].borderColor[i],
+          lineWidth: 1,
+          hidden: chart.getDataVisibility(i) === false,
+          index: i,
+        }));
+      },
+    },
+    onClick(e, legendItem, legend) {
+      const index = legendItem.index;
+      const chart = legend.chart;
+      chart.toggleDataVisibility(index);
+      chart.update();
+    },
+  });
+
+  const chart = new Chart(ctx, {
     type: 'polarArea',
     data: {
       labels: sections.map(s => s.label),
@@ -96,33 +125,7 @@ function renderReadinessChart(canvasId, sections) {
         },
       },
       plugins: {
-        legend: {
-          position: 'right',
-          labels: {
-            font: { family: "'Poppins', system-ui", size: 12 },
-            color: '#6B7290',
-            boxWidth: 12,
-            padding: 20,
-            generateLabels(chart) {
-              const data = chart.data;
-              const hidden = chart._hiddenIndices || {};
-              return data.labels.map((label, i) => ({
-                text: label + '  ' + data.datasets[0].data[i] + '%',
-                fillStyle:   data.datasets[0].backgroundColor[i],
-                strokeStyle: data.datasets[0].borderColor[i],
-                lineWidth: 1,
-                hidden: chart.getDataVisibility(i) === false,
-                index: i,
-              }));
-            },
-          },
-          onClick(e, legendItem, legend) {
-            const index = legendItem.index;
-            const chart = legend.chart;
-            chart.toggleDataVisibility(index);
-            chart.update();
-          },
-        },
+        legend: legendConfig(),
         tooltip: {
           callbacks: {
             label: ctx => ' ' + ctx.parsed.r + '%',
@@ -130,5 +133,15 @@ function renderReadinessChart(canvasId, sections) {
         },
       },
     },
+  });
+
+  // Update legend position on resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      chart.options.plugins.legend = legendConfig();
+      chart.update('none');
+    }, 150);
   });
 }

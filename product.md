@@ -49,9 +49,9 @@ title: Product
 <table class="dash-table" id="feature-table">
   <thead>
     <tr>
-      <th style="text-align:left;">Tier</th>
+      <th class="col-tier">Tier</th>
       <th style="text-align:left;">Feature</th>
-      <th>Category</th>
+      <th class="col-category">Category</th>
       <th>Backend</th>
       <th>Frontend</th>
       <th>Released</th>
@@ -79,7 +79,7 @@ title: Product
           data-released="{{ f.dev_status.released }}"
           data-doc="{{ f.has_doc }}"
         >
-          <td style="text-align:left;">
+          <td class="col-tier">
             {% case f.tier %}
               {% when 'free' %}
                 <span class="tier-pill tier-free">FREE</span>
@@ -94,7 +94,7 @@ title: Product
             {% endcase %}
           </td>
           <td class="col-name">{{ f.name }}</td>
-          <td style="white-space:nowrap;">{{ f.category }}</td>
+          <td class="col-category">{{ f.category }}</td>
           <td>{% include status_badge.html status=f.dev_status.backend %}</td>
           <td>{% include status_badge.html status=f.dev_status.frontend %}</td>
           <td>
@@ -215,7 +215,7 @@ function createFeatureChart(config) {
 
 function renderTierSummaryChart() {
   const tiers   = ['free', 'pro_starter', 'pro_plus', 'agency', 'addon'];
-  const labels  = ['Free', 'PRO Starter', 'PRO Plus', 'PRO Agency', 'Add-on'];
+  const labels  = ['Free', 'Starter', 'Plus', 'Agency', 'Add-on'];
   const planned = [], inProgress = [], done = [];
   const rows = Array.from(document.querySelectorAll('#feature-table tbody tr'));
 

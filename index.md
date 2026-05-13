@@ -254,6 +254,7 @@ title: Overview
 
 ## Post-launch Roadmap
 
+<div class="table-scroll">
 <table class="dash-table">
   <thead>
     <tr>
@@ -279,6 +280,7 @@ title: Overview
     {% endfor %}
   </tbody>
 </table>
+</div>
 
 ---
 
