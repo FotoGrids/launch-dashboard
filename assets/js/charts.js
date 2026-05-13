@@ -60,7 +60,10 @@ function renderReadinessChart(canvasId, sections) {
     '#FFB914', // yellow  — website
     '#FF8C42', // orange  — marketing
     '#F01E32', // red     — admin
+    '#6B7290', // slate   — legal
   ];
+
+  const sectionColours = sections.map((_, i) => palette[i % palette.length]);
 
   new Chart(ctx, {
     type: 'polarArea',
@@ -68,14 +71,14 @@ function renderReadinessChart(canvasId, sections) {
       labels: sections.map(s => s.label),
       datasets: [{
         data: sections.map(s => s.pct),
-        backgroundColor: palette.map(c => c + 'CC'), // 80% opacity
-        borderColor:     palette,
+        backgroundColor: sectionColours.map(c => c + 'CC'), // 80% opacity
+        borderColor:     sectionColours,
         borderWidth: 1,
       }],
     },
     options: {
       responsive: true,
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       scales: {
         r: {
           min: 0,

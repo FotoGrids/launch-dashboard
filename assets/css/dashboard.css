@@ -618,6 +618,33 @@ h3 {
   color: var(--text-muted);
 }
 
+.overview-top-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.overview-top-row .launch-hero {
+  height: 100%;
+  padding: 24px;
+}
+
+.overview-top-row .launch-hero .readiness {
+  height: 100%;
+}
+
+.overview-top-row .launch-hero .readiness canvas {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+}
+
+.stat-grid--side {
+  grid-template-columns: 1fr;
+  align-content: start;
+}
+
 /* ── Metrics ─────────────────────────────────────────────────── */
 .metric-group {
   display: flex;
@@ -682,6 +709,14 @@ h3 {
     padding: 20px;
   }
 
+  .overview-top-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-grid--side {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .stat-grid { grid-template-columns: repeat(2, 1fr); }
 
   .dash-table { font-size: 12px; }
@@ -696,5 +731,6 @@ h3 {
 
 @media (max-width: 480px) {
   .stat-grid { grid-template-columns: 1fr 1fr; }
+  .stat-grid--side { grid-template-columns: 1fr; }
   .filter-tabs { gap: 6px; }
 }

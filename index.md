@@ -35,7 +35,18 @@ title: Overview
 {% assign marketing_done     = marketing_done_a.size | plus: marketing_done_c.size %}
 
 {% assign admin_items        = site.data.admin %}
-{% assign admin_done         = admin_items | where: "status", "done" %}
+{% assign legal_items        = admin_items | where: "category", "Legal" %}
+{% assign legal_done         = legal_items | where: "status", "done" %}
+{% assign admin_ops_total    = 0 %}
+{% assign admin_ops_done     = 0 %}
+{% for item in admin_items %}
+  {% unless item.category == "Legal" %}
+    {% assign admin_ops_total = admin_ops_total | plus: 1 %}
+    {% if item.status == "done" %}
+      {% assign admin_ops_done = admin_ops_done | plus: 1 %}
+    {% endif %}
+  {% endunless %}
+{% endfor %}
 
 {% assign total_items  = launch_features.size | plus: all_tasks.size %}
 {% assign done_items   = done_features.size   | plus: done_tasks.size %}
@@ -52,7 +63,10 @@ title: Overview
 {% if marketing_total > 0 %}{% assign marketing_pct = marketing_done | times: 100 | divided_by: marketing_total %}{% endif %}
 
 {% assign admin_pct = 0 %}
-{% if admin_items.size > 0 %}{% assign admin_pct = admin_done.size | times: 100 | divided_by: admin_items.size %}{% endif %}
+{% if admin_ops_total > 0 %}{% assign admin_pct = admin_ops_done | times: 100 | divided_by: admin_ops_total %}{% endif %}
+
+{% assign legal_pct = 0 %}
+{% if legal_items.size > 0 %}{% assign legal_pct = legal_done.size | times: 100 | divided_by: legal_items.size %}{% endif %}
 
 {% comment %} Per-section: split features into free vs pro for the chart {% endcomment %}
 {% assign free_features      = launch_features | where: "tier", "free" %}
@@ -71,44 +85,44 @@ title: Overview
 {% assign pro_pct = 0 %}
 {% if pro_total_count > 0 %}{% assign pro_pct = pro_done_count | times: 100 | divided_by: pro_total_count %}{% endif %}
 
-<div class="launch-hero">
-  <div class="target">
-    <div class="label">Target</div>
-    <div class="value">{{ site.data.milestones.launch.target_date }}</div>
-    <div style="font-size:12px; color:var(--text-muted);">v{{ site.data.milestones.launch.version }}</div>
+<div class="overview-top-row">
+  <div class="launch-hero">
+    <div class="readiness">
+      <canvas id="readinessChart"></canvas>
+    </div>
   </div>
 
-  <div class="readiness">
-    <div class="readiness-label">Launch readiness by section</div>
-    <canvas id="readinessChart" style="max-height:260px;"></canvas>
-  </div>
-</div>
-
-<div class="stat-grid">
-  <div class="stat-card">
-    <div class="stat-value">{{ feature_pct }}%</div>
-    <div class="stat-label">Features released</div>
-    <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ feature_pct }}%;"></div></div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-value">{{ product_pct }}%</div>
-    <div class="stat-label">Product tasks done</div>
-    <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ product_pct }}%;"></div></div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-value">{{ website_pct }}%</div>
-    <div class="stat-label">Website ready</div>
-    <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ website_pct }}%;"></div></div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-value">{{ marketing_pct }}%</div>
-    <div class="stat-label">Marketing ready</div>
-    <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ marketing_pct }}%;"></div></div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-value">{{ admin_pct }}%</div>
-    <div class="stat-label">Admin & legal done</div>
-    <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ admin_pct }}%;"></div></div>
+  <div class="stat-grid stat-grid--side">
+    <div class="stat-card">
+      <div class="stat-value">{{ feature_pct }}%</div>
+      <div class="stat-label">Features released</div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ feature_pct }}%;"></div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">{{ product_pct }}%</div>
+      <div class="stat-label">Product tasks done</div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ product_pct }}%;"></div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">{{ website_pct }}%</div>
+      <div class="stat-label">Website ready</div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ website_pct }}%;"></div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">{{ marketing_pct }}%</div>
+      <div class="stat-label">Marketing ready</div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ marketing_pct }}%;"></div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">{{ admin_pct }}%</div>
+      <div class="stat-label">Admin tasks done</div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ admin_pct }}%;"></div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">{{ legal_pct }}%</div>
+      <div class="stat-label">Legal tasks done</div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ legal_pct }}%;"></div></div>
+    </div>
   </div>
 </div>
 
@@ -179,6 +193,7 @@ renderReadinessChart('readinessChart', [
   { label: 'Product Tasks',    pct: {{ product_pct }} },
   { label: 'Website',          pct: {{ website_pct }} },
   { label: 'Marketing',        pct: {{ marketing_pct }} },
-  { label: 'Admin & Legal',    pct: {{ admin_pct }} },
+  { label: 'Admin Tasks',      pct: {{ admin_pct }} },
+  { label: 'Legal Tasks',      pct: {{ legal_pct }} },
 ]);
 </script>
