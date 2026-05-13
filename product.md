@@ -99,6 +99,8 @@ title: Product
           <td>
             {% if f.dev_status.released %}
               {% include icon_done.html %}
+            {% elsif f.dev_status.released == false or f.dev_status.released == 'false' %}
+              {% include icon_false.html %}
             {% else %}
               <span class="badge badge-planned">No</span>
             {% endif %}
@@ -108,6 +110,8 @@ title: Product
               {% include icon_done.html %}
             {% elsif f.has_doc == 'in_progress' %}
               <span class="badge badge-in_progress">WIP</span>
+            {% elsif f.has_doc == false or f.has_doc == 'false' %}
+              {% include icon_false.html %}
             {% else %}
               <span class="badge badge-planned">No</span>
             {% endif %}
