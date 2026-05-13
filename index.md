@@ -133,71 +133,81 @@ title: Overview
 <div class="roadmap-grid">
   <div class="roadmap-card">
     <div class="roadmap-number">1</div>
-    <div class="roadmap-stage-top">
-      <div class="roadmap-stage">Stage 1</div>
-      <div class="roadmap-date">July 2026</div>
+    <div class="roadmap-content">
+      <div class="roadmap-stage-top">
+        <div class="roadmap-stage">Stage 1</div>
+        <div class="roadmap-date">July 2026</div>
+      </div>
+      <div class="roadmap-title">
+        <span class="roadmap-tier-pill roadmap-tier-pill--free">Free</span>
+        <span class="roadmap-tier-text">Version</span>
+      </div>
+      <p class="roadmap-requirements-title">Requirements</p>
+      <ul class="roadmap-list">
+        <li>Free features completed</li>
+        <li>Product tasks completed</li>
+        <li>Website ready</li>
+        <li>Documentation ready</li>
+        <li>Admin tasks completed</li>
+        <li>Legal tasks completed</li>
+      </ul>
     </div>
-    <div class="roadmap-title">
-      <span class="roadmap-tier-pill roadmap-tier-pill--free">Free</span>
-      <span class="roadmap-tier-text">Version</span>
-    </div>
-    <p class="roadmap-requirements-title">Requirements</p>
-    <ul class="roadmap-list">
-      <li>Free features completed</li>
-      <li>Product tasks completed</li>
-      <li>Website ready</li>
-      <li>Documentation ready</li>
-      <li>Admin and legal tasks completed</li>
-    </ul>
   </div>
 
   <div class="roadmap-card">
     <div class="roadmap-number">2</div>
-    <div class="roadmap-stage-top">
-      <div class="roadmap-stage">Stage 2</div>
-      <div class="roadmap-date">August 2026</div>
+    <div class="roadmap-content">
+      <div class="roadmap-stage-top">
+        <div class="roadmap-stage">Stage 2</div>
+        <div class="roadmap-date">August 2026</div>
+      </div>
+      <div class="roadmap-title">
+        <span class="roadmap-tier-pill roadmap-tier-pill--starter">Pro</span>
+        <span class="roadmap-tier-text">Starter Version</span>
+      </div>
+      <p class="roadmap-requirements-title">Requirements</p>
+      <ul class="roadmap-list">
+        <li>Pro Starter version completed</li>
+        <li>Marketing completed</li>
+        <li>Affiliate program ready</li>
+      </ul>
     </div>
-    <div class="roadmap-title">
-      <span class="roadmap-tier-pill roadmap-tier-pill--starter">Pro</span>
-      <span class="roadmap-tier-text">Starter Version</span>
-    </div>
-    <p class="roadmap-requirements-title">Requirements</p>
-    <ul class="roadmap-list">
-      <li>Pro Starter version completed</li>
-      <li>Marketing completed</li>
-    </ul>
   </div>
 
   <div class="roadmap-card">
     <div class="roadmap-number">3</div>
-    <div class="roadmap-stage-top">
-      <div class="roadmap-stage">Stage 3</div>
-      <div class="roadmap-date">October 2026</div>
+    <div class="roadmap-content">
+      <div class="roadmap-stage-top">
+        <div class="roadmap-stage">Stage 3</div>
+        <div class="roadmap-date">October 2026</div>
+      </div>
+      <div class="roadmap-title">
+        <span class="roadmap-tier-pill roadmap-tier-pill--plus">Pro</span>
+        <span class="roadmap-tier-text">Plus Version</span>
+      </div>
+      <p class="roadmap-requirements-title">Target</p>
+      <ul class="roadmap-list">
+        <li>Pro Plus plan released</li>
+      </ul>
     </div>
-    <div class="roadmap-title">
-      <span class="roadmap-tier-pill roadmap-tier-pill--plus">Pro</span>
-      <span class="roadmap-tier-text">Plus Version</span>
-    </div>
-    <p class="roadmap-requirements-title">Target</p>
-    <ul class="roadmap-list">
-      <li>Pro Plus plan released</li>
-    </ul>
   </div>
 
   <div class="roadmap-card">
     <div class="roadmap-number">4</div>
-    <div class="roadmap-stage-top">
-      <div class="roadmap-stage">Stage 4</div>
-      <div class="roadmap-date">December 2026</div>
+    <div class="roadmap-content">
+      <div class="roadmap-stage-top">
+        <div class="roadmap-stage">Stage 4</div>
+        <div class="roadmap-date">December 2026</div>
+      </div>
+      <div class="roadmap-title">
+        <span class="roadmap-tier-pill roadmap-tier-pill--agency">Pro</span>
+        <span class="roadmap-tier-text">Agency Version</span>
+      </div>
+      <p class="roadmap-requirements-title">Target</p>
+      <ul class="roadmap-list">
+        <li>Pro Agency plan released</li>
+      </ul>
     </div>
-    <div class="roadmap-title">
-      <span class="roadmap-tier-pill roadmap-tier-pill--agency">Pro</span>
-      <span class="roadmap-tier-text">Agency Version</span>
-    </div>
-    <p class="roadmap-requirements-title">Target</p>
-    <ul class="roadmap-list">
-      <li>Pro Agency plan released</li>
-    </ul>
   </div>
 </div>
 
