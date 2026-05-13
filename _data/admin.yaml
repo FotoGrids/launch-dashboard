@@ -34,8 +34,14 @@
   status: in_progress
   notes: "Plausible installed on website; goal tracking pending"
 
-- id: tos
-  name: Terms of Service written and published
+- id: tos_product
+  name: Product Terms of Service written and published
+  category: Legal
+  status: planned
+  notes: ""
+
+- id: tos_website
+  name: Website Terms of Service written and published
   category: Legal
   status: planned
   notes: ""
@@ -52,6 +58,12 @@
   status: planned
   notes: ""
 
+- id: payments_tos
+  name: Payments ToS written and published
+  category: Legal
+  status: planned
+  notes: ""
+
 - id: refund_policy
   name: Refund Policy published
   category: Legal
@@ -60,6 +72,12 @@
 
 - id: cookie_banner
   name: Cookie consent banner
+  category: Legal
+  status: planned
+  notes: ""
+
+- id: affiliated_tos
+  name: Affiliated Terms of Service written and published
   category: Legal
   status: planned
   notes: ""

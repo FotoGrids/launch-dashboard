@@ -206,8 +206,17 @@
   notes: ""
   priority: medium
 
-- id: tos_publish
-  name: Terms of Service written and published
+- id: tos_product_publish
+  name: Product Terms of Service written and published
+  section: admin
+  category: Legal
+  status: planned
+  blocked_by: ""
+  notes: ""
+  priority: high
+
+- id: tos_website_publish
+  name: Website Terms of Service written and published
   section: admin
   category: Legal
   status: planned
@@ -233,6 +242,15 @@
   notes: ""
   priority: high
 
+- id: payments_tos
+  name: Payments ToS written and published
+  section: admin
+  category: Legal
+  status: planned
+  blocked_by: ""
+  notes: ""
+  priority: medium
+
 - id: refund_policy
   name: Refund Policy published
   section: admin
@@ -248,5 +266,14 @@
   category: Legal
   status: planned
   blocked_by: privacy_policy
+  notes: ""
+  priority: medium
+
+- id: affiliated_tos
+  name: Affiliated Terms of Service written and published
+  section: admin
+  category: Legal
+  status: planned
+  blocked_by: ""
   notes: ""
   priority: medium

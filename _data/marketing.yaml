@@ -1,12 +1,12 @@
 assets:
   - id: plugin_banner
     name: WordPress.org plugin banner (1544×500)
-    status: done
+    status: live
     notes: ""
 
   - id: plugin_icon
     name: WordPress.org plugin icon (256×256)
-    status: done
+    status: live
     notes: ""
 
   - id: demo_video
@@ -16,7 +16,7 @@ assets:
 
   - id: og_image
     name: Open Graph / social share image
-    status: done
+    status: planned
     notes: ""
 
   - id: product_hunt_gallery
@@ -26,12 +26,12 @@ assets:
 
   - id: twitter_card
     name: Twitter card image
-    status: done
+    status: live
     notes: ""
 
   - id: linkedin_banner
     name: LinkedIn company page banner
-    status: in_progress
+    status: planned
     notes: ""
 
   - id: email_header
@@ -47,12 +47,12 @@ channels:
 
   - id: email_list
     name: Email list + welcome sequence
-    status: in_progress
+    status: planned
     notes: "Welcome email written; drip sequence (3 emails) pending"
 
   - id: social_profiles
     name: Social profiles claimed (X, LinkedIn)
-    status: done
+    status: planned
     notes: ""
 
   - id: wordpress_subreddits
@@ -77,5 +77,5 @@ channels:
 
   - id: early_access
     name: Early access / beta user outreach
-    status: in_progress
+    status: planned
     notes: "10 beta users onboarded; follow-up interviews pending"
