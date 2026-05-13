@@ -664,6 +664,12 @@ h3 {
   gap: 12px;
 }
 
+.roadmap-number {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--indigo-tint);
+}
+
 .roadmap-stage {
   font-size: 12px;
   font-weight: 600;

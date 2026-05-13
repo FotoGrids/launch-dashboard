@@ -132,6 +132,7 @@ title: Overview
 
 <div class="roadmap-grid">
   <div class="roadmap-card">
+    <div class="roadmap-number">1</div>
     <div class="roadmap-stage-top">
       <div class="roadmap-stage">Stage 1</div>
       <div class="roadmap-date">July 2026</div>
@@ -148,6 +149,7 @@ title: Overview
   </div>
 
   <div class="roadmap-card">
+    <div class="roadmap-number">2</div>
     <div class="roadmap-stage-top">
       <div class="roadmap-stage">Stage 2</div>
       <div class="roadmap-date">August 2026</div>
@@ -161,6 +163,7 @@ title: Overview
   </div>
 
   <div class="roadmap-card">
+    <div class="roadmap-number">3</div>
     <div class="roadmap-stage-top">
       <div class="roadmap-stage">Stage 3</div>
       <div class="roadmap-date">October 2026</div>
@@ -173,6 +176,7 @@ title: Overview
   </div>
 
   <div class="roadmap-card">
+    <div class="roadmap-number">4</div>
     <div class="roadmap-stage-top">
       <div class="roadmap-stage">Stage 4</div>
       <div class="roadmap-date">December 2026</div>
