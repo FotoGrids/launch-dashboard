@@ -144,13 +144,13 @@ title: Overview
       </div>
       <p class="roadmap-requirements-title">Requirements</p>
       <ul class="roadmap-list">
-        <li>All Free-tier features released and stable</li>
-        <li>Plugin approved on WordPress.org</li>
-        <li>Home, Features, and Pricing pages live</li>
-        <li>ToS and Privacy Policy published</li>
-        <li>Core infrastructure live (hosting, SSL, email)</li>
-        <li>Docs written for all Free features</li>
-        <li>3+ blog posts published for SEO</li>
+        <li>Free-tier features released and stable.</li>
+        <li>Plugin approved on WordPress.org.</li>
+        <li>Home, Features, and Pricing pages live.</li>
+        <li>ToS and Privacy Policy published.</li>
+        <li>Core infrastructure live.</li>
+        <li>Docs written for all Free features.</li>
+        <li>10+ blog posts published.</li>
       </ul>
     </div>
   </div>
@@ -168,12 +168,14 @@ title: Overview
       </div>
       <p class="roadmap-requirements-title">Requirements</p>
       <ul class="roadmap-list">
-        <li>All Pro Starter features released and stable</li>
-        <li>Stripe payments and license key system live</li>
-        <li>Refund policy, GDPR review, and cookie banner done</li>
-        <li>Product Hunt launch kit ready</li>
-        <li>Launch email and social posts scheduled</li>
-        <li>Docs written for all Pro Starter features</li>
+        <li>Pro Starter features released and stable.</li>
+        <li>Freemius payments and licensing live.</li>
+        <li>Refund policy, GDPR, cookie banner.</li>
+        <li>Product Hunt launch kit ready.</li>
+        <li>Launch email and social posts ready.</li>
+        <li>Docs written for all Pro Starter features.</li>
+        <li>Affiliate program live.</li>
+        <li>20+ blog posts published.</li>
       </ul>
     </div>
   </div>
@@ -191,11 +193,11 @@ title: Overview
       </div>
       <p class="roadmap-requirements-title">Requirements</p>
       <ul class="roadmap-list">
-        <li>All Pro Plus features released and stable</li>
-        <li>WooCommerce gallery, Google Photos, REST API, CDN ready</li>
-        <li>Docs written for all Pro Plus features</li>
-        <li>Affiliate program live</li>
-        <li>Blog at 10+ published posts</li>
+        <li>Pro Plus features released and stable.</li>
+        <li>E-Commerce and external integrations ready.</li>
+        <li>CDN setup ready, pricing is set.</li>
+        <li>Docs written for all Pro Plus features.</li>
+        <li>40+ blog posts published.</li>
       </ul>
     </div>
   </div>
@@ -213,10 +215,10 @@ title: Overview
       </div>
       <p class="roadmap-requirements-title">Requirements</p>
       <ul class="roadmap-list">
-        <li>Client account management and white-label mode ready</li>
-        <li>WordPress Multisite fully tested at scale</li>
-        <li>Agency-specific onboarding and docs complete</li>
-        <li>Blog at 20+ published posts</li>
+        <li>Site management and white-label mode ready.</li>
+        <li>WordPress Multisite fully tested at scale.</li>
+        <li>Agency-specific onboarding and docs complete, support is ready.</li>
+        <li>60+ blog posts published.</li>
       </ul>
     </div>
   </div>
