@@ -1,4 +1,4 @@
-<aside class="sidebar">
+<aside class="sidebar" id="sidebar">
   <div class="sidebar-logo">
     <img src="{{ '/assets/fotogrids-logo.svg' | relative_url }}" alt="FotoGrids" height="22">
     <div class="tag">Launch Dashboard</div>
@@ -37,3 +37,41 @@
     Target: {{ site.data.meta.launch_target }}
   </div>
 </aside>
+
+<!-- Mobile top bar -->
+<header class="mobile-topbar">
+  <div class="mobile-topbar-logo">
+    <img src="{{ '/assets/fotogrids-logo.svg' | relative_url }}" alt="FotoGrids" height="20">
+  </div>
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Mobile drawer overlay -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<script>
+(function() {
+  var btn     = document.getElementById('mobileMenuBtn');
+  var sidebar = document.getElementById('sidebar');
+  var overlay = document.getElementById('mobileOverlay');
+  function openMenu() {
+    sidebar.classList.add('mobile-open');
+    overlay.classList.add('mobile-open');
+    btn.classList.add('is-open');
+  }
+  function closeMenu() {
+    sidebar.classList.remove('mobile-open');
+    overlay.classList.remove('mobile-open');
+    btn.classList.remove('is-open');
+  }
+  btn.addEventListener('click', function() {
+    sidebar.classList.contains('mobile-open') ? closeMenu() : openMenu();
+  });
+  overlay.addEventListener('click', closeMenu);
+  sidebar.querySelectorAll('nav a').forEach(function(a) {
+    a.addEventListener('click', closeMenu);
+  });
+})();
+</script>

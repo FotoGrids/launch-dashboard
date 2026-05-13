@@ -102,17 +102,25 @@ function renderReadinessChart(canvasId, sections) {
             font: { family: "'Poppins', system-ui", size: 12 },
             color: '#6B7290',
             boxWidth: 12,
-            padding: 12,
+            padding: 20,
             generateLabels(chart) {
               const data = chart.data;
+              const hidden = chart._hiddenIndices || {};
               return data.labels.map((label, i) => ({
                 text: label + '  ' + data.datasets[0].data[i] + '%',
                 fillStyle:   data.datasets[0].backgroundColor[i],
                 strokeStyle: data.datasets[0].borderColor[i],
                 lineWidth: 1,
+                hidden: chart.getDataVisibility(i) === false,
                 index: i,
               }));
             },
+          },
+          onClick(e, legendItem, legend) {
+            const index = legendItem.index;
+            const chart = legend.chart;
+            chart.toggleDataVisibility(index);
+            chart.update();
           },
         },
         tooltip: {

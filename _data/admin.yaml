@@ -16,11 +16,11 @@
   status: done
   notes: ""
 
-- id: email_setup
-  name: Transactional email (Postmark)
+- id: google_workspace
+  name: Google Workspace and Emails setup
   category: Infrastructure
-  status: in_progress
-  notes: "Account created, templates in progress — see tasks.yaml"
+  status: planned
+  notes: ""
 
 - id: backup_system
   name: Automated database backups

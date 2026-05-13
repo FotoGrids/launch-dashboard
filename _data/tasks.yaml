@@ -74,22 +74,31 @@
 
 # ── Product — Infrastructure & Integrations ───────────────────────────────
 
-- id: stripe_integration
-  name: Stripe payment integration
+- id: freemius_sdk
+  name: Freemius SDK integration
+  section: product
+  category: Infrastructure
+  status: done
+  blocked_by: ""
+  notes: "SDK in place"
+  priority: high
+
+- id: freemius_plans
+  name: Freemius plans configured
   section: product
   category: Infrastructure
   status: in_progress
   blocked_by: ""
-  notes: "Webhooks for subscription events still pending"
+  notes: "Most plans in place; still in progress"
   priority: high
 
-- id: stripe_webhooks
-  name: Stripe webhooks (subscription events)
+- id: freemius_pricing_page
+  name: Pricing page connected to Freemius
   section: product
   category: Infrastructure
-  status: planned
-  blocked_by: stripe_integration
-  notes: ""
+  status: done
+  blocked_by: ""
+  notes: "Pricing page on website already connected"
   priority: high
 
 - id: license_key_system
@@ -98,7 +107,7 @@
   category: Infrastructure
   status: in_progress
   blocked_by: ""
-  notes: "Using EDD Software Licensing"
+  notes: "Via Freemius"
   priority: high
 
 - id: update_server
@@ -107,7 +116,7 @@
   category: Infrastructure
   status: in_progress
   blocked_by: ""
-  notes: "Auto-update for pro tiers via EDD"
+  notes: "Auto-update for pro tiers via Freemius"
   priority: high
 
 - id: staging_environment
@@ -148,14 +157,6 @@
   notes: ""
   priority: high
 
-- id: affiliate_program
-  name: Affiliate program setup
-  section: website
-  category: Growth
-  status: planned
-  blocked_by: ""
-  notes: ""
-  priority: low
 
 # ── Marketing ─────────────────────────────────────────────────────────────
 
@@ -188,13 +189,13 @@
 
 # ── Admin ──────────────────────────────────────────────────────────────────
 
-- id: transactional_email
-  name: Transactional email templates (Postmark)
+- id: google_workspace
+  name: Google Workspace and Emails setup
   section: admin
   category: Infrastructure
-  status: in_progress
+  status: planned
   blocked_by: ""
-  notes: "Welcome and purchase confirmation templates drafted; reset password pending"
+  notes: ""
   priority: high
 
 - id: backup_system
@@ -204,6 +205,15 @@
   status: planned
   blocked_by: ""
   notes: ""
+  priority: medium
+
+- id: freemius_affiliate
+  name: Freemius affiliate program
+  section: admin
+  category: Infrastructure
+  status: done
+  blocked_by: ""
+  notes: "Affiliate program set up in Freemius"
   priority: medium
 
 - id: tos_product_publish
