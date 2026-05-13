@@ -144,12 +144,13 @@ title: Overview
       </div>
       <p class="roadmap-requirements-title">Requirements</p>
       <ul class="roadmap-list">
-        <li>Free features completed</li>
-        <li>Product tasks completed</li>
-        <li>Website ready</li>
-        <li>Documentation ready</li>
-        <li>Admin tasks completed</li>
-        <li>Legal tasks completed</li>
+        <li>All Free-tier features released and stable</li>
+        <li>Plugin approved on WordPress.org</li>
+        <li>Home, Features, and Pricing pages live</li>
+        <li>ToS and Privacy Policy published</li>
+        <li>Core infrastructure live (hosting, SSL, email)</li>
+        <li>Docs written for all Free features</li>
+        <li>3+ blog posts published for SEO</li>
       </ul>
     </div>
   </div>
@@ -167,9 +168,12 @@ title: Overview
       </div>
       <p class="roadmap-requirements-title">Requirements</p>
       <ul class="roadmap-list">
-        <li>Pro Starter version completed</li>
-        <li>Marketing completed</li>
-        <li>Affiliate program ready</li>
+        <li>All Pro Starter features released and stable</li>
+        <li>Stripe payments and license key system live</li>
+        <li>Refund policy, GDPR review, and cookie banner done</li>
+        <li>Product Hunt launch kit ready</li>
+        <li>Launch email and social posts scheduled</li>
+        <li>Docs written for all Pro Starter features</li>
       </ul>
     </div>
   </div>
@@ -185,9 +189,13 @@ title: Overview
         <span class="roadmap-tier-pill roadmap-tier-pill--plus">Pro</span>
         <span class="roadmap-tier-text">Plus Version</span>
       </div>
-      <p class="roadmap-requirements-title">Target</p>
+      <p class="roadmap-requirements-title">Requirements</p>
       <ul class="roadmap-list">
-        <li>Pro Plus plan released</li>
+        <li>All Pro Plus features released and stable</li>
+        <li>WooCommerce gallery, Google Photos, REST API, CDN ready</li>
+        <li>Docs written for all Pro Plus features</li>
+        <li>Affiliate program live</li>
+        <li>Blog at 10+ published posts</li>
       </ul>
     </div>
   </div>
@@ -203,9 +211,12 @@ title: Overview
         <span class="roadmap-tier-pill roadmap-tier-pill--agency">Pro</span>
         <span class="roadmap-tier-text">Agency Version</span>
       </div>
-      <p class="roadmap-requirements-title">Target</p>
+      <p class="roadmap-requirements-title">Requirements</p>
       <ul class="roadmap-list">
-        <li>Pro Agency plan released</li>
+        <li>Client account management and white-label mode ready</li>
+        <li>WordPress Multisite fully tested at scale</li>
+        <li>Agency-specific onboarding and docs complete</li>
+        <li>Blog at 20+ published posts</li>
       </ul>
     </div>
   </div>
