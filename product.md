@@ -199,6 +199,13 @@ function isCompletedStatus(value) {
   return normalized === 'true' || normalized === 'done';
 }
 
+function statusBucket(value) {
+  const normalized = normalizeStatus(value);
+  if (normalized === 'in_progress') return 'in_progress';
+  if (normalized === 'true' || normalized === 'done') return 'completed';
+  return 'planned';
+}
+
 function createFeatureChart(config) {
   const canvas = document.getElementById('featureChart');
   if (!canvas) return;
@@ -265,22 +272,29 @@ function renderTierDetailChart(tier) {
     .filter(r => r.dataset.tier === tier && r.dataset.roadmap === 'false');
 
   const labels = ['Backend', 'Frontend', 'Released', 'Docs'];
-  const values = [
-    rows.filter(r => isCompletedStatus(r.dataset.backend)).length,
-    rows.filter(r => isCompletedStatus(r.dataset.frontend)).length,
-    rows.filter(r => normalizeStatus(r.dataset.released) === 'true').length,
-    rows.filter(r => isCompletedStatus(r.dataset.doc)).length,
-  ];
+  const completed = [0, 0, 0, 0];
+  const inProgress = [0, 0, 0, 0];
+  const planned = [0, 0, 0, 0];
+
+  rows.forEach(r => {
+    const statuses = [r.dataset.backend, r.dataset.frontend, r.dataset.released, r.dataset.doc];
+    statuses.forEach((status, idx) => {
+      const bucket = statusBucket(status);
+      if (bucket === 'completed') completed[idx]++;
+      else if (bucket === 'in_progress') inProgress[idx]++;
+      else planned[idx]++;
+    });
+  });
 
   createFeatureChart({
     type: 'bar',
     data: {
       labels,
-      datasets: [{
-        label: 'Completed',
-        data: values,
-        backgroundColor: ['#3C46F0', '#7B83F5', '#46B450', '#FFB914'],
-      }],
+      datasets: [
+        { label: 'Completed',   data: completed,  backgroundColor: '#46B450' },
+        { label: 'In Progress', data: inProgress, backgroundColor: '#FFB914' },
+        { label: 'Planned',     data: planned,    backgroundColor: '#E5E7F0' },
+      ],
     },
     options: {
       responsive: true,
@@ -292,8 +306,8 @@ function renderTierDetailChart(tier) {
         },
       },
       scales: {
-        x: { grid: { display: false }, ticks: { font: { family: "'Poppins', system-ui", size: 11 }, color: '#6B7290' }, border: { display: false } },
-        y: { beginAtZero: true, max: rows.length > 0 ? rows.length : 1, ticks: { stepSize: 1, font: { family: "'Poppins', system-ui", size: 11 }, color: '#6B7290' }, grid: { color: '#E5E7F0' }, border: { display: false } },
+        x: { stacked: true, grid: { display: false }, ticks: { font: { family: "'Poppins', system-ui", size: 11 }, color: '#6B7290' }, border: { display: false } },
+        y: { stacked: true, beginAtZero: true, max: rows.length > 0 ? rows.length : 1, ticks: { stepSize: 1, font: { family: "'Poppins', system-ui", size: 11 }, color: '#6B7290' }, grid: { color: '#E5E7F0' }, border: { display: false } },
       },
     },
   });
