@@ -597,9 +597,9 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: in_progress
-    frontend: false
-    released: false
+    backend: true
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false
@@ -628,8 +628,8 @@
   status: beta
   dev_status:
     backend: true
-    frontend: in_progress
-    released: false
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false
@@ -1420,10 +1420,10 @@
   status: shipped
   dev_status:
     backend: true
-    frontend: in_progress
-    released: false
+    frontend: true
+    released: true
   roadmap: false
-  notes: "Working, but missing CSS sanitization"
+  notes: "Just update the note look"
   wp_org_visible: true
   has_doc: false
 
