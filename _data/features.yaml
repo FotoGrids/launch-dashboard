@@ -1435,8 +1435,8 @@
   status: shipped
   dev_status:
     backend: true
-    frontend: in_progress
-    released: false
+    frontend: true
+    released: true
   roadmap: false
   notes: "Working, but missing JS sanitization"
   wp_org_visible: true
