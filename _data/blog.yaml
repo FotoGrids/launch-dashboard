@@ -1,0 +1,282 @@
+# Blog coverage — 60 articles across 7 clusters
+# Articles map 1:1 to /Users/markrean/Documents/Claude/Projects/FotoGrids Blog/blog-progress.md
+# Status legend: planned | drafting | in_review | live
+# When an article goes live: set status=live, fill url + post_id, commit + push dashboard.
+
+target: 60
+
+blog_sections:
+  - name: "Image SEO"
+    cluster: 1
+    persona: "Marketer + business owner"
+    articles:
+      - title: "The complete guide to image SEO in WordPress (2026 edition)"
+        type: pillar
+        status: planned
+        url: ""
+      - title: "How to write alt text that ranks (12 real examples)"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Image file naming for SEO — the rules nobody teaches"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Structured data for images: when it matters, when it doesn't"
+        type: deep-dive
+        status: planned
+        url: ""
+      - title: "How to optimize gallery images for SEO"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Image SEO for WooCommerce product pages"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Image SEO mistakes that kill rankings (and the fixes)"
+        type: listicle
+        status: planned
+        url: ""
+      - title: "How AI search engines crawl images (and what that means for your site)"
+        type: opinion
+        status: planned
+        url: ""
+
+  - name: "Performance & Speed"
+    cluster: 2
+    persona: "Developer + business owner"
+    articles:
+      - title: "How image galleries affect page speed (and the fixes that actually work)"
+        type: pillar
+        status: planned
+        url: ""
+      - title: "Lazy loading explained for WordPress site owners"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Why WebP matters and how to serve it on WordPress"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "AVIF in 2026: should you switch from WebP?"
+        type: deep-dive
+        status: planned
+        url: ""
+      - title: "Core Web Vitals for image-heavy sites"
+        type: deep-dive
+        status: planned
+        url: ""
+      - title: "The hidden cost of carousel sliders (and how to fix them)"
+        type: opinion
+        status: planned
+        url: ""
+      - title: "CDN strategy for WordPress gallery sites"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Mobile performance for photographers' portfolios"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Video in galleries: MP4 vs YouTube vs Vimeo vs Cloudflare Stream"
+        type: comparison
+        status: planned
+        url: ""
+      - title: "How to add video to a WordPress gallery without killing page speed"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Self-hosting vs embedding video: the real trade-offs in 2026"
+        type: opinion
+        status: planned
+        url: ""
+
+  - name: "Photographer Workflows"
+    cluster: 3
+    persona: "Photographer"
+    articles:
+      - title: "7 things every photographer website needs"
+        type: pillar
+        status: planned
+        url: ""
+      - title: "5 watermarking strategies for photographers"
+        type: listicle
+        status: planned
+        url: ""
+      - title: "Client proofing galleries that don't suck"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "EXIF data: when to show it, when to strip it"
+        type: deep-dive
+        status: planned
+        url: ""
+      - title: "Wedding photographer's WordPress checklist (Friday-to-Sunday workflow)"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "The portfolio gallery problem (and what works in 2026)"
+        type: opinion
+        status: planned
+        url: ""
+      - title: "Pricing your wedding photography (and showing it on your site)"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Print sales from your WordPress portfolio"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Booking page essentials for photographers"
+        type: tutorial
+        status: planned
+        url: ""
+
+  - name: "WooCommerce & E-commerce"
+    cluster: 4
+    persona: "Online shop"
+    articles:
+      - title: "The complete guide to WooCommerce product galleries"
+        type: pillar
+        status: planned
+        url: ""
+      - title: "WooCommerce gallery vs lookbook: when to use which"
+        type: comparison
+        status: planned
+        url: ""
+      - title: "Product image zoom: which patterns actually convert"
+        type: deep-dive
+        status: planned
+        url: ""
+      - title: "Variable products + variant galleries done right"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Mobile product galleries that don't kill conversions"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Lookbook to cart: shoppable galleries in 2026"
+        type: opinion
+        status: planned
+        url: ""
+
+  - name: "WordPress Galleries"
+    cluster: 5
+    persona: "Broad / marketer"
+    articles:
+      - title: "Best WordPress gallery plugins compared"
+        type: pillar
+        status: planned
+        url: ""
+      - title: "WordPress gallery vs page-builder gallery: pros and cons"
+        type: comparison
+        status: planned
+        url: ""
+      - title: "Native WordPress gallery block vs plugins"
+        type: comparison
+        status: planned
+        url: ""
+      - title: "Masonry vs grid vs justified gallery layouts (with examples)"
+        type: comparison
+        status: planned
+        url: ""
+      - title: "How to add a gallery to a WordPress page (the right way in 2026)"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Migrating from NextGEN Gallery, Envira, and others"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "WordPress gallery accessibility: WCAG 2.2 checklist"
+        type: deep-dive
+        status: planned
+        url: ""
+      - title: "Gallery filters and search: when complexity is worth it"
+        type: deep-dive
+        status: planned
+        url: ""
+      - title: "Gallery layouts for portfolios: which one fits your work"
+        type: opinion
+        status: planned
+        url: ""
+      - title: "The accessibility checklist for WordPress galleries (WCAG 2.2)"
+        type: deep-dive
+        status: planned
+        url: ""
+      - title: "Gallery hover effects — when they help and when they hurt"
+        type: opinion
+        status: planned
+        url: ""
+
+  - name: "Developers & Agencies"
+    cluster: 7
+    persona: "Developer / agency"
+    articles:
+      - title: "The developer's guide to building galleries in WordPress"
+        type: pillar
+        status: planned
+        url: ""
+      - title: "Custom block development for galleries (Gutenberg)"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "ACF Pro + galleries: the patterns that scale"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "White-labelling a gallery plugin for agency work"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Multisite gallery licensing patterns"
+        type: deep-dive
+        status: planned
+        url: ""
+      - title: "Hook-driven extensibility: how to extend FotoGrids"
+        type: tutorial
+        status: planned
+        url: ""
+      - title: "Building a gallery API endpoint with WordPress REST"
+        type: tutorial
+        status: planned
+        url: ""
+
+  - name: "Strategy & Business"
+    cluster: 8
+    persona: "Business owner + agency"
+    articles:
+      - title: "The business case for investing in your gallery experience"
+        type: pillar
+        status: planned
+        url: ""
+      - title: "What 2026 gallery design looks like (with examples)"
+        type: opinion
+        status: planned
+        url: ""
+      - title: "When to use a gallery vs a slider vs a lookbook"
+        type: comparison
+        status: planned
+        url: ""
+      - title: "Conversion-led image strategy for landing pages"
+        type: deep-dive
+        status: planned
+        url: ""
+      - title: "The 6→1 toolkit: how to simplify your WordPress stack"
+        type: opinion
+        status: planned
+        url: ""
+      - title: "AI image search and what it means for your gallery strategy"
+        type: opinion
+        status: planned
+        url: ""
+      - title: "Why your gallery is the most under-invested page on your site"
+        type: opinion
+        status: planned
+        url: ""
+      - title: "Pricing your services on a creative WordPress site"
+        type: opinion
+        status: planned
+        url: ""

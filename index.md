@@ -20,12 +20,29 @@ title: Overview
 
 {% assign website_pages      = site.data.website.pages %}
 {% assign website_pages_done = website_pages | where: "status", "live" %}
-{% assign blog_posts         = site.data.website.blog.posts %}
-{% assign blog_published     = blog_posts | where: "status", "published" %}
-{% assign docs_items         = site.data.website.docs %}
-{% assign docs_done          = docs_items | where: "status", "done" %}
-{% assign website_total      = website_pages.size | plus: blog_posts.size | plus: docs_items.size %}
-{% assign website_done       = website_pages_done.size | plus: blog_published.size | plus: docs_done.size %}
+
+{% comment %} Blog: walk blog_sections to count articles by status {% endcomment %}
+{% assign blog_sections   = site.data.blog.blog_sections %}
+{% assign blog_total      = 0 %}
+{% assign blog_published  = 0 %}
+{% for section in blog_sections %}
+  {% assign sect_live    = section.articles | where: "status", "live" %}
+  {% assign blog_total     = blog_total | plus: section.articles.size %}
+  {% assign blog_published = blog_published | plus: sect_live.size %}
+{% endfor %}
+
+{% comment %} Docs: walk doc_sections to count articles by status {% endcomment %}
+{% assign doc_sections    = site.data.documentation.doc_sections %}
+{% assign docs_total      = 0 %}
+{% assign docs_done       = 0 %}
+{% for section in doc_sections %}
+  {% assign sect_live    = section.articles | where: "status", "live" %}
+  {% assign docs_total     = docs_total | plus: section.articles.size %}
+  {% assign docs_done      = docs_done | plus: sect_live.size %}
+{% endfor %}
+
+{% assign website_total      = website_pages.size | plus: blog_total | plus: docs_total %}
+{% assign website_done       = website_pages_done.size | plus: blog_published | plus: docs_done %}
 
 {% assign marketing_assets   = site.data.marketing.assets %}
 {% assign marketing_channels = site.data.marketing.channels %}
