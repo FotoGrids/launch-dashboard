@@ -403,15 +403,15 @@ doc_sections:
     articles:
       - title: "Lightbox Overview"
         status: live
-        url: "https://fotogrids.com/docs/lightbox-overview/"
+        url: "https://www.fotogrids.com/docs/lightbox/lightbox-overview/"
         post_id: 4983
       - title: "Lightbox: Layout & Appearance"
         status: live
-        url: "https://fotogrids.com/docs/lightbox-layout-appearance/"
+        url: "https://www.fotogrids.com/docs/lightbox/lightbox-layout-appearance/"
         post_id: 5011
       - title: "Lightbox: Navigation"
         status: live
-        url: "https://fotogrids.com/docs/lightbox-navigation/"
+        url: "https://www.fotogrids.com/docs/lightbox/lightbox-navigation/"
         post_id: 5013
         notes: "ACF fields not set on push — update needed"
       - title: "Lightbox: Auto-Progress (Slideshow)"
@@ -420,24 +420,24 @@ doc_sections:
         notes: "Covered inside Navigation article — may fold in"
       - title: "Lightbox: Thumbnail Strip"
         status: live
-        url: "https://fotogrids.com/docs/lightbox-thumbnail-strip/"
+        url: "https://www.fotogrids.com/docs/lightbox/lightbox-thumbnail-strip/"
         post_id: 5028
       - title: "Lightbox: Zoom"
         status: live
-        url: "https://fotogrids.com/docs/lightbox-zoom/"
+        url: "https://www.fotogrids.com/docs/lightbox/lightbox-zoom/"
         post_id: 5029
       - title: "Lightbox: Info Panel"
         status: live
-        url: "https://fotogrids.com/docs/lightbox-info-panel/"
+        url: "https://www.fotogrids.com/docs/lightbox/lightbox-info-panel/"
         post_id: 5030
         notes: "Tiers: Free + Pro Plus"
       - title: "Lightbox: Custom Colors"
         status: live
-        url: "https://fotogrids.com/docs/lightbox-custom-colors/"
+        url: "https://www.fotogrids.com/docs/lightbox/lightbox-custom-colors/"
         post_id: 5031
       - title: "Lightbox: Developer Reference"
         status: live
-        url: "https://fotogrids.com/docs/lightbox-developer-reference/"
+        url: "https://www.fotogrids.com/docs/lightbox/lightbox-developer-reference/"
         post_id: 5037
         notes: "Category: Developer Documentation"
 

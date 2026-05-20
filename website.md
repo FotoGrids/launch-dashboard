@@ -146,7 +146,7 @@ title: Website
       <td>{% include status_badge.html status=article.status %}</td>
       <td style="text-align:left;">
         {% if article.url and article.url != "" %}
-          <a href="{{ article.url }}" style="font-size:12px; color:var(--text-muted);">{{ article.url }}</a>
+          <a href="{{ article.url }}" target="_blank" style="font-size:12px; color:var(--text-muted);">{{ article.url }}</a>
         {% else %}
           <span style="font-size:12px; color:var(--text-muted);">—</span>
         {% endif %}
