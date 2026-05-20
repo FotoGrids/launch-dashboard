@@ -102,46 +102,59 @@ title: Website
 
 ## Documentation Coverage
 
-{% assign docs      = site.data.website.docs %}
-{% assign docs_done = docs | where: "status", "done" %}
-{% assign docs_wip  = docs | where: "status", "in_progress" %}
-{% assign docs_plan = docs | where: "status", "planned" %}
+{% assign doc_sections = site.data.website.doc_sections %}
+{% assign docs_live  = 0 %}
+{% assign docs_wip   = 0 %}
+{% assign docs_plan  = 0 %}
+{% assign docs_total = 0 %}
+{% for section in doc_sections %}
+  {% assign sect_live = section.articles | where: "status", "live" %}
+  {% assign sect_wip  = section.articles | where: "status", "in_progress" %}
+  {% assign sect_plan = section.articles | where: "status", "planned" %}
+  {% assign docs_live  = docs_live  | plus: sect_live.size %}
+  {% assign docs_wip   = docs_wip   | plus: sect_wip.size %}
+  {% assign docs_plan  = docs_plan  | plus: sect_plan.size %}
+  {% assign docs_total = docs_total | plus: section.articles.size %}
+{% endfor %}
 
 <div class="stat-grid">
-  {% include stat_card.html value=docs_done.size label="Doc pages done" highlight=true %}
-  {% include stat_card.html value=docs_wip.size label="In progress" %}
-  {% include stat_card.html value=docs_plan.size label="Planned" %}
-  {% include stat_card.html value=docs.size label="Total doc pages" %}
+  {% include stat_card.html value=docs_live label="Articles live" highlight=true %}
+  {% include stat_card.html value=docs_wip  label="In progress" %}
+  {% include stat_card.html value=docs_plan label="Planned" %}
+  {% include stat_card.html value=docs_total label="Total articles" %}
 </div>
 
-{% include progress_bar.html done=docs_done.size total=docs.size label="Documentation complete" %}
+{% include progress_bar.html done=docs_live total=docs_total label="Documentation complete" %}
+
+{% for section in doc_sections %}
+### {{ section.name }}
 
 <div class="table-scroll">
 <table class="dash-table">
   <thead>
     <tr>
-      <th style="text-align:left;">Feature</th>
-      <th>Doc status</th>
+      <th style="text-align:left;">Article</th>
+      <th>Status</th>
       <th style="text-align:left;">URL</th>
+      <th style="text-align:left;">Notes</th>
     </tr>
   </thead>
   <tbody>
-    {% for doc in docs %}
-    {% assign feature = site.data.features | where: "id", doc.feature_id | first %}
+    {% for article in section.articles %}
     <tr>
-      <td class="col-name">
-        {% if feature %}{{ feature.name }}{% else %}{{ doc.feature_id }}{% endif %}
-      </td>
-      <td>{% include status_badge.html status=doc.status %}</td>
+      <td class="col-name">{{ article.title }}</td>
+      <td>{% include status_badge.html status=article.status %}</td>
       <td style="text-align:left;">
-        {% if doc.url and doc.url != "" %}
-          <a href="{{ doc.url }}" style="font-size:12px; color:var(--text-muted);">{{ doc.url }}</a>
+        {% if article.url and article.url != "" %}
+          <a href="{{ article.url }}" style="font-size:12px; color:var(--text-muted);">{{ article.url }}</a>
         {% else %}
           <span style="font-size:12px; color:var(--text-muted);">—</span>
         {% endif %}
       </td>
+      <td class="col-notes">{{ article.notes | default: "—" }}</td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
 </div>
+{% endfor %}

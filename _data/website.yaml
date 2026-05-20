@@ -248,71 +248,417 @@ blog:
       status: planned
       url: ""
 
-docs:
-  - feature_id: lightbox
-    status: planned
-    url: ""
+doc_sections:
+  - name: "Getting Started"
+    articles:
+      - title: "What is FotoGrids?"
+        status: planned
+        url: ""
+      - title: "System Requirements"
+        status: planned
+        url: ""
+      - title: "Installing FotoGrids"
+        status: planned
+        url: ""
+      - title: "Installing FotoGrids Pro"
+        status: planned
+        url: ""
+      - title: "Creating Your First Gallery"
+        status: planned
+        url: ""
+      - title: "Creating Your First Album"
+        status: planned
+        url: ""
+      - title: "Inserting a Gallery (Shortcode)"
+        status: planned
+        url: ""
+      - title: "Inserting a Gallery (Block Editor)"
+        status: planned
+        url: ""
+      - title: "Inserting an Album"
+        status: planned
+        url: ""
+      - title: "FotoGrids Dashboard Overview"
+        status: planned
+        url: ""
 
-  - feature_id: auto_compression
-    status: planned
-    url: ""
+  - name: "Gallery Management"
+    articles:
+      - title: "Gallery Editor Overview"
+        status: planned
+        url: ""
+      - title: "Adding Images to a Gallery"
+        status: planned
+        url: ""
+      - title: "Removing and Reordering Images"
+        status: planned
+        url: ""
+      - title: "Editing Item Details"
+        status: planned
+        url: ""
+      - title: "Editing Item EXIF Data"
+        status: planned
+        url: ""
+      - title: "Editing Item Tags, People & Locations"
+        status: planned
+        url: ""
+      - title: "Editing Item SEO Fields"
+        status: planned
+        url: ""
+      - title: "External Links on Items"
+        status: planned
+        url: ""
+      - title: "Bulk Operations"
+        status: planned
+        url: ""
+        notes: "Pro Plus"
+      - title: "Gallery Templates"
+        status: planned
+        url: ""
 
-  - feature_id: webp_conversion
-    status: planned
-    url: ""
+  - name: "Albums"
+    articles:
+      - title: "Albums Overview"
+        status: planned
+        url: ""
+      - title: "Creating and Managing Albums"
+        status: planned
+        url: ""
+      - title: "Album Display & Settings"
+        status: planned
+        url: ""
 
-  - feature_id: lazy_loading
-    status: planned
-    url: ""
+  - name: "Layout & Display"
+    articles:
+      - title: "Choosing a Layout"
+        status: planned
+        url: ""
+      - title: "Grid Layout"
+        status: planned
+        url: ""
+      - title: "Masonry Layout"
+        status: planned
+        url: ""
+      - title: "Justified Layout"
+        status: planned
+        url: ""
+      - title: "Slider / Carousel Layout"
+        status: planned
+        url: ""
+        notes: "Pro"
+      - title: "Polaroid Layout"
+        status: planned
+        url: ""
+        notes: "Pro"
+      - title: "Responsive Columns"
+        status: planned
+        url: ""
+      - title: "Item Spacing & Gaps"
+        status: planned
+        url: ""
+      - title: "Image Sizing & Cropping"
+        status: planned
+        url: ""
+      - title: "Borders & Shadows"
+        status: planned
+        url: ""
+      - title: "Hover Effects"
+        status: planned
+        url: ""
 
-  - feature_id: watermarking
-    status: planned
-    url: ""
+  - name: "Captions & Text"
+    articles:
+      - title: "Caption Display"
+        status: planned
+        url: ""
+      - title: "Caption Source"
+        status: planned
+        url: ""
+      - title: "Caption Styling"
+        status: planned
+        url: ""
+      - title: "Description"
+        status: planned
+        url: ""
 
-  - feature_id: right_click_protection
-    status: planned
-    url: ""
+  - name: "Image Effects & Loading"
+    articles:
+      - title: "Thumbnail Filters"
+        status: planned
+        url: ""
+      - title: "Full Image Filters"
+        status: planned
+        url: ""
+      - title: "Hover Filter Overrides"
+        status: planned
+        url: ""
+      - title: "Loading Icon"
+        status: planned
+        url: ""
+      - title: "Lazy Loading"
+        status: planned
+        url: ""
 
-  - feature_id: seo_alt_tags
-    status: planned
-    url: ""
+  - name: "Lightbox"
+    articles:
+      - title: "Lightbox Overview"
+        status: live
+        url: "https://fotogrids.com/docs/lightbox-overview/"
+        post_id: 4983
+      - title: "Lightbox: Layout & Appearance"
+        status: live
+        url: "https://fotogrids.com/docs/lightbox-layout-appearance/"
+        post_id: 5011
+      - title: "Lightbox: Navigation"
+        status: live
+        url: "https://fotogrids.com/docs/lightbox-navigation/"
+        post_id: 5013
+        notes: "ACF fields not set on push — update needed"
+      - title: "Lightbox: Auto-Progress (Slideshow)"
+        status: planned
+        url: ""
+        notes: "Covered inside Navigation article — may fold in"
+      - title: "Lightbox: Thumbnail Strip"
+        status: live
+        url: "https://fotogrids.com/docs/lightbox-thumbnail-strip/"
+        post_id: 5028
+      - title: "Lightbox: Zoom"
+        status: live
+        url: "https://fotogrids.com/docs/lightbox-zoom/"
+        post_id: 5029
+      - title: "Lightbox: Info Panel"
+        status: live
+        url: "https://fotogrids.com/docs/lightbox-info-panel/"
+        post_id: 5030
+        notes: "Tiers: Free + Pro Plus"
+      - title: "Lightbox: Custom Colors"
+        status: live
+        url: "https://fotogrids.com/docs/lightbox-custom-colors/"
+        post_id: 5031
+      - title: "Lightbox: Developer Reference"
+        status: live
+        url: "https://fotogrids.com/docs/lightbox-developer-reference/"
+        post_id: 5037
+        notes: "Category: Developer Documentation"
 
-  - feature_id: password_galleries
-    status: planned
-    url: ""
+  - name: "Pagination & Filtering"
+    articles:
+      - title: "Pagination Modes"
+        status: planned
+        url: ""
+      - title: "Pagination Settings"
+        status: planned
+        url: ""
+      - title: "Filtering by Tags"
+        status: planned
+        url: ""
+      - title: "Filtering by Date"
+        status: planned
+        url: ""
+      - title: "Sorting"
+        status: planned
+        url: ""
+      - title: "User-Sortable Galleries"
+        status: planned
+        url: ""
+        notes: "Pro"
 
-  - feature_id: buy_now_button
-    status: planned
-    url: ""
+  - name: "Metadata: Tags, People & Locations"
+    articles:
+      - title: "Tags Overview"
+        status: planned
+        url: ""
+      - title: "Adding & Managing Tags"
+        status: planned
+        url: ""
+      - title: "People"
+        status: planned
+        url: ""
+      - title: "Locations"
+        status: planned
+        url: ""
+      - title: "EXIF Data"
+        status: planned
+        url: ""
+      - title: "Map View"
+        status: planned
+        url: ""
+        notes: "Pro"
 
-  - feature_id: elementor_block
-    status: planned
-    url: ""
+  - name: "Social Sharing"
+    articles:
+      - title: "Social Sharing Overview"
+        status: planned
+        url: ""
+      - title: "Configuring Share Buttons"
+        status: planned
+        url: ""
+      - title: "Share Tracking"
+        status: planned
+        url: ""
 
-  - feature_id: gutenberg_block
-    status: planned
-    url: ""
+  - name: "Security"
+    articles:
+      - title: "Password-Protecting a Gallery"
+        status: planned
+        url: ""
+      - title: "Right-Click Protection"
+        status: planned
+        url: ""
+      - title: "Gallery Permissions"
+        status: planned
+        url: ""
 
-  - feature_id: shortcodes
-    status: planned
-    url: ""
+  - name: "Watermarking"
+    articles:
+      - title: "Watermark Overview"
+        status: planned
+        url: ""
+      - title: "Text Watermarks"
+        status: planned
+        url: ""
+      - title: "Image Watermarks"
+        status: planned
+        url: ""
+      - title: "Watermark Positioning"
+        status: planned
+        url: ""
+      - title: "Repeat Pattern Watermarks"
+        status: planned
+        url: ""
+        notes: "Pro"
 
-  - feature_id: custom_css
-    status: planned
-    url: ""
+  - name: "Statistics & Analytics"
+    articles:
+      - title: "Statistics Overview"
+        status: planned
+        url: ""
+      - title: "Viewing Statistics"
+        status: planned
+        url: ""
+      - title: "Statistics Retention"
+        status: planned
+        url: ""
+      - title: "Advanced Analytics"
+        status: planned
+        url: ""
+        notes: "Pro"
 
-  - feature_id: multisite_support
-    status: planned
-    url: ""
+  - name: "Custom Code"
+    articles:
+      - title: "Custom CSS per Gallery"
+        status: planned
+        url: ""
+      - title: "Custom JavaScript per Gallery"
+        status: planned
+        url: ""
 
-  - feature_id: template_overrides
-    status: planned
-    url: ""
+  - name: "Plugin Settings"
+    articles:
+      - title: "Global Defaults"
+        status: planned
+        url: ""
+      - title: "Responsiveness Settings"
+        status: planned
+        url: ""
+      - title: "Permissions Manager"
+        status: planned
+        url: ""
+      - title: "Advanced Settings"
+        status: planned
+        url: ""
+      - title: "License & Activation (Pro)"
+        status: planned
+        url: ""
 
-  - feature_id: hotlink_protection
-    status: planned
-    url: ""
+  - name: "Integrations & Page Builders"
+    articles:
+      - title: "Gutenberg Block"
+        status: planned
+        url: ""
+      - title: "Elementor Widget"
+        status: planned
+        url: ""
+        notes: "Pro"
+      - title: "Divi Module"
+        status: planned
+        url: ""
+        notes: "Pro"
+      - title: "Bricks Builder"
+        status: planned
+        url: ""
+        notes: "Pro"
+      - title: "WooCommerce Integration"
+        status: planned
+        url: ""
+        notes: "Pro"
+      - title: "Easy Digital Downloads"
+        status: planned
+        url: ""
+        notes: "Pro"
+      - title: "Google Photos"
+        status: planned
+        url: ""
+        notes: "Pro"
+      - title: "Dropbox"
+        status: planned
+        url: ""
+        notes: "Pro"
+      - title: "Instagram"
+        status: planned
+        url: ""
+        notes: "Pro"
 
-  - feature_id: srcset_generation
-    status: planned
-    url: ""
+  - name: "Performance & Caching"
+    articles:
+      - title: "Caching Overview"
+        status: planned
+        url: ""
+      - title: "Lazy Loading"
+        status: planned
+        url: ""
+      - title: "Image Optimization Tips"
+        status: planned
+        url: ""
+
+  - name: "For Developers"
+    articles:
+      - title: "REST API Reference"
+        status: planned
+        url: ""
+      - title: "Available Hooks & Filters"
+        status: planned
+        url: ""
+      - title: "Extending with Custom Layouts"
+        status: planned
+        url: ""
+      - title: "Extending Metadata Types"
+        status: planned
+        url: ""
+      - title: "Free ↔ Pro Plugin Architecture"
+        status: planned
+        url: ""
+      - title: "Database Schema"
+        status: planned
+        url: ""
+
+  - name: "Troubleshooting"
+    articles:
+      - title: "Common Issues & Fixes"
+        status: planned
+        url: ""
+      - title: "Lightbox Not Opening"
+        status: planned
+        url: ""
+      - title: "Stats Not Recording"
+        status: planned
+        url: ""
+      - title: "Compatibility with Themes"
+        status: planned
+        url: ""
+      - title: "Debugging Mode"
+        status: planned
+        url: ""
+      - title: "Contacting Support"
+        status: planned
+        url: ""
