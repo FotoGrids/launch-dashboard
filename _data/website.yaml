@@ -252,14 +252,17 @@ doc_sections:
   - name: "Getting Started"
     articles:
       - title: "What is FotoGrids?"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/getting-started/what-is-fotogrids/"
+        post_id: 1070
       - title: "System Requirements"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/getting-started/system-requirements/"
+        post_id: 1074
       - title: "Installing FotoGrids"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/getting-started/installing-fotogrids/"
+        post_id: 5042
       - title: "Installing FotoGrids Pro"
         status: planned
         url: ""
@@ -303,8 +306,9 @@ doc_sections:
   - name: "Gallery Management"
     articles:
       - title: "Gallery Editor Overview"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/galleries/gallery-editor-overview/"
+        post_id: 5043
       - title: "Adding Images to a Gallery"
         status: planned
         url: ""
@@ -324,8 +328,9 @@ doc_sections:
         status: planned
         url: ""
       - title: "External Links on Items"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/galleries/external-links-on-items/"
+        post_id: 5044
       - title: "Bulk Operations"
         status: planned
         url: ""
@@ -337,11 +342,13 @@ doc_sections:
   - name: "Albums"
     articles:
       - title: "Albums Overview"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/albums/albums-overview/"
+        post_id: 5045
       - title: "Creating and Managing Albums"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/albums/creating-and-managing-albums/"
+        post_id: 5046
       - title: "Album Display & Settings"
         status: planned
         url: ""
@@ -402,14 +409,20 @@ doc_sections:
   - name: "Image Effects & Loading"
     articles:
       - title: "Thumbnail Filters"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/galleries/image-filters/"
+        post_id: 5047
+        notes: "Combined with Full Image Filters in single article"
       - title: "Full Image Filters"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/galleries/image-filters/"
+        post_id: 5047
+        notes: "Combined with Thumbnail Filters in single article"
       - title: "Hover Filter Overrides"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/galleries/image-filters/"
+        post_id: 5047
+        notes: "Covered inside Image Filters article"
       - title: "Loading Icon"
         status: planned
         url: ""
@@ -481,8 +494,9 @@ doc_sections:
   - name: "Metadata: Tags, People & Locations"
     articles:
       - title: "Tags Overview"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/items-photos-images/tags-overview/"
+        post_id: 5048
       - title: "Adding & Managing Tags"
         status: planned
         url: ""
@@ -562,17 +576,20 @@ doc_sections:
   - name: "Custom Code"
     articles:
       - title: "Custom CSS per Gallery"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/customization/custom-css-per-gallery/"
+        post_id: 5049
       - title: "Custom JavaScript per Gallery"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/customization/custom-javascript-per-gallery/"
+        post_id: 5050
 
   - name: "Plugin Settings"
     articles:
       - title: "Global Defaults"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/settings-and-configuration/global-defaults/"
+        post_id: 5051
       - title: "Responsiveness Settings"
         status: planned
         url: ""
