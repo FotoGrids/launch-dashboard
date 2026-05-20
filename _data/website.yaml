@@ -282,6 +282,24 @@ doc_sections:
         status: planned
         url: ""
 
+  - name: "Licensing & Account"
+    articles:
+      - title: "How Licensing Works"
+        status: planned
+        url: ""
+      - title: "Activating Your License Key"
+        status: planned
+        url: ""
+      - title: "Upgrading from Free to Pro"
+        status: planned
+        url: ""
+      - title: "Transferring a License to a New Domain"
+        status: planned
+        url: ""
+      - title: "Renewing & Expiry"
+        status: planned
+        url: ""
+
   - name: "Gallery Management"
     articles:
       - title: "Gallery Editor Overview"
@@ -393,9 +411,6 @@ doc_sections:
         status: planned
         url: ""
       - title: "Loading Icon"
-        status: planned
-        url: ""
-      - title: "Lazy Loading"
         status: planned
         url: ""
 
@@ -567,9 +582,6 @@ doc_sections:
       - title: "Advanced Settings"
         status: planned
         url: ""
-      - title: "License & Activation (Pro)"
-        status: planned
-        url: ""
 
   - name: "Integrations & Page Builders"
     articles:
@@ -609,15 +621,24 @@ doc_sections:
         url: ""
         notes: "Pro"
 
-  - name: "Performance & Caching"
+  - name: "SEO & Performance"
     articles:
-      - title: "Caching Overview"
+      - title: "Image SEO & Alt Text"
+        status: planned
+        url: ""
+      - title: "Structured Data for Galleries"
+        status: planned
+        url: ""
+      - title: "AVIF & WebP"
         status: planned
         url: ""
       - title: "Lazy Loading"
         status: planned
         url: ""
-      - title: "Image Optimization Tips"
+      - title: "Image Optimization"
+        status: planned
+        url: ""
+      - title: "Caching Overview"
         status: planned
         url: ""
 
@@ -642,9 +663,19 @@ doc_sections:
         status: planned
         url: ""
 
+  - name: "Advanced Configuration"
+    articles:
+      - title: "Using FotoGrids on a Multisite Network"
+        status: planned
+        url: ""
+        notes: "Agency"
+
   - name: "Troubleshooting"
     articles:
       - title: "Common Issues & Fixes"
+        status: planned
+        url: ""
+      - title: "Plugin Conflict Checklist"
         status: planned
         url: ""
       - title: "Lightbox Not Opening"
