@@ -296,10 +296,10 @@
   status: beta
   dev_status:
     backend: true
-    frontend: in_progress
+    frontend: true
     released: false
   roadmap: false
-  notes: ""
+  notes: "Only Info Blocks need a bit more CSS polishing"
   wp_org_visible: true
   has_doc: false
 
@@ -461,8 +461,8 @@
   status: beta
   dev_status:
     backend: true
-    frontend: in_progress
-    released: false
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false
@@ -568,8 +568,8 @@
   status: beta
   dev_status:
     backend: true
-    frontend: in_progress
-    released: false
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false
@@ -584,9 +584,9 @@
   dev_status:
     backend: true
     frontend: true
-    released: false
+    released: true
   roadmap: false
-  notes: "Need to apply in Lightbox as well"
+  notes: ""
   wp_org_visible: false
   has_doc: false
 
@@ -827,7 +827,7 @@
   status: beta
   dev_status:
     backend: true
-    frontend: false
+    frontend: in_progress
     released: false
   roadmap: false
   notes: ""
@@ -901,11 +901,11 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: done
-    frontend: in_progress
-    released: false
+    backend: true
+    frontend: true
+    released: true
   roadmap: false
-  notes: ""
+  notes: "Just some CSS polishing needed"
   wp_org_visible: false
   has_doc: false
 
@@ -1423,7 +1423,7 @@
     frontend: true
     released: true
   roadmap: false
-  notes: "Just update the note look"
+  notes: ""
   wp_org_visible: true
   has_doc: false
 
@@ -1438,7 +1438,7 @@
     frontend: true
     released: true
   roadmap: false
-  notes: "Working, but missing JS sanitization"
+  notes: ""
   wp_org_visible: true
   has_doc: false
 
