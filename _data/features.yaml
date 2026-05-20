@@ -466,7 +466,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: comments_ratings_reviews
   name: Comments, Ratings & Reviews
@@ -588,7 +588,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: color_controls
   name: Color Controls
@@ -984,7 +984,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: seo_per_item_people_tagging
   name: Per-Item People Tagging
@@ -1425,7 +1425,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: custom_js
   name: Custom JS per Collection
@@ -1440,7 +1440,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: rest_api
   name: REST API endpoints
@@ -1654,7 +1654,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: bulk_media_import
   name: Bulk Media Import
