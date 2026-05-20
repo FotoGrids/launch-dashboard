@@ -293,15 +293,15 @@
   category: Interactions
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: beta
+  status: shipped
   dev_status:
     backend: true
     frontend: true
     released: false
   roadmap: false
-  notes: "Only Info Blocks need a bit more CSS polishing"
+  notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: sorting
   name: Set Collection Sorting
