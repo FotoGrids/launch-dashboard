@@ -234,8 +234,9 @@ doc_sections:
         status: planned
         url: ""
       - title: "Sorting"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/pagination-and-filtering/sorting/"
+        post_id: 5077
       - title: "User-Sortable Galleries"
         status: planned
         url: ""
