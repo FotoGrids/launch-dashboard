@@ -308,11 +308,11 @@
   category: Interactions
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: beta
+  status: true
   dev_status:
     backend: true
-    frontend: no
-    released: false
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: true
@@ -1144,7 +1144,7 @@
   status: false
   dev_status:
     backend: true
-    frontend: no
+    frontend: in_progress
     released: false
   roadmap: false
   notes: ""
