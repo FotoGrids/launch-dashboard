@@ -316,7 +316,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: sorting_user_change_order
   name: Allow Users to Change Sort Order
