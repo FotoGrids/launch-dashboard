@@ -785,7 +785,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: image_optimizer
   name: Image Optimizer
@@ -907,7 +907,7 @@
   roadmap: false
   notes: "Just some CSS polishing needed"
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: permissions_collection_full
   name: User Permissions per Collection - Full
@@ -1699,7 +1699,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: backup_system
   name: Backup System

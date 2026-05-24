@@ -375,9 +375,10 @@ doc_sections:
         tier: pro_starter
         url: ""
       - title: "Gallery Permissions"
-        status: in_progress
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/security-and-privacy/gallery-permissions/"
+        post_id: 5093
 
   - name: "Watermarking"
     articles:
@@ -526,9 +527,10 @@ doc_sections:
         tier: free
         url: ""
       - title: "Caching Overview"
-        status: in_progress
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/performance/caching-overview/"
+        post_id: 5092
 
   - name: "For Developers"
     articles:
@@ -568,9 +570,10 @@ doc_sections:
         tier: free
         url: ""
       - title: "Import / Export"
-        status: in_progress
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/settings-and-configuration/import-export/"
+        post_id: 5094
 
   - name: "Advanced Configuration"
     articles:
