@@ -194,21 +194,18 @@ doc_sections:
 
   - name: "Captions & Text"
     articles:
-      - title: "Caption Display"
+      - title: "Captions"
+        status: in_progress
+        tier: free
+        url: ""
+        notes: "Consolidates Caption Display, Caption Source, Caption Styling, Description"
+      - title: "Custom Fonts"
         status: planned
         tier: free
         url: ""
-      - title: "Caption Source"
+      - title: "Global Typography System"
         status: planned
-        tier: free
-        url: ""
-      - title: "Caption Styling"
-        status: planned
-        tier: free
-        url: ""
-      - title: "Description"
-        status: planned
-        tier: free
+        tier: pro_plus
         url: ""
 
   - name: "Image Effects & Loading"
