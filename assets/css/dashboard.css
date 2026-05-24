@@ -491,6 +491,11 @@ h3 {
 
 .checklist-item:last-child { border-bottom: none; }
 
+.checklist-item .tier-wrapper {
+  width: 94px;
+  flex-shrink: 0;
+}
+
 .checklist-item .check-icon {
   width: 18px;
   height: 18px;

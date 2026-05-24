@@ -29,6 +29,14 @@ title: Admin & Legal
   <div class="checklist">
     {% for item in cat_items %}
     <div class="checklist-item {{ item.status }}">
+      <div class="tier-wrapper">
+        {% assign t = item.tier | default: "free" %}
+        {% if t == 'pro_starter' %}<span class="tier-pill tier-starter"><span class="pro-tag">PRO</span><span class="tier-name">Starter</span></span>
+        {% elsif t == 'pro_plus' %}<span class="tier-pill tier-plus"><span class="pro-tag">PRO</span><span class="tier-name">Plus</span></span>
+        {% elsif t == 'agency' %}<span class="tier-pill tier-agency"><span class="pro-tag">PRO</span><span class="tier-name">Agency</span></span>
+        {% elsif t == 'free' %}<span class="tier-pill tier-free">FREE</span>
+        {% else %}<span class="tier-pill tier-addon">{{ t }}</span>{% endif %}
+      </div>
       <div class="check-icon"></div>
       <div class="item-name">{{ item.name }}</div>
       {% if item.notes and item.notes != "" %}
