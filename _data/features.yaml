@@ -1141,15 +1141,15 @@
   category: SEO & Structured Data
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: false
+  status: shipped
   dev_status:
     backend: true
-    frontend: in_progress
-    released: false
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: exif_edit
   name: Edit EXIF Data
