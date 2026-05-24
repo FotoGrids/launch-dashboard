@@ -37,6 +37,7 @@ title: Documentation
 <table class="dash-table">
   <thead>
     <tr>
+      <th class="col-tier">Tier</th>
       <th class="col-left">Article</th>
       <th>Status</th>
       <th class="col-left">URL</th>
@@ -46,6 +47,14 @@ title: Documentation
   <tbody>
     {% for article in section.articles %}
     <tr>
+      <td class="col-tier">
+        {% assign t = article.tier | default: "free" %}
+        {% if t == 'pro_starter' %}<span class="tier-pill tier-starter"><span class="pro-tag">PRO</span><span class="tier-name">Starter</span></span>
+        {% elsif t == 'pro_plus' %}<span class="tier-pill tier-plus"><span class="pro-tag">PRO</span><span class="tier-name">Plus</span></span>
+        {% elsif t == 'agency' %}<span class="tier-pill tier-agency"><span class="pro-tag">PRO</span><span class="tier-name">Agency</span></span>
+        {% elsif t == 'free' %}<span class="tier-pill tier-free">FREE</span>
+        {% else %}<span class="tier-pill tier-addon">{{ t }}</span>{% endif %}
+      </td>
       <td class="col-name">{{ article.title }}</td>
       <td>{% include status_badge.html status=article.status %}</td>
       <td class="col-left">
