@@ -297,7 +297,7 @@ doc_sections:
         status: planned
         url: ""
       - title: "Gallery Permissions"
-        status: planned
+        status: in_progress
         url: ""
 
   - name: "Watermarking"
@@ -418,7 +418,7 @@ doc_sections:
         status: planned
         url: ""
       - title: "Caching Overview"
-        status: planned
+        status: in_progress
         url: ""
 
   - name: "For Developers"
@@ -440,6 +440,18 @@ doc_sections:
         url: ""
       - title: "Database Schema"
         status: planned
+        url: ""
+
+  - name: "Workflow & Maintenance"
+    articles:
+      - title: "Autosave"
+        status: in_progress
+        url: ""
+      - title: "Live Preview"
+        status: in_progress
+        url: ""
+      - title: "Import / Export"
+        status: in_progress
         url: ""
 
   - name: "Advanced Configuration"
