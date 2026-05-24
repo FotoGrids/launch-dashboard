@@ -107,4 +107,14 @@ function renderReadinessChart(canvasId, sections) {
       },
     },
   });
+  return chart;
+}
+
+// Update only specific indices in an existing readiness chart instance.
+// patchMap: { [index]: newPct }  e.g. { 4: 55, 5: 10, 7: 80, 8: 0 }
+function updateReadinessChart(chart, patchMap) {
+  Object.entries(patchMap).forEach(([idx, val]) => {
+    chart.data.datasets[0].data[idx] = val;
+  });
+  chart.update();
 }

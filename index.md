@@ -389,7 +389,7 @@ title: Overview
 <p class="dash-timestamp">Last updated: <span class="il-time">{{ site.time | date: "%b %d, %Y" }}</span> — numbers update on every push.</p>
 
 <script>
-renderReadinessChart('readinessChart', [
+const ovChart = renderReadinessChart('readinessChart', [
   { label: 'Free Features',         pct: {{ free_pct }} },
   { label: 'PRO Features',          pct: {{ pro_pct }} },
   { label: 'Product Tasks',         pct: {{ product_pct }} },
@@ -448,12 +448,18 @@ function switchStage(stage, btn) {
   document.querySelector('[data-card="free-features"]').classList.toggle('stat-card--disabled', stage !== 1);
   document.querySelector('[data-card="pro-features"]').classList.toggle('stat-card--disabled',  stage === 1);
 
-  // Reactive cards
+  // Reactive cards + chart (indices 4=docs, 5=blog, 7=admin, 8=legal)
   const d = STAGE_DATA[stage];
   setCard('ov-val-docs',  'ov-bar-docs',  d.docs.live,      d.docs.total);
   setCard('ov-val-blog',  'ov-bar-blog',  d.blog.published, d.blog.target);
   setCard('ov-val-admin', 'ov-bar-admin', d.admin.done,     d.admin.total);
   setCard('ov-val-legal', 'ov-bar-legal', d.legal.done,     d.legal.total);
+  updateReadinessChart(ovChart, {
+    4: pct(d.docs.live,      d.docs.total),
+    5: pct(d.blog.published, d.blog.target),
+    7: pct(d.admin.done,     d.admin.total),
+    8: pct(d.legal.done,     d.legal.total),
+  });
 }
 
 // Boot on Stage 1
