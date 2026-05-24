@@ -506,10 +506,12 @@ doc_sections:
 
   - name: "SEO & Performance"
     articles:
-      - title: "Image SEO & Alt Text"
-        status: planned
+      - title: "Alt Tags"
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/seo/alt-tags/"
+        post_id: 5099
+        notes: "Scoped to alt text only. Broader Image SEO (schema, sitemaps) to be its own article."
       - title: "Structured Data for Galleries"
         status: planned
         tier: free
