@@ -386,7 +386,7 @@
   status: beta
   dev_status:
     backend: true
-    frontend: false
+    frontend: in_progress
     released: false
   roadmap: false
   notes: ""
@@ -779,9 +779,9 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: planned
   dev_status:
-    backend: false
-    frontend: false
-    released: false
+    backend: true
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false
@@ -999,7 +999,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: seo_ai_facial_recognition
   name: AI Facial Recognition
@@ -1029,7 +1029,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: seo_smart_location_suggestions_map_integration
   name: Smart Location Suggestions with Map Integration

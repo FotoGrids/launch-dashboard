@@ -202,7 +202,7 @@ blog_sections:
         type: opinion
         status: planned
         url: ""
-      - title: "The accessibility checklist for WordPress galleries (WCAG 2.2)"
+      - title: "How to test whether your gallery's lightbox is actually accessible"
         type: deep-dive
         status: planned
         url: ""
