@@ -273,6 +273,7 @@ h3 {
 }
 
 .stat-card.highlight .stat-value { color: var(--indigo); }
+.stat-card--disabled { opacity: 0.3; }
 
 /* Per-card accent colours matching the readiness chart palette */
 .stat-card[data-accent] .stat-value      { color: var(--accent); }

@@ -109,6 +109,69 @@ title: Overview
 {% assign pro_pct = 0 %}
 {% if pro_total_count > 0 %}{% assign pro_pct = pro_done_count | times: 100 | divided_by: pro_total_count %}{% endif %}
 
+{% comment %} ── Per-stage docs breakdowns ────────────────────────── {% endcomment %}
+{% assign docs_free_live = 0 %}{% assign docs_free_total = 0 %}
+{% assign docs_s2_live   = 0 %}{% assign docs_s2_total   = 0 %}
+{% assign docs_s3_live   = 0 %}{% assign docs_s3_total   = 0 %}
+{% assign docs_s4_live   = 0 %}{% assign docs_s4_total   = 0 %}
+{% for section in doc_sections %}
+  {% for article in section.articles %}
+    {% assign at = article.tier | default: "free" %}
+    {% assign is_live = false %}{% if article.status == "live" %}{% assign is_live = true %}{% endif %}
+    {% comment %} Stage 1: free only {% endcomment %}
+    {% if at == "free" %}
+      {% assign docs_free_total = docs_free_total | plus: 1 %}
+      {% if is_live %}{% assign docs_free_live = docs_free_live | plus: 1 %}{% endif %}
+    {% endif %}
+    {% comment %} Stage 2: free + pro_starter {% endcomment %}
+    {% if at == "free" or at == "pro_starter" %}
+      {% assign docs_s2_total = docs_s2_total | plus: 1 %}
+      {% if is_live %}{% assign docs_s2_live = docs_s2_live | plus: 1 %}{% endif %}
+    {% endif %}
+    {% comment %} Stage 3: free + pro_starter + pro_plus {% endcomment %}
+    {% if at == "free" or at == "pro_starter" or at == "pro_plus" %}
+      {% assign docs_s3_total = docs_s3_total | plus: 1 %}
+      {% if is_live %}{% assign docs_s3_live = docs_s3_live | plus: 1 %}{% endif %}
+    {% endif %}
+    {% comment %} Stage 4: all {% endcomment %}
+    {% assign docs_s4_total = docs_s4_total | plus: 1 %}
+    {% if is_live %}{% assign docs_s4_live = docs_s4_live | plus: 1 %}{% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% comment %} ── Per-stage admin/legal (free tier vs pro tier) ──────── {% endcomment %}
+{% assign admin_free_done = 0 %}{% assign admin_free_total = 0 %}
+{% assign admin_pro_done  = 0 %}{% assign admin_pro_total  = 0 %}
+{% assign legal_free_done = 0 %}{% assign legal_free_total = 0 %}
+{% assign legal_pro_done  = 0 %}{% assign legal_pro_total  = 0 %}
+{% for item in admin_items %}
+  {% assign it = item.tier | default: "free" %}
+  {% if item.category == "Legal" %}
+    {% if it == "free" %}
+      {% assign legal_free_total = legal_free_total | plus: 1 %}
+      {% if item.status == "done" %}{% assign legal_free_done = legal_free_done | plus: 1 %}{% endif %}
+    {% else %}
+      {% assign legal_pro_total = legal_pro_total | plus: 1 %}
+      {% if item.status == "done" %}{% assign legal_pro_done = legal_pro_done | plus: 1 %}{% endif %}
+    {% endif %}
+  {% else %}
+    {% if it == "free" %}
+      {% assign admin_free_total = admin_free_total | plus: 1 %}
+      {% if item.status == "done" %}{% assign admin_free_done = admin_free_done | plus: 1 %}{% endif %}
+    {% else %}
+      {% assign admin_pro_total = admin_pro_total | plus: 1 %}
+      {% if item.status == "done" %}{% assign admin_pro_done = admin_pro_done | plus: 1 %}{% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<div class="filter-tabs" id="stage-filter">
+  <button class="filter-tab active" data-stage="1" onclick="switchStage(1, this)">Stage 1</button>
+  <button class="filter-tab" data-stage="2" onclick="switchStage(2, this)">Stage 2</button>
+  <button class="filter-tab" data-stage="3" onclick="switchStage(3, this)">Stage 3</button>
+  <button class="filter-tab" data-stage="4" onclick="switchStage(4, this)">Stage 4</button>
+</div>
+
 <div class="overview-top-row">
   <div class="launch-hero">
     <div class="readiness">
@@ -117,12 +180,12 @@ title: Overview
   </div>
 
   <div class="stat-grid stat-grid--side">
-    <div class="stat-card" data-accent="free">
+    <div class="stat-card" data-accent="free" data-card="free-features">
       <div class="stat-value">{{ free_pct }}%</div>
       <div class="stat-label">Free Features released</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ free_pct }}%;"></div></div>
     </div>
-    <div class="stat-card" data-accent="pro">
+    <div class="stat-card" data-accent="pro" data-card="pro-features">
       <div class="stat-value">{{ pro_pct }}%</div>
       <div class="stat-label">Pro Features released</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ pro_pct }}%;"></div></div>
@@ -137,30 +200,30 @@ title: Overview
       <div class="stat-label">Website pages ready</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ website_pages_pct }}%;"></div></div>
     </div>
-    <div class="stat-card" data-accent="docs">
-      <div class="stat-value">{{ docs_pct }}%</div>
+    <div class="stat-card" data-accent="docs" id="ov-card-docs">
+      <div class="stat-value" id="ov-val-docs">{{ docs_pct }}%</div>
       <div class="stat-label">Documentation</div>
-      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ docs_pct }}%;"></div></div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="ov-bar-docs" style="width:{{ docs_pct }}%;"></div></div>
     </div>
-    <div class="stat-card" data-accent="blog">
-      <div class="stat-value">{{ blog_pct }}%</div>
+    <div class="stat-card" data-accent="blog" id="ov-card-blog">
+      <div class="stat-value" id="ov-val-blog">{{ blog_pct }}%</div>
       <div class="stat-label">Blog articles written</div>
-      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ blog_pct }}%;"></div></div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="ov-bar-blog" style="width:{{ blog_pct }}%;"></div></div>
     </div>
     <div class="stat-card" data-accent="mktg">
       <div class="stat-value">{{ marketing_pct }}%</div>
       <div class="stat-label">Marketing ready</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ marketing_pct }}%;"></div></div>
     </div>
-    <div class="stat-card" data-accent="admin">
-      <div class="stat-value">{{ admin_pct }}%</div>
+    <div class="stat-card" data-accent="admin" id="ov-card-admin">
+      <div class="stat-value" id="ov-val-admin">{{ admin_pct }}%</div>
       <div class="stat-label">Admin tasks done</div>
-      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ admin_pct }}%;"></div></div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="ov-bar-admin" style="width:{{ admin_pct }}%;"></div></div>
     </div>
-    <div class="stat-card" data-accent="legal">
-      <div class="stat-value">{{ legal_pct }}%</div>
+    <div class="stat-card" data-accent="legal" id="ov-card-legal">
+      <div class="stat-value" id="ov-val-legal">{{ legal_pct }}%</div>
       <div class="stat-label">Legal tasks done</div>
-      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ legal_pct }}%;"></div></div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="ov-bar-legal" style="width:{{ legal_pct }}%;"></div></div>
     </div>
   </div>
 </div>
@@ -327,14 +390,72 @@ title: Overview
 
 <script>
 renderReadinessChart('readinessChart', [
-  { label: 'Free Features',    pct: {{ free_pct }} },
-  { label: 'PRO Features',     pct: {{ pro_pct }} },
-  { label: 'Product Tasks',    pct: {{ product_pct }} },
+  { label: 'Free Features',         pct: {{ free_pct }} },
+  { label: 'PRO Features',          pct: {{ pro_pct }} },
+  { label: 'Product Tasks',         pct: {{ product_pct }} },
   { label: 'Website Pages Ready',   pct: {{ website_pages_pct }} },
   { label: 'Documentation',         pct: {{ docs_pct }} },
   { label: 'Blog Articles Written', pct: {{ blog_pct }} },
-  { label: 'Marketing',        pct: {{ marketing_pct }} },
-  { label: 'Admin Tasks',      pct: {{ admin_pct }} },
-  { label: 'Legal Tasks',      pct: {{ legal_pct }} },
+  { label: 'Marketing',             pct: {{ marketing_pct }} },
+  { label: 'Admin Tasks',           pct: {{ admin_pct }} },
+  { label: 'Legal Tasks',           pct: {{ legal_pct }} },
 ]);
+
+// ── Per-stage data (Liquid-baked at build time) ──────────────────
+const STAGE_DATA = {
+  1: {
+    docs:  { live: {{ docs_free_live }},  total: {{ docs_free_total }} },
+    blog:  { published: {{ blog_published }}, target: 10 },
+    admin: { done: {{ admin_free_done }}, total: {{ admin_free_total }} },
+    legal: { done: {{ legal_free_done }}, total: {{ legal_free_total }} },
+  },
+  2: {
+    docs:  { live: {{ docs_s2_live }},  total: {{ docs_s2_total }} },
+    blog:  { published: {{ blog_published }}, target: 20 },
+    admin: { done: {{ admin_pro_done }}, total: {{ admin_pro_total }} },
+    legal: { done: {{ legal_pro_done }}, total: {{ legal_pro_total }} },
+  },
+  3: {
+    docs:  { live: {{ docs_s3_live }},  total: {{ docs_s3_total }} },
+    blog:  { published: {{ blog_published }}, target: 40 },
+    admin: { done: {{ admin_pro_done }}, total: {{ admin_pro_total }} },
+    legal: { done: {{ legal_pro_done }}, total: {{ legal_pro_total }} },
+  },
+  4: {
+    docs:  { live: {{ docs_s4_live }},  total: {{ docs_s4_total }} },
+    blog:  { published: {{ blog_published }}, target: 60 },
+    admin: { done: {{ admin_pro_done }}, total: {{ admin_pro_total }} },
+    legal: { done: {{ legal_pro_done }}, total: {{ legal_pro_total }} },
+  },
+};
+
+function pct(done, total) {
+  return total > 0 ? Math.round(done * 100 / total) : 0;
+}
+
+function setCard(valId, barId, value, total) {
+  const p = pct(value, total);
+  document.getElementById(valId).textContent     = p + '%';
+  document.getElementById(barId).style.width     = p + '%';
+}
+
+function switchStage(stage, btn) {
+  // Tab active state
+  document.querySelectorAll('#stage-filter .filter-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  // Disabled cards: Stage 1 → dim Pro; Stage 2/3/4 → dim Free
+  document.querySelector('[data-card="free-features"]').classList.toggle('stat-card--disabled', stage !== 1);
+  document.querySelector('[data-card="pro-features"]').classList.toggle('stat-card--disabled',  stage === 1);
+
+  // Reactive cards
+  const d = STAGE_DATA[stage];
+  setCard('ov-val-docs',  'ov-bar-docs',  d.docs.live,      d.docs.total);
+  setCard('ov-val-blog',  'ov-bar-blog',  d.blog.published, d.blog.target);
+  setCard('ov-val-admin', 'ov-bar-admin', d.admin.done,     d.admin.total);
+  setCard('ov-val-legal', 'ov-bar-legal', d.legal.done,     d.legal.total);
+}
+
+// Boot on Stage 1
+switchStage(1, document.querySelector('#stage-filter .filter-tab[data-stage="1"]'));
 </script>
