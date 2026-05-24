@@ -643,17 +643,22 @@ h3 {
 .overview-top-row {
   display: flex;
   gap: 16px;
-  align-items: stretch;
+  align-items: start;
 }
 
 .overview-top-row .launch-hero {
-  flex: 3 1 0;
+  flex: 1 1 0;
   min-width: 0;
   padding: 32px;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: nowrap;
 }
 
 .overview-top-row .launch-hero .readiness {
-  height: 100%;
+  flex: 1 1 0;
+  min-height: 200px;
 }
 
 .overview-top-row .launch-hero .readiness canvas {
@@ -664,10 +669,9 @@ h3 {
 
 .stat-grid--side {
   flex: 0 0 auto;
-  width: 390px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: max-content;
+  grid-template-columns: repeat(3, max-content);
   align-content: start;
-  height: 100%;
 }
 
 /* ── Launch roadmap ───────────────────────────────────────────── */
@@ -937,7 +941,7 @@ h3 {
 
   .stat-grid--side {
     flex: 1 1 auto;
-    width: auto;
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
   }
 
