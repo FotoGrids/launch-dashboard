@@ -1085,7 +1085,7 @@
   dev_status:
     backend: na
     frontend: true
-    released: false
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: true
