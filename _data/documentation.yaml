@@ -195,9 +195,10 @@ doc_sections:
   - name: "Captions & Text"
     articles:
       - title: "Captions"
-        status: in_progress
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/captions-text/captions/"
+        post_id: 5097
         notes: "Consolidates Caption Display, Caption Source, Caption Styling, Description"
       - title: "Custom Fonts"
         status: planned
