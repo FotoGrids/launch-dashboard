@@ -23,8 +23,9 @@ doc_sections:
         status: planned
         url: ""
       - title: "Inserting a Gallery (Shortcode)"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/getting-started/inserting-a-gallery-shortcode/"
+        post_id: 5081
       - title: "Inserting a Gallery (Block Editor)"
         status: planned
         url: ""
@@ -38,11 +39,13 @@ doc_sections:
   - name: "Licensing & Account"
     articles:
       - title: "How Licensing Works"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/licensing-account/how-licensing-works/"
+        post_id: 5080
       - title: "Activating Your License Key"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/licensing-account/activating-your-license-key/"
+        post_id: 5079
       - title: "Upgrading from Free to Pro"
         status: planned
         url: ""
@@ -63,17 +66,21 @@ doc_sections:
         status: planned
         url: ""
       - title: "Removing and Reordering Images"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/galleries/removing-and-reordering-images/"
+        post_id: 5082
       - title: "Editing Item Details"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/galleries/editing-item-details/"
+        post_id: 5083
       - title: "Editing Item EXIF Data"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/galleries/editing-item-exif-data/"
+        post_id: 5084
       - title: "Editing Item Tags, People & Locations"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/galleries/editing-item-tags-people-locations/"
+        post_id: 5085
       - title: "Editing Item SEO Fields"
         status: planned
         url: ""
@@ -174,8 +181,9 @@ doc_sections:
         post_id: 5047
         notes: "Covered inside Image Filters article"
       - title: "Loading Icon"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/layouts-and-templates/loading-icon/"
+        post_id: 5078
 
   - name: "Lightbox"
     articles:
@@ -249,14 +257,17 @@ doc_sections:
         url: "https://www.fotogrids.com/docs/items-photos-images/tags-overview/"
         post_id: 5048
       - title: "Adding & Managing Tags"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/items-photos-images/managing-tags/"
+        post_id: 5091
       - title: "People"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/items-photos-images/managing-people/"
+        post_id: 5090
       - title: "Locations"
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/docs/items-photos-images/managing-locations/"
+        post_id: 5089
       - title: "EXIF Data"
         status: planned
         url: ""
