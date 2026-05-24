@@ -18,7 +18,7 @@ title: Product
   <button class="filter-tab" data-tier="agency" onclick="filterTier('agency', this)">PRO Agency</button>
   <button class="filter-tab" data-tier="addon" onclick="filterTier('addon', this)">Add-ons</button>
   <button class="filter-tab" data-tier="roadmap" onclick="filterTier('roadmap', this)">Post-launch</button>
-  <button class="filter-tab filter-tab--all" data-tier="all" onclick="filterTier('all', this)">All tiers</button>
+  <button class="filter-tab filter-tab--all" data-tier="all" onclick="filterTier('all', this)">All Tiers</button>
 </div>
 
 <div class="stat-grid" id="feature-stat-grid" style="margin-bottom:24px;margin-top:16px;">
@@ -35,8 +35,6 @@ title: Product
     <span><strong id="feature-progress-pct">0%</strong> &nbsp;<span id="feature-progress-count"></span></span>
   </div>
 </div>
-
----
 
 {% comment %} ── Stacked bar chart ──────────────────────────────────────────── {% endcomment %}
 <div class="chart-wrap">
@@ -332,11 +330,11 @@ function updateStatGrid(tier) {
 
   let released = 0, inprogress = 0;
   scoped.forEach(r => {
-    const isReleased = normalizeStatus(r.dataset.released) === 'true';
-    const backendIP  = normalizeStatus(r.dataset.backend)  === 'in_progress';
-    const frontendIP = normalizeStatus(r.dataset.frontend) === 'in_progress';
+    const isReleased  = normalizeStatus(r.dataset.released)  === 'true';
+    const backendDone = isCompletedStatus(r.dataset.backend)  || normalizeStatus(r.dataset.backend)  === 'in_progress';
+    const frontendDone= isCompletedStatus(r.dataset.frontend) || normalizeStatus(r.dataset.frontend) === 'in_progress';
     if (isReleased) released++;
-    else if (backendIP || frontendIP) inprogress++;
+    else if (backendDone || frontendDone) inprogress++;
   });
 
   const total      = scoped.length;

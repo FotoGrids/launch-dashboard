@@ -7,34 +7,35 @@ title: Documentation
 <p class="page-subtitle">Article coverage across all docs sections.</p>
 
 {% assign doc_sections = site.data.documentation.doc_sections %}
-{% assign docs_live  = 0 %}
-{% assign docs_wip   = 0 %}
-{% assign docs_plan  = 0 %}
-{% assign docs_total = 0 %}
-{% for section in doc_sections %}
-  {% assign sect_live = section.articles | where: "status", "live" %}
-  {% assign sect_wip  = section.articles | where: "status", "in_progress" %}
-  {% assign sect_plan = section.articles | where: "status", "planned" %}
-  {% assign docs_live  = docs_live  | plus: sect_live.size %}
-  {% assign docs_wip   = docs_wip   | plus: sect_wip.size %}
-  {% assign docs_plan  = docs_plan  | plus: sect_plan.size %}
-  {% assign docs_total = docs_total | plus: section.articles.size %}
-{% endfor %}
 
-<div class="stat-grid">
-  {% include stat_card.html value=docs_live label="Articles live" highlight=true %}
-  {% include stat_card.html value=docs_wip  label="In progress" %}
-  {% include stat_card.html value=docs_plan label="Planned" %}
-  {% include stat_card.html value=docs_total label="Total articles" %}
+<div class="filter-tabs" id="docs-tier-filter">
+  <button class="filter-tab active" data-tier="free"        onclick="filterDocsTier('free', this)">Free</button>
+  <button class="filter-tab"        data-tier="pro_starter" onclick="filterDocsTier('pro_starter', this)">PRO Starter</button>
+  <button class="filter-tab"        data-tier="pro_plus"    onclick="filterDocsTier('pro_plus', this)">PRO Plus</button>
+  <button class="filter-tab"        data-tier="agency"      onclick="filterDocsTier('agency', this)">PRO Agency</button>
+  <button class="filter-tab filter-tab--all" data-tier="all" onclick="filterDocsTier('all', this)">All tiers</button>
 </div>
 
-{% include progress_bar.html done=docs_live total=docs_total label="Documentation complete" %}
+<div class="stat-grid" style="margin-bottom:24px;margin-top:16px;">
+  <div class="stat-card highlight"><div class="stat-value" id="docs-stat-live">—</div><div class="stat-label">Articles live</div></div>
+  <div class="stat-card"><div class="stat-value" id="docs-stat-wip">—</div><div class="stat-label">In progress</div></div>
+  <div class="stat-card"><div class="stat-value" id="docs-stat-plan">—</div><div class="stat-label">Planned</div></div>
+  <div class="stat-card"><div class="stat-value" id="docs-stat-total">—</div><div class="stat-label">Total articles</div></div>
+</div>
+
+<div class="progress-wrap" style="margin-bottom:24px;">
+  <div class="progress-bar-track"><div class="progress-bar-fill" id="docs-progress-fill" style="width:0%;"></div></div>
+  <div class="progress-label">
+    <span id="docs-progress-label">Documentation complete</span>
+    <span><strong id="docs-progress-pct">0%</strong> &nbsp;<span id="docs-progress-count"></span></span>
+  </div>
+</div>
 
 {% for section in doc_sections %}
 ### {{ section.name }}
 
-<div class="table-scroll">
-<table class="dash-table">
+<div class="table-scroll docs-section-wrap">
+<table class="dash-table docs-section-table">
   <thead>
     <tr>
       <th class="col-tier">Tier</th>
@@ -46,7 +47,7 @@ title: Documentation
   </thead>
   <tbody>
     {% for article in section.articles %}
-    <tr>
+    <tr data-tier="{{ article.tier | default: 'free' }}" data-status="{{ article.status }}">
       <td class="col-tier">
         {% assign t = article.tier | default: "free" %}
         {% if t == 'pro_starter' %}<span class="tier-pill tier-starter"><span class="pro-tag">PRO</span><span class="tier-name">Starter</span></span>
@@ -71,3 +72,51 @@ title: Documentation
 </table>
 </div>
 {% endfor %}
+
+<script>
+const DOCS_TIER_LABELS = { free: 'Free', pro_starter: 'PRO Starter', pro_plus: 'PRO Plus', agency: 'PRO Agency', all: 'all tiers' };
+
+function updateDocsStats(tier) {
+  const rows = Array.from(document.querySelectorAll('.docs-section-table tbody tr'));
+  const scoped = tier === 'all' ? rows : rows.filter(r => r.dataset.tier === tier);
+  let live = 0, wip = 0, plan = 0;
+  scoped.forEach(r => {
+    if      (r.dataset.status === 'live')        live++;
+    else if (r.dataset.status === 'in_progress') wip++;
+    else                                         plan++;
+  });
+  const total = scoped.length;
+  const pct   = total > 0 ? Math.round(live * 100 / total) : 0;
+
+  document.getElementById('docs-stat-live').textContent     = live;
+  document.getElementById('docs-stat-wip').textContent      = wip;
+  document.getElementById('docs-stat-plan').textContent     = plan;
+  document.getElementById('docs-stat-total').textContent    = total;
+  document.getElementById('docs-progress-fill').style.width = pct + '%';
+  document.getElementById('docs-progress-pct').textContent  = pct + '%';
+  document.getElementById('docs-progress-count').textContent = '(' + live + '/' + total + ')';
+  document.getElementById('docs-progress-label').textContent = 'Documentation complete — ' + (DOCS_TIER_LABELS[tier] || tier);
+}
+
+function filterDocsTier(tier, btn) {
+  document.querySelectorAll('#docs-tier-filter .filter-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('.docs-section-table tbody tr').forEach(row => {
+    row.style.display = (tier === 'all' || row.dataset.tier === tier) ? '' : 'none';
+  });
+
+  // Hide section heading + table when no rows are visible
+  document.querySelectorAll('.docs-section-wrap').forEach(wrap => {
+    const anyVisible = Array.from(wrap.querySelectorAll('tbody tr')).some(r => r.style.display !== 'none');
+    wrap.style.display = anyVisible ? '' : 'none';
+    const heading = wrap.previousElementSibling;
+    if (heading && heading.tagName.match(/^H[1-6]$/)) heading.style.display = anyVisible ? '' : 'none';
+  });
+
+  updateDocsStats(tier);
+}
+
+// Boot on Free
+filterDocsTier('free', document.querySelector('#docs-tier-filter .filter-tab[data-tier="free"]'));
+</script>
