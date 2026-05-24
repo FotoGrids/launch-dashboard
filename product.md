@@ -6,38 +6,37 @@ title: Product
 <h1>Product</h1>
 <p class="page-subtitle">Feature development status and product admin tasks.</p>
 
-{% comment %} ── Progress summary ──────────────────────────────────────────── {% endcomment %}
+{% comment %} ── Data only — rendering is JS-driven ───────────────────────── {% endcomment %}
 {% assign launch_features = site.data.features | where: "roadmap", false %}
-{% assign done_features   = launch_features | where: "dev_status.released", true %}
-{% assign not_done        = launch_features | where: "dev_status.released", false %}
-{% assign ip_backend      = not_done | where: "dev_status.backend", "in_progress" %}
-{% assign ip_frontend     = not_done | where: "dev_status.frontend", "in_progress" %}
-{% assign ip_combined     = ip_backend | concat: ip_frontend | uniq %}
-
-<div class="stat-grid" style="margin-bottom:24px;">
-  {% assign done_pct = done_features.size | times: 100 | divided_by: launch_features.size %}
-  {% include stat_card.html value=done_features.size label="Features released" highlight=true %}
-  {% include stat_card.html value=launch_features.size label="Launch-scoped features" %}
-  {% include stat_card.html value=ip_combined.size label="In progress" %}
-  {% assign not_started = launch_features.size | minus: done_features.size | minus: ip_combined.size %}
-  {% include stat_card.html value=not_started label="Not started" %}
-</div>
-
-{% include progress_bar.html done=done_features.size total=launch_features.size label="Feature completion (launch scope)" %}
-
----
 
 ## Section A — Features
 
 <div class="filter-tabs" id="tier-filter">
-  <button class="filter-tab active" onclick="filterTier('all', this)">All tiers</button>
-  <button class="filter-tab" onclick="filterTier('free', this)">Free</button>
-  <button class="filter-tab" onclick="filterTier('pro_starter', this)">PRO Starter</button>
-  <button class="filter-tab" onclick="filterTier('pro_plus', this)">PRO Plus</button>
-  <button class="filter-tab" onclick="filterTier('agency', this)">PRO Agency</button>
-  <button class="filter-tab" onclick="filterTier('addon', this)">Add-ons</button>
-  <button class="filter-tab" onclick="filterTier('roadmap', this)">Post-launch</button>
+  <button class="filter-tab active" data-tier="free" onclick="filterTier('free', this)">Free</button>
+  <button class="filter-tab" data-tier="pro_starter" onclick="filterTier('pro_starter', this)">PRO Starter</button>
+  <button class="filter-tab" data-tier="pro_plus" onclick="filterTier('pro_plus', this)">PRO Plus</button>
+  <button class="filter-tab" data-tier="agency" onclick="filterTier('agency', this)">PRO Agency</button>
+  <button class="filter-tab" data-tier="addon" onclick="filterTier('addon', this)">Add-ons</button>
+  <button class="filter-tab" data-tier="roadmap" onclick="filterTier('roadmap', this)">Post-launch</button>
+  <button class="filter-tab filter-tab--all" data-tier="all" onclick="filterTier('all', this)">All tiers</button>
 </div>
+
+<div class="stat-grid" id="feature-stat-grid" style="margin-bottom:24px;margin-top:16px;">
+  <div class="stat-card highlight"><div class="stat-value" id="stat-released">—</div><div class="stat-label">Features released</div></div>
+  <div class="stat-card"><div class="stat-value" id="stat-total">—</div><div class="stat-label" id="stat-total-label">Launch-scoped features</div></div>
+  <div class="stat-card"><div class="stat-value" id="stat-inprogress">—</div><div class="stat-label">In progress</div></div>
+  <div class="stat-card"><div class="stat-value" id="stat-notstarted">—</div><div class="stat-label">Not started</div></div>
+</div>
+
+<div class="progress-wrap" id="feature-progress" style="margin-bottom:24px;">
+  <div class="progress-bar-track"><div class="progress-bar-fill" id="feature-progress-fill" style="width:0%;"></div></div>
+  <div class="progress-label">
+    <span id="feature-progress-label">Feature completion</span>
+    <span><strong id="feature-progress-pct">0%</strong> &nbsp;<span id="feature-progress-count"></span></span>
+  </div>
+</div>
+
+---
 
 {% comment %} ── Stacked bar chart ──────────────────────────────────────────── {% endcomment %}
 <div class="chart-wrap">
@@ -321,6 +320,44 @@ function updateFeatureChartForTier(tier) {
   renderTierDetailChart(tier);
 }
 
+// ── Stat grid + progress bar update ─────────────────────────────
+function updateStatGrid(tier) {
+  const rows = Array.from(document.querySelectorAll('#feature-table tbody tr'))
+    .filter(r => !r.classList.contains('table-category-row'));
+
+  const scoped = rows.filter(r => {
+    const isRoadmap = r.dataset.roadmap === 'true';
+    if (tier === 'all')      return !isRoadmap;
+    if (tier === 'roadmap')  return isRoadmap;
+    return !isRoadmap && r.dataset.tier === tier;
+  });
+
+  let released = 0, inprogress = 0;
+  scoped.forEach(r => {
+    const isReleased = normalizeStatus(r.dataset.released) === 'true';
+    const backendIP  = normalizeStatus(r.dataset.backend)  === 'in_progress';
+    const frontendIP = normalizeStatus(r.dataset.frontend) === 'in_progress';
+    if (isReleased) released++;
+    else if (backendIP || frontendIP) inprogress++;
+  });
+
+  const total      = scoped.length;
+  const notStarted = total - released - inprogress;
+  const pct        = total > 0 ? Math.round(released * 100 / total) : 0;
+
+  document.getElementById('stat-released').textContent    = released;
+  document.getElementById('stat-total').textContent       = total;
+  document.getElementById('stat-inprogress').textContent  = inprogress;
+  document.getElementById('stat-notstarted').textContent  = notStarted;
+
+  const tierLabel = tier === 'all' ? 'all launch-scoped' : tier === 'roadmap' ? 'post-launch' : tier.replace('_', ' ');
+  document.getElementById('stat-total-label').textContent      = tier === 'all' ? 'Launch-scoped features' : 'Features in scope';
+  document.getElementById('feature-progress-label').textContent = 'Feature completion — ' + tierLabel;
+  document.getElementById('feature-progress-fill').style.width  = pct + '%';
+  document.getElementById('feature-progress-pct').textContent   = pct + '%';
+  document.getElementById('feature-progress-count').textContent = '(' + released + '/' + total + ')';
+}
+
 // ── Tier filter ─────────────────────────────────────────────────
 function filterTier(tier, btn) {
   document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
@@ -328,7 +365,7 @@ function filterTier(tier, btn) {
 
   const rows = document.querySelectorAll('#feature-table tbody tr');
   rows.forEach(row => {
-    if (row.classList.contains('table-category-row')) return; // handle after feature rows
+    if (row.classList.contains('table-category-row')) return;
     const rowTier    = row.dataset.tier;
     const rowRoadmap = row.dataset.roadmap === 'true';
 
@@ -352,9 +389,10 @@ function filterTier(tier, btn) {
     catRow.style.display = anyVisible ? '' : 'none';
   });
 
+  updateStatGrid(tier);
   updateFeatureChartForTier(tier);
 }
 
-// ── Initial chart render (all tiers summary) ─────────────────────
-updateFeatureChartForTier('all');
+// ── Boot on Free ─────────────────────────────────────────────────
+filterTier('free', document.querySelector('.filter-tab[data-tier="free"]'));
 </script>

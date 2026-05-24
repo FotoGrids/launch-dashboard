@@ -105,7 +105,7 @@
   name: License key generation and validation
   section: product
   category: Infrastructure
-  status: in_progress
+  status: done
   blocked_by: ""
   notes: "Via Freemius"
   priority: high

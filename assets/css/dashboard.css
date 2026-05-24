@@ -532,6 +532,8 @@ h3 {
 
 .filter-tab { font-size: 12px; }
 
+.filter-tab--all { margin-left: auto; }
+
 /* ── Chart container ────────────────────────────────────────── */
 .chart-wrap {
   background: var(--white);
