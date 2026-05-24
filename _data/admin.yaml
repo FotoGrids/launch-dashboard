@@ -38,7 +38,7 @@
   category: Infrastructure
   tier: free
   status: in_progress
-  notes: "Google Analytics installed on website; goal tracking pending"
+  notes: "GA installed; goal tracking pending"
 
 - id: tos_product
   name: Product Terms of Service written and published

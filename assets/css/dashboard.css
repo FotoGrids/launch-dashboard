@@ -483,7 +483,7 @@ h3 {
 .checklist-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
   padding: 12px 16px;
   border-bottom: 1px solid var(--border);
   font-size: 13px;
