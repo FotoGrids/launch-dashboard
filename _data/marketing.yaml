@@ -1,12 +1,12 @@
 assets:
   - id: plugin_banner
     name: WordPress.org plugin banner (1544×500)
-    status: live
+    status: planned
     notes: ""
 
   - id: plugin_icon
     name: WordPress.org plugin icon (256×256)
-    status: live
+    status: planned
     notes: ""
 
   - id: demo_video
@@ -26,7 +26,7 @@ assets:
 
   - id: twitter_card
     name: Twitter card image
-    status: live
+    status: planned
     notes: ""
 
   - id: linkedin_banner

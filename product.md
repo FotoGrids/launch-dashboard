@@ -49,13 +49,13 @@ title: Product
   <thead>
     <tr>
       <th class="col-tier">Tier</th>
-      <th style="text-align:left;">Feature</th>
+      <th class="col-left">Feature</th>
       <th class="col-category">Category</th>
       <th>Backend</th>
       <th>Frontend</th>
       <th>Released</th>
       <th>Doc</th>
-      <th style="text-align:left;">Notes</th>
+      <th class="col-left">Notes</th>
     </tr>
   </thead>
   <tbody>
@@ -133,12 +133,12 @@ title: Product
 <table class="dash-table">
   <thead>
     <tr>
-      <th style="text-align:left;">Task</th>
+      <th class="col-left">Task</th>
       <th>Category</th>
       <th>Status</th>
       <th>Priority</th>
       <th>Blocked by</th>
-      <th style="text-align:left;">Notes</th>
+      <th class="col-left">Notes</th>
     </tr>
   </thead>
   <tbody>

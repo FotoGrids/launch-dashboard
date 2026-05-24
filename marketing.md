@@ -29,9 +29,9 @@ title: Marketing
 <table class="dash-table">
   <thead>
     <tr>
-      <th style="text-align:left;">Asset</th>
+      <th class="col-left">Asset</th>
       <th>Status</th>
-      <th style="text-align:left;">Notes</th>
+      <th class="col-left">Notes</th>
     </tr>
   </thead>
   <tbody>

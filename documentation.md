@@ -37,10 +37,10 @@ title: Documentation
 <table class="dash-table">
   <thead>
     <tr>
-      <th style="text-align:left;">Article</th>
+      <th class="col-left">Article</th>
       <th>Status</th>
-      <th style="text-align:left;">URL</th>
-      <th style="text-align:left;">Notes</th>
+      <th class="col-left">URL</th>
+      <th class="col-left">Notes</th>
     </tr>
   </thead>
   <tbody>
@@ -48,7 +48,7 @@ title: Documentation
     <tr>
       <td class="col-name">{{ article.title }}</td>
       <td>{% include status_badge.html status=article.status %}</td>
-      <td style="text-align:left;">
+      <td class="col-left">
         {% if article.url and article.url != "" %}
           <a href="{{ article.url }}" target="_blank" style="font-size:12px; color:var(--text-muted);">{{ article.url }}</a>
         {% else %}

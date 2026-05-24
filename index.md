@@ -298,8 +298,8 @@ title: Overview
   <thead>
     <tr>
       <th class="col-tier">Tier</th>
-      <th>Feature</th>
-      <th class="col-notes">Notes</th>
+      <th class="col-left">Feature</th>
+      <th class="col-left">Notes</th>
     </tr>
   </thead>
   <tbody>

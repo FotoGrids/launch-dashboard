@@ -25,10 +25,10 @@ title: Website
 <table class="dash-table">
   <thead>
     <tr>
-      <th style="text-align:left;">Page</th>
+      <th class="col-left">Page</th>
       <th>Status</th>
-      <th style="text-align:left;">URL</th>
-      <th style="text-align:left;">Notes</th>
+      <th class="col-left">URL</th>
+      <th class="col-left">Notes</th>
     </tr>
   </thead>
   <tbody>
@@ -36,7 +36,7 @@ title: Website
     <tr>
       <td class="col-name">{{ page.name }}</td>
       <td>{% include status_badge.html status=page.status %}</td>
-      <td style="text-align:left;">
+      <td class="col-left">
         {% if page.url and page.url != "" and page.status == "live" %}
           <a href="{{ page.url }}" style="font-size:12px; color:var(--text-muted);">{{ page.url }}</a>
         {% elsif page.url and page.url != "" %}
