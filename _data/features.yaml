@@ -1624,7 +1624,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: live_preview
   name: Live Preview
@@ -1639,7 +1639,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: gallery_album_defaults
   name: Gallery & Album Defaults

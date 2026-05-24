@@ -562,13 +562,15 @@ doc_sections:
   - name: "Workflow & Maintenance"
     articles:
       - title: "Autosave"
-        status: in_progress
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/settings-and-configuration/autosave/"
+        post_id: 5095
       - title: "Live Preview"
-        status: in_progress
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/galleries/live-preview/"
+        post_id: 5096
       - title: "Import / Export"
         status: live
         tier: free
