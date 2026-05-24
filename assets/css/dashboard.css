@@ -634,7 +634,7 @@ h3 {
 .overview-top-row .launch-hero {
   flex: 3 1 0;
   min-width: 0;
-  padding: 64px;
+  padding: 32px;
 }
 
 .overview-top-row .launch-hero .readiness {
@@ -648,8 +648,9 @@ h3 {
 }
 
 .stat-grid--side {
-  flex: 0 0 280px;
-  grid-template-columns: 1fr;
+  flex: 0 0 auto;
+  width: 380px;
+  grid-template-columns: repeat(3, 1fr);
   align-content: start;
   height: 100%;
 }
@@ -921,7 +922,8 @@ h3 {
 
   .stat-grid--side {
     flex: 1 1 auto;
-    grid-template-columns: repeat(2, 1fr);
+    width: auto;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .roadmap-grid {

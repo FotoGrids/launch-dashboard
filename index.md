@@ -76,6 +76,13 @@ title: Overview
 {% assign website_pct = 0 %}
 {% if website_total > 0 %}{% assign website_pct = website_done | times: 100 | divided_by: website_total %}{% endif %}
 
+{% assign website_pages_pct = 0 %}
+{% if website_pages.size > 0 %}{% assign website_pages_pct = website_pages_done.size | times: 100 | divided_by: website_pages.size %}{% endif %}
+{% assign docs_pct = 0 %}
+{% if docs_total > 0 %}{% assign docs_pct = docs_done | times: 100 | divided_by: docs_total %}{% endif %}
+{% assign blog_pct = 0 %}
+{% if blog_total > 0 %}{% assign blog_pct = blog_published | times: 100 | divided_by: blog_total %}{% endif %}
+
 {% assign marketing_pct = 0 %}
 {% if marketing_total > 0 %}{% assign marketing_pct = marketing_done | times: 100 | divided_by: marketing_total %}{% endif %}
 
@@ -111,9 +118,14 @@ title: Overview
 
   <div class="stat-grid stat-grid--side">
     <div class="stat-card">
-      <div class="stat-value">{{ feature_pct }}%</div>
-      <div class="stat-label">Features released</div>
-      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ feature_pct }}%;"></div></div>
+      <div class="stat-value">{{ free_pct }}%</div>
+      <div class="stat-label">Free Features released</div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ free_pct }}%;"></div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">{{ pro_pct }}%</div>
+      <div class="stat-label">Pro Features released</div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ pro_pct }}%;"></div></div>
     </div>
     <div class="stat-card">
       <div class="stat-value">{{ product_pct }}%</div>
@@ -121,9 +133,19 @@ title: Overview
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ product_pct }}%;"></div></div>
     </div>
     <div class="stat-card">
-      <div class="stat-value">{{ website_pct }}%</div>
-      <div class="stat-label">Website ready</div>
-      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ website_pct }}%;"></div></div>
+      <div class="stat-value">{{ website_pages_pct }}%</div>
+      <div class="stat-label">Website Pages</div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ website_pages_pct }}%;"></div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">{{ docs_pct }}%</div>
+      <div class="stat-label">Documentation</div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ docs_pct }}%;"></div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">{{ blog_pct }}%</div>
+      <div class="stat-label">Blog</div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ blog_pct }}%;"></div></div>
     </div>
     <div class="stat-card">
       <div class="stat-value">{{ marketing_pct }}%</div>
@@ -308,7 +330,9 @@ renderReadinessChart('readinessChart', [
   { label: 'Free Features',    pct: {{ free_pct }} },
   { label: 'PRO Features',     pct: {{ pro_pct }} },
   { label: 'Product Tasks',    pct: {{ product_pct }} },
-  { label: 'Website',          pct: {{ website_pct }} },
+  { label: 'Website Pages',    pct: {{ website_pages_pct }} },
+  { label: 'Documentation',    pct: {{ docs_pct }} },
+  { label: 'Blog',             pct: {{ blog_pct }} },
   { label: 'Marketing',        pct: {{ marketing_pct }} },
   { label: 'Admin Tasks',      pct: {{ admin_pct }} },
   { label: 'Legal Tasks',      pct: {{ legal_pct }} },

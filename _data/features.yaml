@@ -1693,9 +1693,9 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: planned
   dev_status:
-    backend: false
-    frontend: false
-    released: false
+    backend: true
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false

@@ -54,45 +54,18 @@ function renderReadinessChart(canvasId, sections) {
   if (!ctx) return;
 
   const palette = [
-    '#3C46F0', // indigo  — free features
+    '#3C46F0', // indigo       — free features
     '#7B83F5', // indigo light — pro features
-    '#46B450', // green   — product tasks
-    '#FFB914', // yellow  — website
-    '#FF8C42', // orange  — marketing
-    '#F01E32', // red     — admin
-    '#6B7290', // slate   — legal
+    '#46B450', // green        — product tasks
+    '#FFB914', // yellow       — website pages
+    '#14C4B4', // teal         — documentation
+    '#8BC34A', // lime         — blog
+    '#FF8C42', // orange       — marketing
+    '#F01E32', // red          — admin
+    '#6B7290', // slate        — legal
   ];
 
   const sectionColours = sections.map((_, i) => palette[i % palette.length]);
-
-  const isMobile = () => window.innerWidth <= 900;
-
-  const legendConfig = () => ({
-    position: isMobile() ? 'bottom' : 'right',
-    labels: {
-      font: { family: "'Poppins', system-ui", size: 12 },
-      color: '#6B7290',
-      boxWidth: 12,
-      padding: isMobile() ? 12 : 20,
-      generateLabels(chart) {
-        const data = chart.data;
-        return data.labels.map((label, i) => ({
-          text: label + '  ' + data.datasets[0].data[i] + '%',
-          fillStyle:   data.datasets[0].backgroundColor[i],
-          strokeStyle: data.datasets[0].borderColor[i],
-          lineWidth: 1,
-          hidden: chart.getDataVisibility(i) === false,
-          index: i,
-        }));
-      },
-    },
-    onClick(e, legendItem, legend) {
-      const index = legendItem.index;
-      const chart = legend.chart;
-      chart.toggleDataVisibility(index);
-      chart.update();
-    },
-  });
 
   const chart = new Chart(ctx, {
     type: 'polarArea',
@@ -125,7 +98,7 @@ function renderReadinessChart(canvasId, sections) {
         },
       },
       plugins: {
-        legend: legendConfig(),
+        legend: { display: false },
         tooltip: {
           callbacks: {
             label: ctx => ' ' + ctx.parsed.r + '%',
@@ -133,15 +106,5 @@ function renderReadinessChart(canvasId, sections) {
         },
       },
     },
-  });
-
-  // Update legend position on resize
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      chart.options.plugins.legend = legendConfig();
-      chart.update('none');
-    }, 150);
   });
 }
