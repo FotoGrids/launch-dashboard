@@ -1089,7 +1089,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: seo_open_graph_tags
   name: Open Graph Tags
