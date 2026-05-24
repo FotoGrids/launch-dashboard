@@ -340,9 +340,10 @@ doc_sections:
         url: "https://www.fotogrids.com/docs/items-photos-images/managing-locations/"
         post_id: 5089
       - title: "EXIF Data"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/items-photos-images/editing-item-exif-data/"
+        post_id: 5084
       - title: "Map View"
         status: planned
         tier: pro_starter
