@@ -13,6 +13,7 @@
   name: Write readme.txt (WordPress.org format)
   section: product
   category: WordPress.org Compliance
+  tier: free
   status: planned
   blocked_by: ""
   notes: ""
@@ -22,6 +23,7 @@
   name: Plugin banner image (1544×500)
   section: product
   category: WordPress.org Compliance
+  tier: free
   status: planned
   blocked_by: ""
   notes: ""
@@ -31,6 +33,7 @@
   name: Plugin icon (256×256 + 128×128)
   section: product
   category: WordPress.org Compliance
+  tier: free
   status: planned
   blocked_by: ""
   notes: ""
@@ -40,6 +43,7 @@
   name: Plugin screenshots (at least 3)
   section: product
   category: WordPress.org Compliance
+  tier: free
   status: planned
   blocked_by: ""
   notes: ""
@@ -49,6 +53,7 @@
   name: Code review — no calls to external APIs without disclosure
   section: product
   category: WordPress.org Compliance
+  tier: free
   status: planned
   blocked_by: ""
   notes: ""
@@ -58,6 +63,7 @@
   name: Submit plugin to WordPress.org review queue
   section: product
   category: WordPress.org Compliance
+  tier: free
   status: planned
   blocked_by: wporg_readme
   notes: "Requires readme.txt, banner, icon, and screenshots to be complete"
@@ -67,6 +73,7 @@
   name: WordPress.org review approved
   section: product
   category: WordPress.org Compliance
+  tier: free
   status: planned
   blocked_by: wporg_submission
   notes: "Typical review turnaround: 1–4 weeks"
@@ -78,6 +85,7 @@
   name: Freemius SDK integration
   section: product
   category: Infrastructure
+  tier: free
   status: done
   blocked_by: ""
   notes: "SDK in place"
@@ -87,6 +95,7 @@
   name: Freemius plans configured
   section: product
   category: Infrastructure
+  tier: pro_starter
   status: in_progress
   blocked_by: ""
   notes: "Most plans in place; still in progress"
@@ -96,6 +105,7 @@
   name: Pricing page connected to Freemius
   section: product
   category: Infrastructure
+  tier: pro_starter
   status: done
   blocked_by: ""
   notes: "Pricing page on website already connected"
@@ -105,6 +115,7 @@
   name: License key generation and validation
   section: product
   category: Infrastructure
+  tier: pro_starter
   status: done
   blocked_by: ""
   notes: "Via Freemius"
@@ -114,6 +125,7 @@
   name: Plugin update server (pro versions)
   section: product
   category: Infrastructure
+  tier: pro_starter
   status: in_progress
   blocked_by: ""
   notes: "Auto-update for pro tiers via Freemius"
@@ -123,6 +135,7 @@
   name: Staging environment for QA
   section: product
   category: Infrastructure
+  tier: free
   status: done
   blocked_by: ""
   notes: ""
@@ -132,6 +145,7 @@
   name: Error logging and monitoring (Sentry or equivalent)
   section: product
   category: Infrastructure
+  tier: free
   status: planned
   blocked_by: ""
   notes: ""
@@ -143,6 +157,7 @@
   name: Finalise tier pricing
   section: website
   category: Pricing
+  tier: free
   status: in_progress
   blocked_by: ""
   notes: "Awaiting competitive analysis"
@@ -152,6 +167,7 @@
   name: Pricing page live
   section: website
   category: Pages
+  tier: free
   status: in_progress
   blocked_by: pricing_finalised
   notes: ""
@@ -164,6 +180,7 @@
   name: Product Hunt launch kit (tagline, images, first comment)
   section: marketing
   category: Launch
+  tier: pro_starter
   status: planned
   blocked_by: ""
   notes: "Schedule for launch week"
@@ -173,6 +190,7 @@
   name: Launch announcement email to list
   section: marketing
   category: Email
+  tier: free
   status: planned
   blocked_by: ""
   notes: ""
@@ -182,6 +200,7 @@
   name: Social launch posts (X, LinkedIn)
   section: marketing
   category: Social
+  tier: free
   status: planned
   blocked_by: ""
   notes: ""
@@ -193,7 +212,8 @@
   name: Google Workspace and Emails setup
   section: admin
   category: Infrastructure
-  status: planned
+  tier: free
+  status: done
   blocked_by: ""
   notes: ""
   priority: high
@@ -202,6 +222,7 @@
   name: Automated database backups
   section: admin
   category: Infrastructure
+  tier: free
   status: planned
   blocked_by: ""
   notes: ""
@@ -211,6 +232,7 @@
   name: Freemius affiliate program
   section: admin
   category: Infrastructure
+  tier: pro_starter
   status: done
   blocked_by: ""
   notes: "Affiliate program set up in Freemius"
@@ -220,6 +242,7 @@
   name: Product Terms of Service written and published
   section: admin
   category: Legal
+  tier: free
   status: planned
   blocked_by: ""
   notes: ""
@@ -229,6 +252,7 @@
   name: Website Terms of Service written and published
   section: admin
   category: Legal
+  tier: free
   status: planned
   blocked_by: ""
   notes: ""
@@ -238,6 +262,7 @@
   name: Privacy Policy written and published
   section: admin
   category: Legal
+  tier: free
   status: planned
   blocked_by: ""
   notes: ""
@@ -247,6 +272,7 @@
   name: GDPR compliance review
   section: admin
   category: Legal
+  tier: free
   status: planned
   blocked_by: privacy_policy
   notes: ""
@@ -256,6 +282,7 @@
   name: Payments ToS written and published
   section: admin
   category: Legal
+  tier: pro_starter
   status: planned
   blocked_by: ""
   notes: ""
@@ -265,6 +292,7 @@
   name: Refund Policy published
   section: admin
   category: Legal
+  tier: pro_starter
   status: planned
   blocked_by: ""
   notes: ""
@@ -274,6 +302,7 @@
   name: Cookie consent banner
   section: admin
   category: Legal
+  tier: free
   status: planned
   blocked_by: privacy_policy
   notes: ""
@@ -283,6 +312,7 @@
   name: Affiliated Terms of Service written and published
   section: admin
   category: Legal
+  tier: pro_starter
   status: planned
   blocked_by: ""
   notes: ""

@@ -125,8 +125,6 @@ title: Product
 </table>
 </div>
 
----
-
 ## Section B — Admin & Integration Tasks
 
 {% assign all_product_tasks = site.data.tasks | where: "section", "product" %}

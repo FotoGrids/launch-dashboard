@@ -1,95 +1,111 @@
 - id: domain_setup
   name: Domain and DNS configured
   category: Infrastructure
+  tier: free
   status: done
   notes: ""
 
 - id: hosting_setup
   name: Hosting environment live (website + shop)
   category: Infrastructure
+  tier: free
   status: done
   notes: ""
 
 - id: ssl_cert
   name: SSL certificate active
   category: Infrastructure
+  tier: free
   status: done
   notes: ""
 
 - id: google_workspace
   name: Google Workspace and Emails setup
   category: Infrastructure
-  status: planned
+  tier: free
+  status: done
   notes: ""
 
 - id: backup_system
   name: Automated database backups
   category: Infrastructure
+  tier: free
   status: planned
   notes: ""
 
 - id: analytics_setup
-  name: Analytics (Plausible or equivalent)
+  name: Analytics (Start from Google Analytics, then add Plausible or equivalent)
   category: Infrastructure
+  tier: free
   status: in_progress
-  notes: "Plausible installed on website; goal tracking pending"
+  notes: "Google Analytics installed on website; goal tracking pending"
 
 - id: tos_product
   name: Product Terms of Service written and published
   category: Legal
+  tier: free
   status: planned
   notes: ""
 
 - id: tos_website
   name: Website Terms of Service written and published
   category: Legal
+  tier: free
   status: planned
   notes: ""
 
 - id: privacy_policy
   name: Privacy Policy written and published
   category: Legal
+  tier: free
   status: planned
   notes: ""
 
 - id: gdpr_compliance
   name: GDPR compliance review
   category: Legal
+  tier: free
   status: planned
   notes: ""
 
 - id: payments_tos
   name: Payments ToS written and published
   category: Legal
+  tier: pro_starter
   status: planned
   notes: ""
 
 - id: refund_policy
   name: Refund Policy published
   category: Legal
+  tier: pro_starter
   status: planned
   notes: ""
 
 - id: cookie_banner
   name: Cookie consent banner
   category: Legal
+  tier: free
   status: planned
   notes: ""
 
 - id: affiliated_tos
   name: Affiliated Terms of Service written and published
   category: Legal
+  tier: pro_starter
   status: planned
   notes: ""
 
 - id: business_registration
   name: Business entity registered
   category: Company
+  tier: pro_starter
   status: planned
   notes: ""
 
 - id: bank_account
   name: Business bank account open
   category: Company
+  tier: pro_starter
   status: planned
   notes: ""

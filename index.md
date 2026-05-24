@@ -297,16 +297,15 @@ title: Overview
 <table class="dash-table">
   <thead>
     <tr>
+      <th class="col-tier">Tier</th>
       <th>Feature</th>
-      <th>Tier</th>
-      <th>Notes</th>
+      <th class="col-notes">Notes</th>
     </tr>
   </thead>
   <tbody>
     {% for item in site.data.milestones.post_launch_roadmap %}
     <tr>
-      <td class="col-name">{{ item.name }}</td>
-      <td>
+      <td class="col-tier">
         {% assign t = item.tier %}
         {% if t == 'pro_starter' %}<span class="tier-pill tier-starter"><span class="pro-tag">PRO</span><span class="tier-name">Starter</span></span>
         {% elsif t == 'pro_plus' %}<span class="tier-pill tier-plus"><span class="pro-tag">PRO</span><span class="tier-name">Plus</span></span>
@@ -314,6 +313,7 @@ title: Overview
         {% elsif t == 'free' %}<span class="tier-pill tier-free">FREE</span>
         {% else %}<span class="tier-pill tier-addon">{{ t }}</span>{% endif %}
       </td>
+      <td class="col-name">{{ item.name }}</td>
       <td class="col-notes">{{ item.notes | default: "—" }}</td>
     </tr>
     {% endfor %}
