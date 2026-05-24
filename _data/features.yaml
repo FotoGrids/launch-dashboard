@@ -640,15 +640,15 @@
   category: Styling & Customization
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  status: beta
+  status: shipped
   dev_status:
     backend: true
-    frontend: in_progress
-    released: false
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: global_typography_system
   name: Global Typography System

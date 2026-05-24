@@ -201,9 +201,10 @@ doc_sections:
         post_id: 5097
         notes: "Consolidates Caption Display, Caption Source, Caption Styling, Description"
       - title: "Custom Fonts"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/captions-text/custom-fonts/"
+        post_id: 5098
       - title: "Global Typography System"
         status: planned
         tier: pro_plus
