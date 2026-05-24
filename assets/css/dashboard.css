@@ -269,9 +269,24 @@ h3 {
   font-size: 12px;
   color: var(--text-muted);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .stat-card.highlight .stat-value { color: var(--indigo); }
+
+/* Per-card accent colours matching the readiness chart palette */
+.stat-card[data-accent] .stat-value      { color: var(--accent); }
+.stat-card[data-accent] .progress-bar-fill { background: var(--accent); }
+
+.stat-card[data-accent="free"]    { --accent: #3C46F0; }
+.stat-card[data-accent="pro"]     { --accent: #7B83F5; }
+.stat-card[data-accent="product"] { --accent: #46B450; }
+.stat-card[data-accent="wpages"]  { --accent: #FFB914; }
+.stat-card[data-accent="docs"]    { --accent: #14C4B4; }
+.stat-card[data-accent="blog"]    { --accent: #8BC34A; }
+.stat-card[data-accent="mktg"]    { --accent: #FF8C42; }
+.stat-card[data-accent="admin"]   { --accent: #F01E32; }
+.stat-card[data-accent="legal"]   { --accent: #6B7290; }
 
 /* ── Progress bar ───────────────────────────────────────────── */
 .progress-wrap {
@@ -649,8 +664,8 @@ h3 {
 
 .stat-grid--side {
   flex: 0 0 auto;
-  width: 380px;
-  grid-template-columns: repeat(3, 1fr);
+  width: 390px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-content: start;
   height: 100%;
 }

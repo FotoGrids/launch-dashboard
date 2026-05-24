@@ -117,47 +117,47 @@ title: Overview
   </div>
 
   <div class="stat-grid stat-grid--side">
-    <div class="stat-card">
+    <div class="stat-card" data-accent="free">
       <div class="stat-value">{{ free_pct }}%</div>
       <div class="stat-label">Free Features released</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ free_pct }}%;"></div></div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card" data-accent="pro">
       <div class="stat-value">{{ pro_pct }}%</div>
       <div class="stat-label">Pro Features released</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ pro_pct }}%;"></div></div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card" data-accent="product">
       <div class="stat-value">{{ product_pct }}%</div>
       <div class="stat-label">Product tasks done</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ product_pct }}%;"></div></div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card" data-accent="wpages">
       <div class="stat-value">{{ website_pages_pct }}%</div>
-      <div class="stat-label">Website Pages</div>
+      <div class="stat-label">Website pages ready</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ website_pages_pct }}%;"></div></div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card" data-accent="docs">
       <div class="stat-value">{{ docs_pct }}%</div>
       <div class="stat-label">Documentation</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ docs_pct }}%;"></div></div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card" data-accent="blog">
       <div class="stat-value">{{ blog_pct }}%</div>
-      <div class="stat-label">Blog</div>
+      <div class="stat-label">Blog articles written</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ blog_pct }}%;"></div></div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card" data-accent="mktg">
       <div class="stat-value">{{ marketing_pct }}%</div>
       <div class="stat-label">Marketing ready</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ marketing_pct }}%;"></div></div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card" data-accent="admin">
       <div class="stat-value">{{ admin_pct }}%</div>
       <div class="stat-label">Admin tasks done</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ admin_pct }}%;"></div></div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card" data-accent="legal">
       <div class="stat-value">{{ legal_pct }}%</div>
       <div class="stat-label">Legal tasks done</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ legal_pct }}%;"></div></div>
@@ -330,9 +330,9 @@ renderReadinessChart('readinessChart', [
   { label: 'Free Features',    pct: {{ free_pct }} },
   { label: 'PRO Features',     pct: {{ pro_pct }} },
   { label: 'Product Tasks',    pct: {{ product_pct }} },
-  { label: 'Website Pages',    pct: {{ website_pages_pct }} },
-  { label: 'Documentation',    pct: {{ docs_pct }} },
-  { label: 'Blog',             pct: {{ blog_pct }} },
+  { label: 'Website Pages Ready',   pct: {{ website_pages_pct }} },
+  { label: 'Documentation',         pct: {{ docs_pct }} },
+  { label: 'Blog Articles Written', pct: {{ blog_pct }} },
   { label: 'Marketing',        pct: {{ marketing_pct }} },
   { label: 'Admin Tasks',      pct: {{ admin_pct }} },
   { label: 'Legal Tasks',      pct: {{ legal_pct }} },
