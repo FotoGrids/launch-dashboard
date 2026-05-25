@@ -53,6 +53,6 @@ title: Website
 </div>
 
 <p style="margin-top:32px; color:var(--text-muted); font-size:13px;">
-  Looking for blog coverage? See <a href="{{ '/blog/' | relative_url }}">Blog</a>.<br/>
-  Looking for documentation coverage? See <a href="{{ '/documentation/' | relative_url }}">Documentation</a>.
+  Looking for blog coverage? See <a href="{{ '/blog' | relative_url }}">Blog</a>.<br/>
+  Looking for documentation coverage? See <a href="{{ '/documentation' | relative_url }}">Documentation</a>.
 </p>
