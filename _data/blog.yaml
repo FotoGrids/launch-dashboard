@@ -57,48 +57,59 @@ blog_sections:
     articles:
       - title: "How image galleries affect page speed (and the fixes that actually work)"
         type: pillar
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/gallery-page-speed/"
+        post_id: 5147
       - title: "Lazy loading explained for WordPress site owners"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/lazy-loading-wordpress/"
+        post_id: 5148
       - title: "Why WebP matters and how to serve it on WordPress"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/webp-wordpress/"
+        post_id: 5149
       - title: "AVIF in 2026: should you switch from WebP?"
         type: deep-dive
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/avif-vs-webp-2026/"
+        post_id: 5150
       - title: "Core Web Vitals for image-heavy sites"
         type: deep-dive
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/core-web-vitals-images/"
+        post_id: 5151
       - title: "The hidden cost of carousel sliders (and how to fix them)"
         type: opinion
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/carousel-performance/"
+        post_id: 5152
       - title: "CDN strategy for WordPress gallery sites"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/wordpress-cdn-images/"
+        post_id: 5153
       - title: "Mobile performance for photographers' portfolios"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/mobile-portfolio-performance/"
+        post_id: 5154
       - title: "Video in galleries: MP4 vs YouTube vs Vimeo vs Cloudflare Stream"
         type: comparison
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/wordpress-gallery-video-hosting/"
+        post_id: 5155
       - title: "How to add video to a WordPress gallery without killing page speed"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/add-video-wordpress-gallery/"
+        post_id: 5156
       - title: "Self-hosting vs embedding video: the real trade-offs in 2026"
         type: opinion
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/self-host-vs-embed-video/"
+        post_id: 5157
 
   - name: "Photographer Workflows"
     cluster: 3
