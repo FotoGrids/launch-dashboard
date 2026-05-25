@@ -413,8 +413,12 @@ h3 {
   overflow: hidden;
 }
 
-.dash-table th,
-.blocker-table th {
+.blocker-table {
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.dash-table th {
   background: var(--navy);
   font-size: 10px;
   font-weight: 600;
@@ -432,9 +436,6 @@ h3 {
 .dash-table td.col-left { text-align: left; }
 
 .dash-table th.col-notes { text-align: left; }
-
-.dash-table th:first-child { border-radius: 8px 0 0 0; }
-.dash-table th:last-child  { border-radius: 0 8px 0 0; }
 
 .dash-table td {
   padding: 16px 20px;
@@ -472,6 +473,13 @@ h3 {
 .dash-table .col-priority-high { color: var(--red); font-weight: 600; font-size: 11px; }
 .dash-table .col-priority-medium { color: var(--yellow); font-weight: 600; font-size: 11px; }
 .dash-table .col-priority-low { color: var(--text-muted); font-weight: 500; font-size: 11px; }
+
+
+.blocker-table th,
+.blocker-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
 
 /* ── Checklist ──────────────────────────────────────────────── */
 .checklist {

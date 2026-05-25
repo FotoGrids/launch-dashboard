@@ -371,8 +371,8 @@ title: Overview
 {% if blocked_tasks.size > 0 %}
 <div class="blocker-list">
   <div class="blocker-title">{{ blocked_tasks.size }} task{% if blocked_tasks.size > 1 %}s{% endif %} blocked by others</div>
-  <div class="panel-desc">The following tasks cannot start until the task they depend on is completed.</div>
-  <table class="dash-table">
+  <div class="panel-desc">Tasks waiting on another task to finish first.</div>
+  <table class="dash-table blocker-table">
     <thead>
       <tr><th>Task</th><th>Waiting on</th><th>Notes</th></tr>
     </thead>
@@ -402,8 +402,8 @@ title: Overview
 {% if dolast_total > 0 %}
 <div class="dolast-list">
   <div class="dolast-title">{{ dolast_total }} item{% if dolast_total > 1 %}s{% endif %} saved for last</div>
-  <div class="panel-desc">The following tasks can only be completed when all the rest of the Free tier features are completed.</div>
-  <table class="dash-table">
+  <div class="panel-desc">Done only after all other Free tier features ship.</div>
+  <table class="dash-table blocker-table">
     <thead>
       <tr><th>Type</th><th>Name</th><th>Notes</th></tr>
     </thead>
