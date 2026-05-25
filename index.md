@@ -372,7 +372,7 @@ title: Overview
 <div class="blocker-list">
   <div class="blocker-title">{{ blocked_tasks.size }} task{% if blocked_tasks.size > 1 %}s{% endif %} blocked by others</div>
   <div class="panel-desc">The following tasks cannot start until the task they depend on is completed.</div>
-  <table class="panel-table blocker-table">
+  <table class="dash-table">
     <thead>
       <tr><th>Task</th><th>Waiting on</th><th>Notes</th></tr>
     </thead>
@@ -385,7 +385,7 @@ title: Overview
     {% endfor %}
     <tr>
       <td><strong>{{ task.name }}</strong></td>
-      <td>{% if task.blocked_by and task.blocked_by != "" %}<span class="panel-muted">waiting on: {{ blocker_name }}</span>{% endif %}</td>
+      <td>{% if task.blocked_by and task.blocked_by != "" %}{{ blocker_name }}{% endif %}</td>
       <td>{{ task.notes }}</td>
     </tr>
     {% endfor %}
@@ -403,7 +403,7 @@ title: Overview
 <div class="dolast-list">
   <div class="dolast-title">{{ dolast_total }} item{% if dolast_total > 1 %}s{% endif %} saved for last</div>
   <div class="panel-desc">The following tasks can only be completed when all the rest of the Free tier features are completed.</div>
-  <table class="panel-table blocker-table">
+  <table class="dash-table">
     <thead>
       <tr><th>Type</th><th>Name</th><th>Notes</th></tr>
     </thead>
