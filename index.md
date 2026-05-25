@@ -370,54 +370,59 @@ title: Overview
 
 {% if blocked_tasks.size > 0 %}
 <div class="blocker-list">
-  <div class="blocker-title">{{ blocked_tasks.size }} blocker{% if blocked_tasks.size > 1 %}s{% endif %} need attention</div>
-  <ul>
+  <div class="blocker-title">{{ blocked_tasks.size }} task{% if blocked_tasks.size > 1 %}s{% endif %} blocked by others</div>
+  <div class="panel-desc">The following tasks cannot start until the task they depend on is completed.</div>
+  <table class="panel-table">
+    <tbody>
     {% for task in blocked_tasks %}
     {% comment %} Resolve blocked_by id to the referenced item's name, scanning all sources {% endcomment %}
     {% assign blocker_name = task.blocked_by %}
     {% for candidate in blocker_sources %}
       {% if candidate.id == task.blocked_by %}{% assign blocker_name = candidate.name %}{% break %}{% endif %}
     {% endfor %}
-    <li>
-      <strong>{{ task.name }}</strong>
-      {% if task.notes and task.notes != "" %} — {{ task.notes }}{% endif %}
-      {% if task.blocked_by and task.blocked_by != "" %}
-        <span style="color:var(--text-muted); font-size:12px;">(waiting on: {{ blocker_name }})</span>
-      {% endif %}
-    </li>
+    <tr>
+      <td><strong>{{ task.name }}</strong></td>
+      <td>{% if task.blocked_by and task.blocked_by != "" %}<span class="panel-muted">waiting on: {{ blocker_name }}</span>{% endif %}</td>
+      <td>{{ task.notes }}</td>
+    </tr>
     {% endfor %}
-  </ul>
+    </tbody>
+  </table>
 </div>
 {% else %}
 <div class="blocker-list empty">
   <div class="blocker-title">No blockers</div>
-  <ul><li style="color:#1A7A57;">All tasks are unblocked.</li></ul>
+  <div class="panel-desc">No tasks are currently blocked by others.</div>
 </div>
 {% endif %}
 
 {% if dolast_total > 0 %}
 <div class="dolast-list">
   <div class="dolast-title">{{ dolast_total }} item{% if dolast_total > 1 %}s{% endif %} saved for last</div>
-  <ul>
+  <div class="panel-desc">The following tasks can only be completed when all the rest of the Free tier features are completed.</div>
+  <table class="panel-table">
+    <tbody>
     {% for task in dolast_tasks %}
-    <li>
-      <strong>{{ task.name }}</strong>
-      {% if task.notes and task.notes != "" %} — {{ task.notes }}{% endif %}
-    </li>
+    <tr>
+      <td><span class="dolast-tag">task</span></td>
+      <td><strong>{{ task.name }}</strong></td>
+      <td>{{ task.notes }}</td>
+    </tr>
     {% endfor %}
     {% for f in dolast_features %}
-    <li>
-      <strong>{{ f.name }}</strong>
-      <span class="dolast-tag">feature</span>
-      {% if f.notes and f.notes != "" %} — {{ f.notes }}{% endif %}
-    </li>
+    <tr>
+      <td><span class="dolast-tag">feature</span></td>
+      <td><strong>{{ f.name }}</strong></td>
+      <td>{{ f.notes }}</td>
+    </tr>
     {% endfor %}
-  </ul>
+    </tbody>
+  </table>
 </div>
 {% else %}
 <div class="dolast-list empty">
   <div class="dolast-title">Nothing queued for last</div>
-  <ul><li>No items marked “do last”.</li></ul>
+  <div class="panel-desc">No items are marked “do last”.</div>
 </div>
 {% endif %}
 

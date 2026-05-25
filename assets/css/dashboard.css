@@ -569,28 +569,6 @@ h3 {
   color: var(--red);
 }
 
-.blocker-list ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.blocker-list ul li {
-  font-size: 13px;
-  color: var(--navy);
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-}
-
-.blocker-list ul li::before {
-  content: '⚠';
-  font-size: 11px;
-  color: var(--red);
-  flex-shrink: 0;
-}
-
 .blocker-list.empty {
   background: #E6F9EA;
   border-color: #B2DFB7;
@@ -635,29 +613,6 @@ h3 {
   color: var(--indigo);
 }
 
-.dolast-list ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.dolast-list ul li {
-  font-size: 13px;
-  color: var(--navy);
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-}
-
-.dolast-list ul li::before {
-  content: '↓';
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--indigo);
-  flex-shrink: 0;
-}
-
 .dolast-list .dolast-tag {
   font-size: 10px;
   font-weight: 600;
@@ -675,8 +630,44 @@ h3 {
 }
 
 .dolast-list.empty .dolast-title { color: var(--text-muted); }
-.dolast-list.empty ul li { color: var(--text-muted); }
-.dolast-list.empty ul li::before { color: var(--text-muted); }
+
+/* ── Shared panel description + borderless panel tables ──────── */
+.panel-desc {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--text-muted);
+  margin: -2px 0 2px;
+}
+
+.panel-table {
+  border: 0;
+  border-collapse: collapse;
+  background: transparent;
+  width: 100%;
+}
+
+.panel-table tr,
+.panel-table td {
+  border: 0;
+  background: transparent;
+}
+
+.panel-table td {
+  font-size: 13px;
+  color: var(--navy);
+  vertical-align: baseline;
+  padding: 3px 12px 3px 0;
+}
+
+.panel-table td:last-child {
+  padding-right: 0;
+  color: var(--text-muted);
+}
+
+.panel-muted {
+  color: var(--text-muted);
+  font-size: 12px;
+}
 
 /* ── "Do last" inline pill — feature table name column ──────── */
 .pill-dolast {
@@ -690,7 +681,6 @@ h3 {
   background: var(--indigo-soft);
   border-radius: 3px;
   padding: 2px 6px;
-  margin-left: 6px;
   white-space: nowrap;
 }
 

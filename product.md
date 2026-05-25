@@ -90,7 +90,7 @@ title: Product
                 <span class="tier-pill tier-addon">Add-on</span>
             {% endcase %}
           </td>
-          <td class="col-name">{{ f.name }}{% if f.depends_on_all %} <span class="pill-dolast" title="Do this only after everything else is released">Do last</span>{% endif %}</td>
+          <td class="col-name">{{ f.name }}</td>
           <td class="col-category">{{ f.category }}</td>
           <td>{% include status_badge.html status=f.dev_status.backend %}</td>
           <td>{% include status_badge.html status=f.dev_status.frontend %}</td>
@@ -114,7 +114,7 @@ title: Product
               <span class="badge badge-planned">No</span>
             {% endif %}
           </td>
-          <td class="col-notes">{{ f.notes }}</td>
+          <td class="col-notes">{% if f.depends_on_all %}<span class="pill-dolast" title="Do this only after everything else is released">Do last</span> {% endif %}{{ f.notes }}</td>
         </tr>
         {% endfor %}
       {% endif %}
