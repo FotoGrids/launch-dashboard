@@ -15,6 +15,7 @@
   --navy-soft:     #25253F;
   --yellow:        #FFB914;
   --red:           #F01E32;
+  --orange:        #FF8C42;
   --green:         #46B450;
   --bg:            #F4F5FA;
   --white:         #FFFFFF;
@@ -552,10 +553,10 @@ h3 {
 
 /* ── Blocker list ───────────────────────────────────────────── */
 .blocker-list {
-  background: #FDEEF0;
-  border: 1px solid #F5C0C5;
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 16px 20px;
+  padding: 28px 32px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -563,10 +564,10 @@ h3 {
 
 .blocker-list .blocker-title {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .08em;
-  color: var(--red);
+  color: var(--orange);
 }
 
 .blocker-list.empty {
@@ -596,10 +597,10 @@ h3 {
 
 /* ── Do-last list — calm indigo counterpart to blockers ─────── */
 .dolast-list {
-  background: var(--indigo-tint);
-  border: 1px solid var(--indigo-soft);
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 16px 20px;
+  padding: 28px 32px;
   display: flex;
   flex-direction: column;
   gap: 10px;
