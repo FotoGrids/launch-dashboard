@@ -413,7 +413,8 @@ h3 {
   overflow: hidden;
 }
 
-.dash-table th {
+.dash-table th,
+.blocker-table th {
   background: var(--navy);
   font-size: 10px;
   font-weight: 600;
@@ -563,7 +564,7 @@ h3 {
 }
 
 .blocker-list .blocker-title {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .08em;
@@ -607,8 +608,8 @@ h3 {
 }
 
 .dolast-list .dolast-title {
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .08em;
   color: var(--indigo);
@@ -648,10 +649,23 @@ h3 {
 }
 
 .panel-table tr,
+.panel-table th,
 .panel-table td {
   border: 0;
   background: transparent;
 }
+
+.panel-table th {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--text-muted);
+  text-align: left;
+  padding: 0 12px 4px 0;
+}
+
+.panel-table th:last-child { padding-right: 0; }
 
 .panel-table td {
   font-size: 13px;
