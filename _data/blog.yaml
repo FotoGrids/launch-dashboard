@@ -12,36 +12,44 @@ blog_sections:
     articles:
       - title: "The complete guide to image SEO in WordPress (2026 edition)"
         type: pillar
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/wordpress-image-seo/"
+        post_id: 5055
       - title: "How to write alt text that ranks (12 real examples)"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/alt-text-that-ranks/"
+        post_id: 5124
       - title: "Image file naming for SEO — the rules nobody teaches"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/image-file-naming-seo/"
+        post_id: 5125
       - title: "Structured data for images: when it matters, when it doesn't"
         type: deep-dive
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/structured-data-for-images/"
+        post_id: 5126
       - title: "How to optimize gallery images for SEO"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/optimize-gallery-images-seo/"
+        post_id: 5127
       - title: "Image SEO for WooCommerce product pages"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/woocommerce-image-seo/"
+        post_id: 5128
       - title: "Image SEO mistakes that kill rankings (and the fixes)"
         type: listicle
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/image-seo-mistakes/"
+        post_id: 5129
       - title: "How AI search engines crawl images (and what that means for your site)"
         type: opinion
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/ai-search-engines-images/"
+        post_id: 5130
 
   - name: "Performance & Speed"
     cluster: 2
