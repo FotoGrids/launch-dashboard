@@ -117,40 +117,49 @@ blog_sections:
     articles:
       - title: "7 things every photographer website needs"
         type: pillar
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/photographer-website/"
+        post_id: 5161
       - title: "5 watermarking strategies for photographers"
         type: listicle
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/photo-watermarking/"
+        post_id: 5162
       - title: "Client proofing galleries that don't suck"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/client-proofing-gallery/"
+        post_id: 5163
       - title: "EXIF data: when to show it, when to strip it"
         type: deep-dive
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/exif-data-photography/"
+        post_id: 5164
       - title: "Wedding photographer's WordPress checklist (Friday-to-Sunday workflow)"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/wedding-photography-workflow/"
+        post_id: 5165
       - title: "The portfolio gallery problem (and what works in 2026)"
         type: opinion
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/photography-portfolio/"
+        post_id: 5166
       - title: "Pricing your wedding photography (and showing it on your site)"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/wedding-photography-pricing/"
+        post_id: 5167
       - title: "Print sales from your WordPress portfolio"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/sell-prints-wordpress/"
+        post_id: 5168
       - title: "Booking page essentials for photographers"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/photography-booking-page/"
+        post_id: 5169
 
   - name: "WooCommerce & E-commerce"
     cluster: 4
