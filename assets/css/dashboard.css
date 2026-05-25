@@ -575,7 +575,7 @@ h3 {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .08em;
+  letter-spacing: .04em;
   color: var(--orange);
 }
 
@@ -619,7 +619,7 @@ h3 {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .08em;
+  letter-spacing: .04em;
   color: var(--indigo);
 }
 
