@@ -153,6 +153,7 @@
 
 - id: templates_library
   name: Templates Library
+  depends_on_all: true
   category: Display & Layout
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -1292,6 +1293,7 @@
 
 - id: gutenberg_block
   name: Gutenberg block
+  depends_on_all: true
   category: Integrations
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -1307,6 +1309,7 @@
 
 - id: elementor_block
   name: Elementor widget
+  depends_on_all: true
   category: Integrations
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -1322,6 +1325,7 @@
 
 - id: divi_module
   name: Divi module
+  depends_on_all: true
   category: Integrations
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -1337,6 +1341,7 @@
 
 - id: bricks_element
   name: Bricks Builder element
+  depends_on_all: true
   category: Integrations
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -1718,6 +1723,7 @@
 
 - id: migration_other_plugins
   name: Migration from Other Plugins
+  depends_on_all: true
   category: Workflow & Maintenance
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]

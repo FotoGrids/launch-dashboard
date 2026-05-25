@@ -13,7 +13,43 @@ title: Overview
 
 {% assign all_tasks          = site.data.tasks %}
 {% assign done_tasks         = all_tasks | where: "status", "done" %}
-{% assign blocked_tasks      = all_tasks | where: "status", "blocked" %}
+
+{% comment %}
+  ── Blockers ──────────────────────────────────────────────────────────────
+  A "blocker" is any item with a non-empty blocked_by field, scanned across
+  every _data source that holds a flat list of items. To include another
+  source, add its array to blocker_sources below. Nested files (blog,
+  documentation, website.pages, features) are not scanned here because their
+  items do not carry a blocked_by field; add them only if that changes.
+{% endcomment %}
+{% assign blocker_sources = "" | split: "" %}
+{% assign blocker_sources = blocker_sources | concat: site.data.tasks %}
+{% assign blocker_sources = blocker_sources | concat: site.data.admin %}
+{% if site.data.marketing.assets %}{% assign blocker_sources = blocker_sources | concat: site.data.marketing.assets %}{% endif %}
+{% if site.data.marketing.channels %}{% assign blocker_sources = blocker_sources | concat: site.data.marketing.channels %}{% endif %}
+
+{% assign blocked_tasks = "" | split: "" %}
+{% for item in blocker_sources %}
+  {% if item.blocked_by and item.blocked_by != "" %}
+    {% assign blocked_tasks = blocked_tasks | push: item %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+  ── Do last ───────────────────────────────────────────────────────────────
+  Items deliberately saved for the end, marked depends_on_all: true.
+  Two sources: flat task lists (blocker_sources, above) and launch-scoped
+  features. Add more flat sources to blocker_sources, not here.
+{% endcomment %}
+{% assign dolast_tasks = "" | split: "" %}
+{% for item in blocker_sources %}
+  {% if item.depends_on_all %}{% assign dolast_tasks = dolast_tasks | push: item %}{% endif %}
+{% endfor %}
+{% assign dolast_features = "" | split: "" %}
+{% for f in launch_features %}
+  {% if f.depends_on_all %}{% assign dolast_features = dolast_features | push: f %}{% endif %}
+{% endfor %}
+{% assign dolast_total = dolast_tasks.size | plus: dolast_features.size %}
 
 {% assign product_tasks      = all_tasks | where: "section", "product" %}
 {% assign product_done       = product_tasks | where: "status", "done" %}
@@ -330,16 +366,23 @@ title: Overview
 
 ## Blockers
 
+<div class="panel-row">
+
 {% if blocked_tasks.size > 0 %}
 <div class="blocker-list">
   <div class="blocker-title">{{ blocked_tasks.size }} blocker{% if blocked_tasks.size > 1 %}s{% endif %} need attention</div>
   <ul>
     {% for task in blocked_tasks %}
+    {% comment %} Resolve blocked_by id to the referenced item's name, scanning all sources {% endcomment %}
+    {% assign blocker_name = task.blocked_by %}
+    {% for candidate in blocker_sources %}
+      {% if candidate.id == task.blocked_by %}{% assign blocker_name = candidate.name %}{% break %}{% endif %}
+    {% endfor %}
     <li>
       <strong>{{ task.name }}</strong>
       {% if task.notes and task.notes != "" %} — {{ task.notes }}{% endif %}
       {% if task.blocked_by and task.blocked_by != "" %}
-        <span style="color:var(--text-muted); font-size:12px;">(waiting on: {{ task.blocked_by }})</span>
+        <span style="color:var(--text-muted); font-size:12px;">(waiting on: {{ blocker_name }})</span>
       {% endif %}
     </li>
     {% endfor %}
@@ -351,6 +394,34 @@ title: Overview
   <ul><li style="color:#1A7A57;">All tasks are unblocked.</li></ul>
 </div>
 {% endif %}
+
+{% if dolast_total > 0 %}
+<div class="dolast-list">
+  <div class="dolast-title">{{ dolast_total }} item{% if dolast_total > 1 %}s{% endif %} saved for last</div>
+  <ul>
+    {% for task in dolast_tasks %}
+    <li>
+      <strong>{{ task.name }}</strong>
+      {% if task.notes and task.notes != "" %} — {{ task.notes }}{% endif %}
+    </li>
+    {% endfor %}
+    {% for f in dolast_features %}
+    <li>
+      <strong>{{ f.name }}</strong>
+      <span class="dolast-tag">feature</span>
+      {% if f.notes and f.notes != "" %} — {{ f.notes }}{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% else %}
+<div class="dolast-list empty">
+  <div class="dolast-title">Nothing queued for last</div>
+  <ul><li>No items marked “do last”.</li></ul>
+</div>
+{% endif %}
+
+</div>{% comment %} /.panel-row {% endcomment %}
 
 ---
 

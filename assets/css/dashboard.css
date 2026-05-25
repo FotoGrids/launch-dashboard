@@ -598,6 +598,102 @@ h3 {
 
 .blocker-list.empty .blocker-title { color: #276B2E; }
 
+/* ── Panel row — Blockers + Do last side by side ─────────────── */
+.panel-row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.panel-row > .blocker-list,
+.panel-row > .dolast-list {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 720px) {
+  .panel-row { flex-direction: column; }
+}
+
+/* ── Do-last list — calm indigo counterpart to blockers ─────── */
+.dolast-list {
+  background: var(--indigo-tint);
+  border: 1px solid var(--indigo-soft);
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dolast-list .dolast-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--indigo);
+}
+
+.dolast-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dolast-list ul li {
+  font-size: 13px;
+  color: var(--navy);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.dolast-list ul li::before {
+  content: '↓';
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--indigo);
+  flex-shrink: 0;
+}
+
+.dolast-list .dolast-tag {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--indigo);
+  background: var(--indigo-soft);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+.dolast-list.empty {
+  background: #F0F1F5;
+  border-color: var(--border);
+}
+
+.dolast-list.empty .dolast-title { color: var(--text-muted); }
+.dolast-list.empty ul li { color: var(--text-muted); }
+.dolast-list.empty ul li::before { color: var(--text-muted); }
+
+/* ── "Do last" inline pill — feature table name column ──────── */
+.pill-dolast {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--indigo);
+  background: var(--indigo-soft);
+  border-radius: 3px;
+  padding: 2px 6px;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
 /* ── Launch hero strip ──────────────────────────────────────── */
 .launch-hero {
   background: var(--white);
