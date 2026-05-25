@@ -105,28 +105,38 @@ title: Overview
 {% assign done_items   = done_features.size   | plus: done_tasks.size %}
 {% assign overall_pct  = done_items | times: 100 | divided_by: total_items %}
 {% assign feature_pct  = done_features.size | times: 100 | divided_by: launch_features.size %}
+{% if overall_pct > 100 %}{% assign overall_pct = 100 %}{% endif %}
+{% if feature_pct > 100 %}{% assign feature_pct = 100 %}{% endif %}
 
 {% assign product_pct = 0 %}
 {% if product_tasks.size > 0 %}{% assign product_pct = product_done.size | times: 100 | divided_by: product_tasks.size %}{% endif %}
+{% if product_pct > 100 %}{% assign product_pct = 100 %}{% endif %}
 
 {% assign website_pct = 0 %}
 {% if website_total > 0 %}{% assign website_pct = website_done | times: 100 | divided_by: website_total %}{% endif %}
+{% if website_pct > 100 %}{% assign website_pct = 100 %}{% endif %}
 
 {% assign website_pages_pct = 0 %}
 {% if website_pages.size > 0 %}{% assign website_pages_pct = website_pages_done.size | times: 100 | divided_by: website_pages.size %}{% endif %}
+{% if website_pages_pct > 100 %}{% assign website_pages_pct = 100 %}{% endif %}
 {% assign docs_pct = 0 %}
 {% if docs_total > 0 %}{% assign docs_pct = docs_done | times: 100 | divided_by: docs_total %}{% endif %}
+{% if docs_pct > 100 %}{% assign docs_pct = 100 %}{% endif %}
 {% assign blog_pct = 0 %}
 {% if blog_total > 0 %}{% assign blog_pct = blog_published | times: 100 | divided_by: blog_total %}{% endif %}
+{% if blog_pct > 100 %}{% assign blog_pct = 100 %}{% endif %}
 
 {% assign marketing_pct = 0 %}
 {% if marketing_total > 0 %}{% assign marketing_pct = marketing_done | times: 100 | divided_by: marketing_total %}{% endif %}
+{% if marketing_pct > 100 %}{% assign marketing_pct = 100 %}{% endif %}
 
 {% assign admin_pct = 0 %}
 {% if admin_ops_total > 0 %}{% assign admin_pct = admin_ops_done | times: 100 | divided_by: admin_ops_total %}{% endif %}
+{% if admin_pct > 100 %}{% assign admin_pct = 100 %}{% endif %}
 
 {% assign legal_pct = 0 %}
 {% if legal_items.size > 0 %}{% assign legal_pct = legal_done.size | times: 100 | divided_by: legal_items.size %}{% endif %}
+{% if legal_pct > 100 %}{% assign legal_pct = 100 %}{% endif %}
 
 {% comment %} Per-section: split features into free vs pro for the chart {% endcomment %}
 {% assign free_features      = launch_features | where: "tier", "free" %}
@@ -144,6 +154,8 @@ title: Overview
 {% if free_features.size > 0 %}{% assign free_pct = free_done.size | times: 100 | divided_by: free_features.size %}{% endif %}
 {% assign pro_pct = 0 %}
 {% if pro_total_count > 0 %}{% assign pro_pct = pro_done_count | times: 100 | divided_by: pro_total_count %}{% endif %}
+{% if free_pct > 100 %}{% assign free_pct = 100 %}{% endif %}
+{% if pro_pct > 100 %}{% assign pro_pct = 100 %}{% endif %}
 
 {% comment %} ── Per-stage docs breakdowns ────────────────────────── {% endcomment %}
 {% assign docs_free_live = 0 %}{% assign docs_free_total = 0 %}
@@ -512,7 +524,7 @@ const STAGE_DATA = {
 };
 
 function pct(done, total) {
-  return total > 0 ? Math.round(done * 100 / total) : 0;
+  return total > 0 ? Math.min(100, Math.round(done * 100 / total)) : 0;
 }
 
 function setCard(valId, barId, value, total) {
