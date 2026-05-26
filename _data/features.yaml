@@ -728,6 +728,21 @@
   wp_org_visible: false
   has_doc: false
 
+- id: regenerate_thumbnails_tool
+  name: Regenerate Thumbnails Tool
+  category: Media & Performance
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: true
+    frontend: in_progress
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
 - id: lazy_loading
   name: Lazy Loading
   category: Media & Performance
@@ -971,6 +986,20 @@
   has_doc: false
 
 # ── SEO & Structured Data ─────────────────────────────────────────────────────────
+- id: seo_libary_manager
+  name: Metadata Library Manager
+  category: SEO & Structured Data
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: shipped
+  dev_status:
+    backend: true
+    frontend: true
+    released: true
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: true
 
 - id: seo_per_item_tags
   name: Per-Item Tags
