@@ -163,7 +163,7 @@
     frontend: true
     released: false
   roadmap: false
-  notes: "10 Free Templates included - in place, but not yet fully polished"
+  notes: "Templates System is implemented; Templates creation is blocked until the full feature set is stable and functional."
   wp_org_visible: false
   has_doc: false
 
@@ -604,7 +604,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: global_color_palette
   name: Global Color Palette
@@ -741,7 +741,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: basic_pagination
   name: Basic Pagination

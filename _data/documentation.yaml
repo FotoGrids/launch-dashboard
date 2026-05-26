@@ -187,6 +187,11 @@ doc_sections:
         status: planned
         tier: free
         url: ""
+      - title: "Color Controls"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/customization/color-controls/"
+        post_id: 5223
       - title: "Hover Effects"
         status: planned
         tier: free
@@ -521,9 +526,10 @@ doc_sections:
         tier: free
         url: ""
       - title: "Lazy Loading"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/performance/lazy-loading/"
+        post_id: 5224
       - title: "Image Optimization"
         status: planned
         tier: free
