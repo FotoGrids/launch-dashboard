@@ -167,28 +167,34 @@ blog_sections:
     articles:
       - title: "The complete guide to WooCommerce product galleries"
         type: pillar
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/woocommerce-product-gallery-guide/"
+        post_id: 5172
       - title: "WooCommerce gallery vs lookbook: when to use which"
         type: comparison
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/woocommerce-gallery-vs-lookbook/"
+        post_id: 5173
       - title: "Product image zoom: which patterns actually convert"
         type: deep-dive
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/product-image-zoom/"
+        post_id: 5174
       - title: "Variable products + variant galleries done right"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/woocommerce-variation-images/"
+        post_id: 5175
       - title: "Mobile product galleries that don't kill conversions"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/mobile-product-gallery/"
+        post_id: 5176
       - title: "Lookbook to cart: shoppable galleries in 2026"
         type: opinion
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/shoppable-gallery/"
+        post_id: 5177
 
   - name: "WordPress Galleries"
     cluster: 5
@@ -196,48 +202,59 @@ blog_sections:
     articles:
       - title: "Best WordPress gallery plugins compared"
         type: pillar
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/best-wordpress-gallery-plugin/"
+        post_id: 5181
       - title: "WordPress gallery vs page-builder gallery: pros and cons"
         type: comparison
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/wordpress-gallery-vs-page-builder/"
+        post_id: 5182
       - title: "Native WordPress gallery block vs plugins"
         type: comparison
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/wordpress-gallery-block-vs-plugin/"
+        post_id: 5183
       - title: "Masonry vs grid vs justified gallery layouts (with examples)"
         type: comparison
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/masonry-vs-grid-gallery/"
+        post_id: 5184
       - title: "How to add a gallery to a WordPress page (the right way in 2026)"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/add-gallery-to-wordpress/"
+        post_id: 5185
       - title: "Migrating from NextGEN Gallery, Envira, and others"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/migrate-nextgen-gallery/"
+        post_id: 5186
       - title: "WordPress gallery accessibility: WCAG 2.2 checklist"
         type: deep-dive
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/gallery-accessibility-wcag/"
+        post_id: 5187
       - title: "Gallery filters and search: when complexity is worth it"
         type: deep-dive
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/gallery-filter-search/"
+        post_id: 5188
       - title: "Gallery layouts for portfolios: which one fits your work"
         type: opinion
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/portfolio-gallery-layout/"
+        post_id: 5189
       - title: "How to test whether your gallery's lightbox is actually accessible"
         type: deep-dive
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/test-gallery-accessibility/"
+        post_id: 5190
       - title: "Gallery hover effects — when they help and when they hurt"
         type: opinion
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/gallery-hover-effects/"
+        post_id: 5191
 
   - name: "Developers & Agencies"
     cluster: 7
@@ -245,32 +262,32 @@ blog_sections:
     articles:
       - title: "The developer's guide to building galleries in WordPress"
         type: pillar
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/wordpress-gallery-development/"
       - title: "Custom block development for galleries (Gutenberg)"
         type: tutorial
-        status: planned
-        url: ""
-      - title: "ACF Pro + galleries: the patterns that scale"
-        type: tutorial
-        status: planned
-        url: ""
-      - title: "White-labelling a gallery plugin for agency work"
-        type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/gutenberg-block-development-gallery/"
+      - title: "ACF gallery patterns: per-gallery settings done right"
+        type: deep-dive
+        status: live
+        url: "https://www.fotogrids.com/blog/acf-gallery-patterns/"
+      - title: "White-labelling a WordPress gallery plugin for clients"
+        type: deep-dive
+        status: live
+        url: "https://www.fotogrids.com/blog/white-label-wordpress-plugin/"
       - title: "Multisite gallery licensing patterns"
         type: deep-dive
-        status: planned
-        url: ""
-      - title: "Hook-driven extensibility: how to extend FotoGrids"
+        status: live
+        url: "https://www.fotogrids.com/blog/wordpress-multisite-plugin-licensing/"
+      - title: "Hook-driven extensibility: how to extend a gallery plugin"
         type: tutorial
-        status: planned
-        url: ""
-      - title: "Building a gallery API endpoint with WordPress REST"
+        status: live
+        url: "https://www.fotogrids.com/blog/extend-wordpress-gallery-plugin/"
+      - title: "Building a gallery API endpoint with the WordPress REST API"
         type: tutorial
-        status: planned
-        url: ""
+        status: live
+        url: "https://www.fotogrids.com/blog/wordpress-rest-api-custom-endpoint/"
 
   - name: "Strategy & Business"
     cluster: 8
