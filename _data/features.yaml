@@ -741,7 +741,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: regenerate_thumbnails_tool
   name: Regenerate Thumbnails Tool
@@ -756,7 +756,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: lazy_loading
   name: Lazy Loading
