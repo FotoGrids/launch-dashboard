@@ -180,9 +180,10 @@ doc_sections:
         tier: free
         url: ""
       - title: "Image Sizing & Cropping"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/settings-and-configuration/image-sizes-cropping/"
+        post_id: 5228
       - title: "Borders & Shadows"
         status: planned
         tier: free
@@ -579,11 +580,16 @@ doc_sections:
         tier: free
         url: "https://www.fotogrids.com/docs/galleries/live-preview/"
         post_id: 5096
-      - title: "Import / Export"
+      - title: "Import / Export Tool"
         status: live
         tier: free
         url: "https://www.fotogrids.com/docs/settings-and-configuration/import-export/"
         post_id: 5094
+      - title: "Regenerate Thumbnails Tool"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/settings-and-configuration/regenerate-thumbnails-tool/"
+        post_id: 5229
 
   - name: "Advanced Configuration"
     articles:
