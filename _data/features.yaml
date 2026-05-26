@@ -183,14 +183,14 @@
   has_doc: false
 
 - id: theme_templates_galleries
-  name: Theme Templates for Galleries
+  name: Galleries - View Page Template
   category: Display & Layout
-  tier: pro_plus
-  available_on: [pro_plus, agency]
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
   status: planned
   dev_status:
-    backend: false
-    frontend: false
+    backend: true
+    frontend: in_progress
     released: false
   roadmap: false
   notes: ""
@@ -198,7 +198,22 @@
   has_doc: false
 
 - id: theme_templates_albums
-  name: Theme Templates for Albums
+  name: Albums - View Page Template
+  category: Display & Layout
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: planned
+  dev_status:
+    backend: true
+    frontend: in_progress
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: theme_templates_galleries
+  name: View Page Templates - Enhanced Editing
   category: Display & Layout
   tier: pro_plus
   available_on: [pro_plus, agency]
