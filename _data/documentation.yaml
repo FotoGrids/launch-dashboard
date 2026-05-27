@@ -37,10 +37,11 @@ doc_sections:
         status: planned
         tier: free
         url: ""
-      - title: "Inserting an Album"
-        status: planned
+      - title: "Inserting an Album (Shortcode)"
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/getting-started/inserting-an-album-shortcode/"
+        post_id: 5236
       - title: "FotoGrids Dashboard Overview"
         status: planned
         tier: free
