@@ -519,6 +519,11 @@ doc_sections:
         url: "https://www.fotogrids.com/docs/seo/alt-tags/"
         post_id: 5099
         notes: "Scoped to alt text only. Broader Image SEO (schema, sitemaps) to be its own article."
+      - title: "Open Graph Tags"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/seo/open-graph-tags/"
+        post_id: 5237
       - title: "Structured Data for Galleries"
         status: planned
         tier: free

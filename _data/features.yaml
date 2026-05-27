@@ -1164,7 +1164,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: seo_schema_markup
   name: Image schema markup (JSON-LD)
