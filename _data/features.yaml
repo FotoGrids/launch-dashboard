@@ -313,7 +313,7 @@
   dev_status:
     backend: true
     frontend: true
-    released: false
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: true
