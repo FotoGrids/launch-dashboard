@@ -467,7 +467,22 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
+
+- id: deep_linking
+  name: Deep Linking
+  category: Interactions
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: true
+    frontend: true
+    released: true
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: true
 
 - id: external_url_manager
   name: External URL Manager
@@ -636,8 +651,8 @@
   wp_org_visible: false
   has_doc: false
 
-- id: borders_corner_radius
-  name: Borders & Corner Radius
+- id: borders_corner_radius_shadows
+  name: Borders, Corner Radius & Shadows
   category: Styling & Customization
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -649,7 +664,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: custom_fonts
   name: Custom Fonts
@@ -1659,6 +1674,22 @@
   has_doc: false
 
 # ── Workflow & Maintenance ───────────────────────────────────────────────────
+
+- id: onboarding_wizard
+  name: Onboarding Wizard
+  category: Workflow & Maintenance
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  depends_on_all: true
+  status: beta
+  dev_status:
+    backend: false
+    frontend: false
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
 
 - id: autosave
   name: Autosave

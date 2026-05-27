@@ -184,10 +184,11 @@ doc_sections:
         tier: free
         url: "https://www.fotogrids.com/docs/settings-and-configuration/image-sizes-cropping/"
         post_id: 5228
-      - title: "Borders & Shadows"
-        status: planned
+      - title: "Borders, Corner Radius & Shadows"
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/layouts-and-templates/borders-corner-radius-shadows/"
+        post_id: 5230
       - title: "Color Controls"
         status: live
         tier: free
@@ -357,18 +358,17 @@ doc_sections:
 
   - name: "Social Sharing"
     articles:
-      - title: "Social Sharing Overview"
-        status: planned
+      - title: "Social Sharing"
+        status: live
         tier: free
-        url: ""
-      - title: "Configuring Share Buttons"
-        status: planned
+        url: "https://www.fotogrids.com/docs/settings-and-configuration/social-sharing/"
+        post_id: 5231
+        notes: "Consolidates Overview, Configuring Share Buttons, and Share Tracking"
+      - title: "Deep Linking"
+        status: live
         tier: free
-        url: ""
-      - title: "Share Tracking"
-        status: planned
-        tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/settings-and-configuration/deep-linking/"
+        post_id: 5232
 
   - name: "Security"
     articles:
