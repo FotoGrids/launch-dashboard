@@ -1551,7 +1551,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: analytics_views
   name: Views Tracking
@@ -1566,7 +1566,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: analytics_top_performing_content
   name: Top Performing Content
@@ -1576,12 +1576,12 @@
   status: beta
   dev_status:
     backend: true
-    frontend: in_progress
-    released: false
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: analytics_engagement_tracking_basic
   name: Engagement Tracking - Basic
@@ -1594,9 +1594,9 @@
     frontend: false
     released: false
   roadmap: false
-  notes: ""
+  notes: "Roadmap-described in the Advanced Analytics doc article."
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: analytics_engagement_tracking_advanced
   name: Engagement Tracking - Advanced
