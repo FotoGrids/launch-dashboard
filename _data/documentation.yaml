@@ -298,13 +298,17 @@ doc_sections:
   - name: "Pagination & Filtering"
     articles:
       - title: "Pagination Modes"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/pagination-and-filtering/pagination/"
+        post_id: 5238
+        notes: "Consolidated with Pagination Settings into single article \"Pagination\""
       - title: "Pagination Settings"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/pagination-and-filtering/pagination/"
+        post_id: 5238
+        notes: "Consolidated with Pagination Modes into single article \"Pagination\""
       - title: "Filtering by Tags"
         status: planned
         tier: free

@@ -801,7 +801,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: full_pagination_preloading
   name: Full Pagination & Preloading
