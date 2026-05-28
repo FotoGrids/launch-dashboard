@@ -796,8 +796,8 @@
   status: beta
   dev_status:
     backend: true
-    frontend: false
-    released: false
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false
