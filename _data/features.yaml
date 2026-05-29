@@ -234,9 +234,9 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: false
   dev_status:
-    backend: no
-    frontend: no
-    released: false
+    backend: true
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false
@@ -253,7 +253,7 @@
     frontend: true
     released: true
   roadmap: false
-  notes: "Only the back button is missing"
+  notes: ""
   wp_org_visible: false
   has_doc: false
 
