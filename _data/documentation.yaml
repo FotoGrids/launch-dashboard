@@ -144,6 +144,11 @@ doc_sections:
         url: "https://www.fotogrids.com/docs/albums/breadcrumbs/"
         post_id: 5239
         notes: "Includes Back Button section"
+      - title: "Smooth Album to Gallery Transitions (AJAX)"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/albums/smooth-album-to-gallery-transitions-ajax/"
+        post_id: 5240
 
   - name: "Layout & Display"
     articles:
