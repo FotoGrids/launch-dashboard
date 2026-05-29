@@ -54,7 +54,7 @@
   status: beta
   dev_status:
     backend: true
-    frontend: true
+    frontend: in_progress
     released: false
   roadmap: false
   notes: ""
@@ -84,7 +84,7 @@
   status: beta
   dev_status:
     backend: true
-    frontend: true
+    frontend: in_progress
     released: false
   roadmap: false
   notes: ""
@@ -100,7 +100,7 @@
   dev_status:
     backend: true
     frontend: true
-    released: false
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: true
@@ -114,7 +114,7 @@
   status: beta
   dev_status:
     backend: true
-    frontend: in_progress
+    frontend: false
     released: false
   roadmap: false
   notes: ""
