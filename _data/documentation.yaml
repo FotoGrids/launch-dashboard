@@ -210,6 +210,10 @@ doc_sections:
         status: planned
         tier: free
         url: ""
+      - title: "Image Zoom"
+        status: planned
+        tier: free
+        url: ""
 
   - name: "Captions & Text"
     articles:

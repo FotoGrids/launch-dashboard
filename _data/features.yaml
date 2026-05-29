@@ -319,6 +319,21 @@
   wp_org_visible: true
   has_doc: true
 
+- id: image_zoom
+  name: Image Zoom
+  category: Interactions
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: true
+    frontend: in_progress
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
 - id: sorting
   name: Set Collection Sorting
   category: Interactions
