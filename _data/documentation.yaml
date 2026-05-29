@@ -138,6 +138,12 @@ doc_sections:
         status: planned
         tier: free
         url: ""
+      - title: "Breadcrumbs"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/albums/breadcrumbs/"
+        post_id: 5239
+        notes: "Includes Back Button section"
 
   - name: "Layout & Display"
     articles:

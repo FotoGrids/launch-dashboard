@@ -240,7 +240,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: ajax_transitions_albums_to_galleries
   name: AJAX Transitions from Albums to Galleries
