@@ -91,6 +91,21 @@
   wp_org_visible: true
   has_doc: false
 
+- id: layout_instant_images
+  name: Layout — Instant Images
+  category: Display & Layout
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: true
+    frontend: true
+    released: true
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
 - id: layout_single_item
   name: Layout — Single Item
   category: Display & Layout
