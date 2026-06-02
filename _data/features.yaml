@@ -205,8 +205,8 @@
   status: planned
   dev_status:
     backend: true
-    frontend: in_progress
-    released: false
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false
@@ -220,14 +220,14 @@
   status: planned
   dev_status:
     backend: true
-    frontend: in_progress
-    released: false
+    frontend: true
+    released: true
   roadmap: false
   notes: ""
   wp_org_visible: false
   has_doc: false
 
-- id: theme_templates_galleries
+- id: theme_templates_galleries_enhanced
   name: View Page Templates - Enhanced Editing
   category: Display & Layout
   tier: pro_plus
