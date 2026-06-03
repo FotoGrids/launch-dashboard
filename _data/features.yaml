@@ -175,7 +175,7 @@
   status: beta
   dev_status:
     backend: true
-    frontend: true
+    frontend: in_progress
     released: false
   roadmap: false
   notes: "Templates System is implemented; Templates creation is blocked until the full feature set is stable and functional."
