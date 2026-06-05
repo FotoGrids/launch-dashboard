@@ -751,7 +751,22 @@
   status: beta
   dev_status:
     backend: in_progress
-    frontend: false
+    frontend: in_progress
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: false
+  has_doc: false
+
+- id: video_support_youtube_vimeo
+  name: Video Support - YouTube & Vimeo
+  category: Media & Performance
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: in_progress
+    frontend: in_progress
     released: false
   roadmap: false
   notes: ""
@@ -759,7 +774,7 @@
   has_doc: false
 
 - id: video_support_full_embeds
-  name: Video Support - Full with Embeds
+  name: Video Support - Full with Advanced Options
   category: Media & Performance
   tier: pro_starter
   available_on: [pro_starter, pro_plus, agency]
