@@ -1435,7 +1435,7 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: beta
   dev_status:
-    backend: in_progress
+    backend: true
     frontend: in_progress
     released: false
   roadmap: false
