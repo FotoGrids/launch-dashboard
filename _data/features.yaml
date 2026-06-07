@@ -948,7 +948,7 @@
   status: beta
   dev_status:
     backend: true
-    frontend: false
+    frontend: in_progress
     released: false
   roadmap: false
   notes: ""
