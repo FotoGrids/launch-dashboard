@@ -121,6 +121,21 @@
   wp_org_visible: true
   has_doc: false
 
+- id: layout_featured_item
+  name: Layout — Featured Item
+  category: Display & Layout
+  tier: free
+  available_on: [free, pro_starter, pro_plus, agency]
+  status: beta
+  dev_status:
+    backend: true
+    frontend: in_progress
+    released: false
+  roadmap: false
+  notes: ""
+  wp_org_visible: true
+  has_doc: false
+
 - id: layout_carousel
   name: Layout — Carousel
   category: Display & Layout
