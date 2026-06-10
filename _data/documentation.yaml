@@ -486,19 +486,22 @@ doc_sections:
   - name: "Integrations & Page Builders"
     articles:
       - title: "Gutenberg Block"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/displaying-galleries/gutenberg-block/"
+        post_id: 5245
       - title: "Elementor Widget"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/displaying-galleries/elementor-widget/"
+        post_id: 5246
         notes: ""
       - title: "Divi Module"
-        status: planned
+        status: live
         tier: free
-        url: ""
-        notes: ""
+        url: "https://www.fotogrids.com/docs/displaying-galleries/divi-module/"
+        post_id: 5247
+        notes: "Requires Divi 5"
       - title: "Bricks Builder"
         status: planned
         tier: free

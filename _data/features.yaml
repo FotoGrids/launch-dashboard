@@ -1408,7 +1408,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: elementor_block
   name: Elementor widget
@@ -1423,7 +1423,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: divi_module
   name: Divi module
@@ -1438,7 +1438,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: bricks_element
   name: Bricks Builder element
