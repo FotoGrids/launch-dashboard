@@ -1846,8 +1846,8 @@
   available_on: [free, pro_starter, pro_plus, agency]
   status: planned
   dev_status:
-    backend: false
-    frontend: false
+    backend: in_progress
+    frontend: in_progress
     released: false
   roadmap: false
   notes: ""

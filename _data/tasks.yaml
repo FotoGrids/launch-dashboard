@@ -126,7 +126,7 @@
   section: product
   category: Infrastructure
   tier: pro_starter
-  status: in_progress
+  status: done
   blocked_by: ""
   notes: "Auto-update for pro tiers via Freemius"
   priority: high
