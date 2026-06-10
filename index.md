@@ -187,6 +187,34 @@ title: Overview
   {% endfor %}
 {% endfor %}
 
+{% comment %} ── Per-stage website-pages breakdowns ─────────────────── {% endcomment %}
+{% assign wpages_s1_live = 0 %}{% assign wpages_s1_total = 0 %}
+{% assign wpages_s2_live = 0 %}{% assign wpages_s2_total = 0 %}
+{% assign wpages_s3_live = 0 %}{% assign wpages_s3_total = 0 %}
+{% assign wpages_s4_live = 0 %}{% assign wpages_s4_total = 0 %}
+{% for page in website_pages %}
+  {% assign pt = page.tier | default: "free" %}
+  {% assign p_live = false %}{% if page.status == "live" %}{% assign p_live = true %}{% endif %}
+  {% comment %} Stage 1: free only {% endcomment %}
+  {% if pt == "free" %}
+    {% assign wpages_s1_total = wpages_s1_total | plus: 1 %}
+    {% if p_live %}{% assign wpages_s1_live = wpages_s1_live | plus: 1 %}{% endif %}
+  {% endif %}
+  {% comment %} Stage 2: free + pro_starter {% endcomment %}
+  {% if pt == "free" or pt == "pro_starter" %}
+    {% assign wpages_s2_total = wpages_s2_total | plus: 1 %}
+    {% if p_live %}{% assign wpages_s2_live = wpages_s2_live | plus: 1 %}{% endif %}
+  {% endif %}
+  {% comment %} Stage 3: free + pro_starter + pro_plus {% endcomment %}
+  {% if pt == "free" or pt == "pro_starter" or pt == "pro_plus" %}
+    {% assign wpages_s3_total = wpages_s3_total | plus: 1 %}
+    {% if p_live %}{% assign wpages_s3_live = wpages_s3_live | plus: 1 %}{% endif %}
+  {% endif %}
+  {% comment %} Stage 4: all {% endcomment %}
+  {% assign wpages_s4_total = wpages_s4_total | plus: 1 %}
+  {% if p_live %}{% assign wpages_s4_live = wpages_s4_live | plus: 1 %}{% endif %}
+{% endfor %}
+
 {% comment %} ── Per-stage admin/legal (free tier vs pro tier) ──────── {% endcomment %}
 {% assign admin_free_done = 0 %}{% assign admin_free_total = 0 %}
 {% assign admin_pro_done  = 0 %}{% assign admin_pro_total  = 0 %}
@@ -243,10 +271,10 @@ title: Overview
       <div class="stat-label">Product tasks done</div>
       <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ product_pct }}%;"></div></div>
     </div>
-    <div class="stat-card" data-accent="wpages">
-      <div class="stat-value">{{ website_pages_pct }}%</div>
+    <div class="stat-card" data-accent="wpages" id="ov-card-wpages">
+      <div class="stat-value" id="ov-val-wpages">{{ website_pages_pct }}%</div>
       <div class="stat-label">Website pages ready</div>
-      <div class="progress-bar-track"><div class="progress-bar-fill" style="width:{{ website_pages_pct }}%;"></div></div>
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="ov-bar-wpages" style="width:{{ website_pages_pct }}%;"></div></div>
     </div>
     <div class="stat-card" data-accent="docs" id="ov-card-docs">
       <div class="stat-value" id="ov-val-docs">{{ docs_pct }}%</div>
@@ -498,24 +526,28 @@ const ovChart = renderReadinessChart('readinessChart', [
 // ── Per-stage data (Liquid-baked at build time) ──────────────────
 const STAGE_DATA = {
   1: {
+    wpages:{ live: {{ wpages_s1_live }}, total: {{ wpages_s1_total }} },
     docs:  { live: {{ docs_free_live }},  total: {{ docs_free_total }} },
     blog:  { published: {{ blog_published }}, target: 10 },
     admin: { done: {{ admin_free_done }}, total: {{ admin_free_total }} },
     legal: { done: {{ legal_free_done }}, total: {{ legal_free_total }} },
   },
   2: {
+    wpages:{ live: {{ wpages_s2_live }}, total: {{ wpages_s2_total }} },
     docs:  { live: {{ docs_s2_live }},  total: {{ docs_s2_total }} },
     blog:  { published: {{ blog_published }}, target: 20 },
     admin: { done: {{ admin_pro_done }}, total: {{ admin_pro_total }} },
     legal: { done: {{ legal_pro_done }}, total: {{ legal_pro_total }} },
   },
   3: {
+    wpages:{ live: {{ wpages_s3_live }}, total: {{ wpages_s3_total }} },
     docs:  { live: {{ docs_s3_live }},  total: {{ docs_s3_total }} },
     blog:  { published: {{ blog_published }}, target: 40 },
     admin: { done: {{ admin_pro_done }}, total: {{ admin_pro_total }} },
     legal: { done: {{ legal_pro_done }}, total: {{ legal_pro_total }} },
   },
   4: {
+    wpages:{ live: {{ wpages_s4_live }}, total: {{ wpages_s4_total }} },
     docs:  { live: {{ docs_s4_live }},  total: {{ docs_s4_total }} },
     blog:  { published: {{ blog_published }}, target: 60 },
     admin: { done: {{ admin_pro_done }}, total: {{ admin_pro_total }} },
@@ -542,13 +574,15 @@ function switchStage(stage, btn) {
   document.querySelector('[data-card="free-features"]').classList.toggle('stat-card--disabled', stage !== 1);
   document.querySelector('[data-card="pro-features"]').classList.toggle('stat-card--disabled',  stage === 1);
 
-  // Reactive cards + chart (indices 4=docs, 5=blog, 7=admin, 8=legal)
+  // Reactive cards + chart (indices 3=wpages, 4=docs, 5=blog, 7=admin, 8=legal)
   const d = STAGE_DATA[stage];
+  setCard('ov-val-wpages','ov-bar-wpages',d.wpages.live,    d.wpages.total);
   setCard('ov-val-docs',  'ov-bar-docs',  d.docs.live,      d.docs.total);
   setCard('ov-val-blog',  'ov-bar-blog',  d.blog.published, d.blog.target);
   setCard('ov-val-admin', 'ov-bar-admin', d.admin.done,     d.admin.total);
   setCard('ov-val-legal', 'ov-bar-legal', d.legal.done,     d.legal.total);
   updateReadinessChart(ovChart, {
+    3: pct(d.wpages.live,    d.wpages.total),
     4: pct(d.docs.live,      d.docs.total),
     5: pct(d.blog.published, d.blog.target),
     7: pct(d.admin.done,     d.admin.total),

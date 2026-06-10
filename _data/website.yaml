@@ -1,207 +1,248 @@
+# Tier vocabulary: free | pro_starter | pro_plus | agency
+# Stages are cumulative: Stage 1 = free, Stage 2 = +pro_starter,
+# Stage 3 = +pro_plus, Stage 4 = all. `tier` defaults to free.
 pages:
   - id: home
     name: Home
     status: live
+    tier: free
     url: "/"
     notes: "Missing images."
 
   - id: pricing
     name: Pricing
     status: live
+    tier: free
     url: "/pricing"
     notes: ""
 
   - id: features
     name: Features Overview
     status: live
+    tier: free
     url: "/features"
     notes: "All content inserted. Missing images."
 
   - id: features_design_customization
     name: Features - Design & Customization
     status: planned
+    tier: free
     notes: ""
 
   - id: features_no_code_workflow
     name: Features - No-Code Workflow
     status: planned
+    tier: free
     notes: ""
 
   - id: features_seo_performance
     name: Features - SEO & Performance
     status: planned
+    tier: free
     notes: ""
 
   - id: features_image_protection_security
     name: Features - Image Protection & Security
     status: planned
+    tier: free
     notes: ""
 
   - id: features_engagement_analytics
     name: Features - Engagement & Analytics
     status: planned
+    tier: free
     notes: ""
 
   - id: live_demos
     name: Live Demos
     status: planned
+    tier: free
     notes: ""
 
   - id: built_for_developers
     name: Built for Developers
     status: planned
+    tier: free
     notes: ""
 
   - id: built_for_photographers
     name: Built for Photographers
     status: planned
+    tier: free
     notes: ""
 
   - id: built_for_agencies
     name: Built for Agencies
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: built_for_bloggers
     name: Built for Bloggers
     status: planned
+    tier: free
     notes: ""
 
   - id: built_for_business_owners
     name: Built for Business Owners
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: built_for_online_shops
     name: Built for Online Shops
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: free_vs_pro
     name: Features Comparison by Tier
     status: live
+    tier: free
     url: "/free-vs-pro"
     notes: ""
 
   - id: docs_index
     name: Documentation hub
     status: in_progress
+    tier: free
     url: "/docs"
     notes: "Index page structure drafted, individual doc pages in progress"
 
   - id: blog_index
     name: Blog index
     status: live
+    tier: free
     url: "/blog"
     notes: ""
 
   - id: about
     name: About
     status: live
+    tier: free
     url: "/about"
     notes: ""
 
   - id: support_center
     name: Support Center
     status: live
+    tier: free
     url: "/support"
     notes: "Almost completed."
 
   - id: contact
     name: Contact
     status: live
+    tier: free
     url: "/contact"
     notes: "Almost completed."
 
   - id: changelog
     name: Changelog
     status: planned
+    tier: pro_starter
     url: "/changelog"
     notes: ""
 
   - id: affiliates
     name: Become an Affiliate
     status: live
+    tier: pro_starter
     url: "/affiliates"
     notes: ""
 
   - id: compare_us_index
     name: Compare Us - Index
     status: live
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_template
     name: Compare Us - Template
     status: live
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_nextgen_gallery
     name: Compare Us - NextGEN Gallery
     status: in_progress
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_envira_gallery
     name: Compare Us - Envira Gallery
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_foogallery
     name: Compare Us - FooGallery
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_modula
     name: Compare Us - Modula
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_photo_gallery_10web
     name: Compare Us - Photo Gallery by 10Web
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_meow_gallery
     name: Compare Us - Meow Gallery
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_visual_portfolio
     name: Compare Us - Visual Portfolio
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_responsive_lightbox_gallery
     name: Compare Us - Responsive Lightbox & Gallery
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_robo_gallery
     name: Compare Us - Robo Gallery
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_gallery_bestwebsoft
     name: Compare Us - Gallery by BestWebSoft
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_slider_revolution
     name: Compare Us - Slider Revolution
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_layerslider
     name: Compare Us - LayerSlider
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_smart_slider_3
     name: Compare Us - Smart Slider 3
     status: planned
+    tier: pro_starter
     notes: ""
 
   - id: compare_us_metaslider
     name: Compare Us - MetaSlider
     status: planned
+    tier: pro_starter
     notes: ""
-
