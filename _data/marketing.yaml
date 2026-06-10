@@ -6,7 +6,7 @@ assets:
 
   - id: plugin_icon
     name: WordPress.org plugin icon (256×256)
-    status: planned
+    status: done
     notes: ""
 
   - id: demo_video
