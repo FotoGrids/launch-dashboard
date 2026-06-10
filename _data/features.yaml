@@ -923,7 +923,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: right_click_protection
   name: Right-click & Drag Protection
@@ -953,7 +953,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: watermarking_advanced_settings_image_watermarks
   name: Advanced Watermark Settings & Image Watermarks

@@ -393,9 +393,16 @@ doc_sections:
   - name: "Security"
     articles:
       - title: "Password-Protecting a Gallery"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/security-and-privacy/password-protecting-a-gallery/"
+        post_id: 5248
+      - title: "Watermarks"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/security-and-privacy/watermarks/"
+        post_id: 5249
+        notes: "Merged Watermark Overview + Text Watermarks + Positioning. Teases Pro image/custom-colour/apply-to/repeat"
       - title: "Right-Click Protection"
         status: planned
         tier: pro_starter
@@ -408,42 +415,30 @@ doc_sections:
 
   - name: "Watermarking"
     articles:
-      - title: "Watermark Overview"
-        status: planned
-        tier: free
-        url: ""
-      - title: "Text Watermarks"
-        status: planned
-        tier: free
-        url: ""
-      - title: "Image Watermarks"
-        status: planned
-        tier: pro_starter
-        url: ""
-      - title: "Watermark Positioning"
-        status: planned
-        tier: free
-        url: ""
       - title: "Repeat Pattern Watermarks"
         status: planned
         tier: pro_starter
         url: ""
-        notes: ""
+        notes: "Image/advanced watermarks not yet built; teased inside the Watermarks article under Security"
 
   - name: "Statistics & Analytics"
     articles:
       - title: "Statistics Overview"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/statistics-and-analytics/statistics-overview/"
+        post_id: 5233
       - title: "Viewing Statistics"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/statistics-and-analytics/viewing-statistics/"
+        post_id: 5250
       - title: "Statistics Retention"
-        status: planned
+        status: folded
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/statistics-and-analytics/viewing-statistics/"
+        post_id: 5250
+        notes: "Folded into Viewing Statistics (Retain Statistics control) — no separate article"
       - title: "Advanced Analytics"
         status: planned
         tier: pro_starter
@@ -471,9 +466,10 @@ doc_sections:
         url: "https://www.fotogrids.com/docs/settings-and-configuration/global-defaults/"
         post_id: 5051
       - title: "Responsiveness Settings"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/settings-and-configuration/responsiveness-settings/"
+        post_id: 5251
       - title: "Permissions Manager"
         status: planned
         tier: free
