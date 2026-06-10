@@ -1397,7 +1397,6 @@
 
 - id: gutenberg_block
   name: Gutenberg block
-  depends_on_all: true
   category: Integrations
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -1413,7 +1412,6 @@
 
 - id: elementor_block
   name: Elementor widget
-  depends_on_all: true
   category: Integrations
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
@@ -1429,7 +1427,6 @@
 
 - id: divi_module
   name: Divi module
-  depends_on_all: true
   category: Integrations
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
