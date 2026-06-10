@@ -347,7 +347,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: sorting
   name: Set Collection Sorting
@@ -756,7 +756,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: video_support_youtube_vimeo
   name: Video Support - YouTube & Vimeo
@@ -771,7 +771,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: video_support_full_embeds
   name: Video Support - Full with Advanced Options

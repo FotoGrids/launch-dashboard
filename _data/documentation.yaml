@@ -211,9 +211,11 @@ doc_sections:
         tier: free
         url: ""
       - title: "Image Zoom"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/customization/image-zoom/"
+        post_id: 5254
+        notes: "Grid interaction zoom; distinct from Lightbox Zoom"
 
   - name: "Captions & Text"
     articles:
@@ -258,6 +260,25 @@ doc_sections:
         tier: free
         url: "https://www.fotogrids.com/docs/layouts-and-templates/loading-icon/"
         post_id: 5078
+
+  - name: "Video"
+    articles:
+      - title: "Video Support — Media Library Files"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/items-photos-images/video-support-media-library-files/"
+        post_id: 5252
+        notes: "Gallery-only. Per-item Video tab + gallery Playback mode"
+      - title: "Video Support — YouTube & Vimeo Embeds"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/items-photos-images/video-support-youtube-vimeo-embeds/"
+        post_id: 5253
+      - title: "Video Playlist Layout"
+        status: planned
+        tier: pro_starter
+        url: ""
+        notes: "Pro feature not yet built"
 
   - name: "Lightbox"
     articles:
