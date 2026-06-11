@@ -450,9 +450,9 @@
     frontend: true
     released: true
   roadmap: false
-  notes: ""
+  notes: "Documented across two articles: Setting Up Filtering + Styling the Filter Bar"
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: filtering_exif_metadata_advanced
   name: Advanced EXIF & Metadata Filtering

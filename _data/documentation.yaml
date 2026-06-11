@@ -345,10 +345,18 @@ doc_sections:
         url: "https://www.fotogrids.com/docs/pagination-and-filtering/pagination/"
         post_id: 5238
         notes: "Consolidated with Pagination Modes into single article \"Pagination\""
-      - title: "Filtering by Tags"
-        status: planned
+      - title: "Setting Up Filtering"
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/pagination-and-filtering/setting-up-filtering/"
+        post_id: 5255
+        notes: "Functional filtering (Tags free; People/Location/Date/EXIF Pro). Renamed from \"Filtering by Tags\""
+      - title: "Styling the Filter Bar"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/customization/styling-the-filter-bar/"
+        post_id: 5256
+        notes: "Panel/spacing/per-control state colours + CSS-variable developer reference"
       - title: "Filtering by Date"
         status: planned
         tier: pro_starter
