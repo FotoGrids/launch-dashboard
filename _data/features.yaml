@@ -1737,14 +1737,14 @@
   category: Workflow & Maintenance
   tier: free
   available_on: [free, pro_starter, pro_plus, agency]
-  depends_on_all: true
+  depends_on_all: false
   status: beta
   dev_status:
-    backend: in_progress
-    frontend: false
-    released: false
+    backend: true
+    frontend: true
+    released: true
   roadmap: false
-  notes: ""
+  notes: "Only missing images in the Create Gallery step."
   wp_org_visible: false
   has_doc: false
 
