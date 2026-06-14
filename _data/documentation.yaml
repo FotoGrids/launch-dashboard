@@ -153,26 +153,55 @@ doc_sections:
   - name: "Layout & Display"
     articles:
       - title: "Choosing a Layout"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/layouts-and-templates/choosing-a-layout/"
+        post_id: 5265
+      - title: "How to Choose the Right Layout"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/layouts-and-templates/which-layout-to-use/"
+        post_id: 5266
       - title: "Grid Layout"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/layouts-and-templates/grid-layout/"
+        post_id: 5257
       - title: "Masonry Layout"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/layouts-and-templates/masonry-layout/"
+        post_id: 5258
       - title: "Justified Layout"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/layouts-and-templates/justified-layout/"
+        post_id: 5259
+      - title: "Single Item Layout"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/layouts-and-templates/single-item-layout/"
+        post_id: 5260
       - title: "Slider Layout"
-        status: planned
+        status: live
         tier: free
-        url: ""
-        notes: ""
+        url: "https://www.fotogrids.com/docs/layouts-and-templates/slider-layout/"
+        post_id: 5261
+      - title: "Image Viewer Layout"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/layouts-and-templates/image-viewer-layout/"
+        post_id: 5262
+      - title: "Featured Item Layout"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/layouts-and-templates/featured-item-layout/"
+        post_id: 5263
+      - title: "Instant Photos Layout"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/layouts-and-templates/instant-photos-layout/"
+        post_id: 5264
       - title: "Carousel Layout"
         status: planned
         tier: pro_starter
