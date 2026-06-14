@@ -33,10 +33,6 @@ doc_sections:
         tier: free
         url: "https://www.fotogrids.com/docs/getting-started/inserting-a-gallery-shortcode/"
         post_id: 5081
-      - title: "Inserting a Gallery (Block Editor)"
-        status: planned
-        tier: free
-        url: ""
       - title: "Inserting an Album (Shortcode)"
         status: live
         tier: free
@@ -207,19 +203,6 @@ doc_sections:
         tier: pro_starter
         url: ""
         notes: ""
-      - title: "Polaroid Layout"
-        status: planned
-        tier: pro_starter
-        url: ""
-        notes: ""
-      - title: "Responsive Columns"
-        status: planned
-        tier: free
-        url: ""
-      - title: "Item Spacing & Gaps"
-        status: planned
-        tier: free
-        url: ""
       - title: "Image Sizing & Cropping"
         status: live
         tier: free
@@ -327,11 +310,6 @@ doc_sections:
         url: "https://www.fotogrids.com/docs/lightbox/lightbox-navigation/"
         post_id: 5013
         notes: "ACF fields not set on push — update needed"
-      - title: "Lightbox: Auto-Progress (Slideshow)"
-        status: planned
-        tier: free
-        url: ""
-        notes: "Covered inside Navigation article — may fold in"
       - title: "Lightbox: Thumbnail Strip"
         status: live
         tier: free
@@ -491,12 +469,6 @@ doc_sections:
         tier: free
         url: "https://www.fotogrids.com/docs/statistics-and-analytics/viewing-statistics/"
         post_id: 5250
-      - title: "Statistics Retention"
-        status: folded
-        tier: free
-        url: "https://www.fotogrids.com/docs/statistics-and-analytics/viewing-statistics/"
-        post_id: 5250
-        notes: "Folded into Viewing Statistics (Retain Statistics control) — no separate article"
       - title: "Advanced Analytics"
         status: planned
         tier: pro_starter
