@@ -1,7 +1,7 @@
 assets:
   - id: plugin_banner
     name: WordPress.org plugin banner (1544×500)
-    status: planned
+    status: done
     notes: ""
 
   - id: plugin_icon
