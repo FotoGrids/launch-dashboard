@@ -225,7 +225,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: theme_templates_albums
   name: Albums - View Page Template
@@ -240,7 +240,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: false
-  has_doc: false
+  has_doc: true
 
 - id: theme_templates_galleries_enhanced
   name: View Page Templates - Enhanced Editing
@@ -619,7 +619,7 @@
   roadmap: false
   notes: ""
   wp_org_visible: true
-  has_doc: false
+  has_doc: true
 
 - id: hover_effects_advanced
   name: Hover Effects — Advanced

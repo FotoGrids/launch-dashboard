@@ -114,9 +114,11 @@ doc_sections:
         url: ""
         notes: "Pro Plus"
       - title: "Gallery Templates"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/displaying-galleries/galleries-view-page-template/"
+        post_id: 5269
+        notes: "Galleries — View Page Template"
 
   - name: "Albums"
     articles:
@@ -145,6 +147,11 @@ doc_sections:
         tier: free
         url: "https://www.fotogrids.com/docs/albums/smooth-album-to-gallery-transitions-ajax/"
         post_id: 5240
+      - title: "Albums — View Page Template"
+        status: live
+        tier: free
+        url: "https://www.fotogrids.com/docs/albums/albums-view-page-template/"
+        post_id: 5270
 
   - name: "Layout & Display"
     articles:
@@ -219,9 +226,10 @@ doc_sections:
         url: "https://www.fotogrids.com/docs/customization/color-controls/"
         post_id: 5223
       - title: "Hover Effects"
-        status: planned
+        status: live
         tier: free
-        url: ""
+        url: "https://www.fotogrids.com/docs/customization/hover-effects/"
+        post_id: 5268
       - title: "Image Zoom"
         status: live
         tier: free
