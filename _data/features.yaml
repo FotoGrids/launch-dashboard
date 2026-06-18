@@ -450,7 +450,7 @@
     frontend: true
     released: true
   roadmap: false
-  notes: "Documented across two articles: Setting Up Filtering + Styling the Filter Bar"
+  notes: ""
   wp_org_visible: false
   has_doc: true
 
