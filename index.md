@@ -314,7 +314,7 @@ title: Overview
     <div class="roadmap-content">
       <div class="roadmap-stage-top">
         <div class="roadmap-stage">Stage 1</div>
-        <div class="roadmap-date">July 2026</div>
+        <div class="roadmap-date">Q2 2026</div>
       </div>
       <div class="roadmap-title">
         <span class="roadmap-tier-pill roadmap-tier-pill--free">Free</span>
@@ -338,7 +338,7 @@ title: Overview
     <div class="roadmap-content">
       <div class="roadmap-stage-top">
         <div class="roadmap-stage">Stage 2</div>
-        <div class="roadmap-date">August 2026</div>
+        <div class="roadmap-date">Q3 2026</div>
       </div>
       <div class="roadmap-title">
         <span class="roadmap-tier-pill roadmap-tier-pill--starter">Pro</span>
@@ -363,7 +363,7 @@ title: Overview
     <div class="roadmap-content">
       <div class="roadmap-stage-top">
         <div class="roadmap-stage">Stage 3</div>
-        <div class="roadmap-date">October 2026</div>
+        <div class="roadmap-date">Q4 2026</div>
       </div>
       <div class="roadmap-title">
         <span class="roadmap-tier-pill roadmap-tier-pill--plus">Pro</span>
@@ -385,7 +385,7 @@ title: Overview
     <div class="roadmap-content">
       <div class="roadmap-stage-top">
         <div class="roadmap-stage">Stage 4</div>
-        <div class="roadmap-date">December 2026</div>
+        <div class="roadmap-date">Q1 2027</div>
       </div>
       <div class="roadmap-title">
         <span class="roadmap-tier-pill roadmap-tier-pill--agency">Pro</span>
