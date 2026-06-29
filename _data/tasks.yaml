@@ -64,7 +64,7 @@
   section: product
   category: WordPress.org Compliance
   tier: free
-  status: planned
+  status: done
   blocked_by: wporg_readme
   notes: "Requires readme.txt, banner, icon, and screenshots to be complete"
   priority: high
