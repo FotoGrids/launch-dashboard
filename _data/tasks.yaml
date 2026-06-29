@@ -65,8 +65,8 @@
   category: WordPress.org Compliance
   tier: free
   status: done
-  blocked_by: wporg_readme
-  notes: "Requires readme.txt, banner, icon, and screenshots to be complete"
+  blocked_by: ""
+  notes: ""
   priority: high
 
 - id: wporg_review_approval
@@ -75,7 +75,7 @@
   category: WordPress.org Compliance
   tier: free
   status: planned
-  blocked_by: wporg_submission
+  blocked_by: ""
   notes: "Typical review turnaround: 1–4 weeks"
   priority: high
 
