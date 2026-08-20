@@ -25,31 +25,31 @@ pages:
 
   - id: features_design_customization
     name: Features - Design & Customization
-    status: done
+    status: live
     tier: free
     notes: ""
 
   - id: features_no_code_workflow
     name: Features - No-Code Workflow
-    status: done
+    status: live
     tier: free
     notes: ""
 
   - id: features_seo_performance
     name: Features - SEO & Performance
-    status: done
+    status: live
     tier: free
     notes: ""
 
   - id: features_image_protection_security
     name: Features - Image Protection & Security
-    status: done
+    status: live
     tier: free
     notes: ""
 
   - id: features_engagement_analytics
     name: Features - Engagement & Analytics
-    status: done
+    status: live
     tier: free
     notes: ""
 
@@ -103,43 +103,43 @@ pages:
 
   - id: live_demos
     name: Live Demos
-    status: done
+    status: live
     tier: free
     notes: ""
 
   - id: built_for_developers
     name: Built for Developers
-    status: done
+    status: live
     tier: free
     notes: ""
 
   - id: built_for_photographers
     name: Built for Photographers
-    status: done
+    status: live
     tier: free
     notes: ""
 
   - id: built_for_agencies
     name: Built for Agencies
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: built_for_bloggers
     name: Built for Bloggers
-    status: done
+    status: live
     tier: free
     notes: ""
 
   - id: built_for_business_owners
     name: Built for Business Owners
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: built_for_online_shops
     name: Built for Online Shops
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
@@ -290,84 +290,84 @@ pages:
 
   - id: compare_us_nextgen_gallery
     name: Compare Us - NextGEN Gallery
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_envira_gallery
     name: Compare Us - Envira Gallery
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_foogallery
     name: Compare Us - FooGallery
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_modula
     name: Compare Us - Modula
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_photo_gallery_10web
     name: Compare Us - Photo Gallery by 10Web
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_meow_gallery
     name: Compare Us - Meow Gallery
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_visual_portfolio
     name: Compare Us - Visual Portfolio
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_responsive_lightbox_gallery
     name: Compare Us - Responsive Lightbox & Gallery
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_robo_gallery
     name: Compare Us - Robo Gallery
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_gallery_bestwebsoft
     name: Compare Us - Gallery by BestWebSoft
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_slider_revolution
     name: Compare Us - Slider Revolution
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_layerslider
     name: Compare Us - LayerSlider
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_smart_slider_3
     name: Compare Us - Smart Slider 3
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
 
   - id: compare_us_metaslider
     name: Compare Us - MetaSlider
-    status: done
+    status: live
     tier: pro_starter
     notes: ""
