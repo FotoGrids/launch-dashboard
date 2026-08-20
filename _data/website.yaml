@@ -230,7 +230,7 @@ pages:
 
   - id: community_forum
     name: Community Forum
-    status: planned
+    status: live
     tier: free
     notes: ""
 
@@ -243,28 +243,28 @@ pages:
 
   - id: roadmap
     name: Roadmap
-    status: planned
+    status: live
     tier: free
     url: "/roadmap"
     notes: ""
 
   - id: showcase
     name: Showcase
-    status: planned
+    status: live
     tier: free
     url: "/showcase"
     notes: ""
 
   - id: feature_requests
     name: Feature Requests
-    status: planned
+    status: live
     tier: free
     url: "/feature-requests"
     notes: ""
 
   - id: changelog
     name: Changelog
-    status: planned
+    status: live
     tier: pro_starter
     url: "/changelog"
     notes: ""
