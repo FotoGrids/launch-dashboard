@@ -30,7 +30,7 @@
   name: Automated database backups
   category: Infrastructure
   tier: free
-  status: planned
+  status: done
   notes: ""
 
 - id: analytics_setup
@@ -51,7 +51,7 @@
   name: Website Terms of Service written and published
   category: Legal
   tier: free
-  status: planned
+  status: done
   notes: ""
 
 - id: privacy_policy
@@ -72,28 +72,28 @@
   name: Payments ToS written and published
   category: Legal
   tier: pro_starter
-  status: planned
+  status: done
   notes: ""
 
 - id: refund_policy
   name: Refund Policy published
   category: Legal
   tier: pro_starter
-  status: planned
+  status: done
   notes: ""
 
 - id: cookie_banner
   name: Cookie consent banner
   category: Legal
   tier: free
-  status: planned
+  status: done
   notes: ""
 
 - id: affiliated_tos
   name: Affiliated Terms of Service written and published
   category: Legal
   tier: pro_starter
-  status: planned
+  status: done
   notes: ""
 
 - id: business_registration

@@ -44,7 +44,7 @@
   section: product
   category: WordPress.org Compliance
   tier: free
-  status: planned
+  status: in_progress
   blocked_by: ""
   notes: ""
   priority: high
@@ -74,7 +74,7 @@
   section: product
   category: WordPress.org Compliance
   tier: free
-  status: planned
+  status: done
   blocked_by: ""
   notes: "Typical review turnaround: 1–4 weeks"
   priority: high
@@ -223,7 +223,7 @@
   section: admin
   category: Infrastructure
   tier: free
-  status: planned
+  status: done
   blocked_by: ""
   notes: ""
   priority: medium
@@ -253,7 +253,7 @@
   section: admin
   category: Legal
   tier: free
-  status: planned
+  status: done
   blocked_by: ""
   notes: ""
   priority: high
@@ -283,7 +283,7 @@
   section: admin
   category: Legal
   tier: pro_starter
-  status: planned
+  status: done
   blocked_by: ""
   notes: ""
   priority: medium
@@ -293,7 +293,7 @@
   section: admin
   category: Legal
   tier: pro_starter
-  status: planned
+  status: done
   blocked_by: ""
   notes: ""
   priority: medium
@@ -303,7 +303,7 @@
   section: admin
   category: Legal
   tier: free
-  status: planned
+  status: done
   blocked_by: privacy_policy
   notes: ""
   priority: medium
@@ -313,7 +313,7 @@
   section: admin
   category: Legal
   tier: pro_starter
-  status: planned
+  status: done
   blocked_by: ""
   notes: ""
   priority: medium
